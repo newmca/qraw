@@ -1,0 +1,7 @@
+build/
+*.user
+.cache/
+.claude/
+__pycache__/
+dist/
+.flatpak-builder/

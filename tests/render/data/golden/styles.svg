@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="536px" height="361px" viewBox="-0.5 -0.5 536 361" content="&lt;mxfile host=&quot;qraw-fixture&quot;&gt;&#xa;  &lt;diagram name=&quot;styles&quot; id=&quot;styles&quot;&gt;&#xa;    &lt;mxGraphModel dx=&quot;800&quot; dy=&quot;600&quot; grid=&quot;1&quot; gridSize=&quot;10&quot; guides=&quot;1&quot; tooltips=&quot;1&quot; connect=&quot;1&quot; arrows=&quot;1&quot; fold=&quot;1&quot; page=&quot;1&quot; pageScale=&quot;1&quot; pageWidth=&quot;827&quot; pageHeight=&quot;1169&quot; math=&quot;0&quot; shadow=&quot;0&quot;&gt;&#xa;      &lt;root&gt;&#xa;        &lt;mxCell id=&quot;0&quot; /&gt;&#xa;        &lt;mxCell id=&quot;1&quot; parent=&quot;0&quot; /&gt;&#xa;        &lt;mxCell id=&quot;g0&quot; value=&quot;south&quot; style=&quot;html=1;fillColor=#ff0000;gradientColor=#0000ff;gradientDirection=south&quot; vertex=&quot;1&quot; parent=&quot;1&quot;&gt;&#xa;          &lt;mxGeometry x=&quot;40&quot; y=&quot;40&quot; width=&quot;90&quot; height=&quot;60&quot; as=&quot;geometry&quot; /&gt;&#xa;        &lt;/mxCell&gt;&#xa;        &lt;mxCell id=&quot;g1&quot; value=&quot;west&quot; style=&quot;html=1;fillColor=#ff0000;gradientColor=#0000ff;gradientDirection=west&quot; vertex=&quot;1&quot; parent=&quot;1&quot;&gt;&#xa;          &lt;mxGeometry x=&quot;150&quot; y=&quot;40&quot; width=&quot;90&quot; height=&quot;60&quot; as=&quot;geometry&quot; /&gt;&#xa;        &lt;/mxCell&gt;&#xa;        &lt;mxCell id=&quot;g2&quot; value=&quot;north&quot; style=&quot;html=1;fillColor=#ff0000;gradientColor=#0000ff;gradientDirection=north&quot; vertex=&quot;1&quot; parent=&quot;1&quot;&gt;&#xa;          &lt;mxGeometry x=&quot;260&quot; y=&quot;40&quot; width=&quot;90&quot; height=&quot;60&quot; as=&quot;geometry&quot; /&gt;&#xa;        &lt;/mxCell&gt;&#xa;        &lt;mxCell id=&quot;g3&quot; value=&quot;east&quot; style=&quot;html=1;fillColor=#ff0000;gradientColor=#0000ff;gradientDirection=east&quot; vertex=&quot;1&quot; parent=&quot;1&quot;&gt;&#xa;          &lt;mxGeometry x=&quot;370&quot; y=&quot;40&quot; width=&quot;90&quot; height=&quot;60&quot; as=&quot;geometry&quot; /&gt;&#xa;        &lt;/mxCell&gt;&#xa;        &lt;mxCell id=&quot;d0&quot; value=&quot;dashed&quot; style=&quot;html=1;dashed=1;dashPattern=8 4;strokeWidth=2&quot; vertex=&quot;1&quot; parent=&quot;1&quot;&gt;&#xa;          &lt;mxGeometry x=&quot;40&quot; y=&quot;140&quot; width=&quot;90&quot; height=&quot;50&quot; as=&quot;geometry&quot; /&gt;&#xa;        &lt;/mxCell&gt;&#xa;        &lt;mxCell id=&quot;d1&quot; value=&quot;shadow&quot; style=&quot;html=1;shadow=1;fillColor=#dae8fc&quot; vertex=&quot;1&quot; parent=&quot;1&quot;&gt;&#xa;          &lt;mxGeometry x=&quot;150&quot; y=&quot;140&quot; width=&quot;90&quot; height=&quot;50&quot; as=&quot;geometry&quot; /&gt;&#xa;        &lt;/mxCell&gt;&#xa;        &lt;mxCell id=&quot;d2&quot; value=&quot;opacity&quot; style=&quot;html=1;opacity=50;fillColor=#f8cecc&quot; vertex=&quot;1&quot; parent=&quot;1&quot;&gt;&#xa;          &lt;mxGeometry x=&quot;260&quot; y=&quot;140&quot; width=&quot;90&quot; height=&quot;50&quot; as=&quot;geometry&quot; /&gt;&#xa;        &lt;/mxCell&gt;&#xa;        &lt;mxCell id=&quot;d3&quot; value=&quot;fill/stroke op&quot; style=&quot;html=1;fillOpacity=30;strokeOpacity=60;strokeWidth=4;fillColor=#d5e8d4&quot; vertex=&quot;1&quot; parent=&quot;1&quot;&gt;&#xa;          &lt;mxGeometry x=&quot;370&quot; y=&quot;140&quot; width=&quot;90&quot; height=&quot;50&quot; as=&quot;geometry&quot; /&gt;&#xa;        &lt;/mxCell&gt;&#xa;        &lt;mxCell id=&quot;r0&quot; value=&quot;rot 45&quot; style=&quot;html=1;rotation=45;fillColor=#fff2cc&quot; vertex=&quot;1&quot; parent=&quot;1&quot;&gt;&#xa;          &lt;mxGeometry x=&quot;40&quot; y=&quot;240&quot; width=&quot;90&quot; height=&quot;50&quot; as=&quot;geometry&quot; /&gt;&#xa;        &lt;/mxCell&gt;&#xa;        &lt;mxCell id=&quot;r1&quot; value=&quot;flipH&quot; style=&quot;shape=trapezoid;perimeter=trapezoidPerimeter;html=1;flipH=1&quot; vertex=&quot;1&quot; parent=&quot;1&quot;&gt;&#xa;          &lt;mxGeometry x=&quot;170&quot; y=&quot;240&quot; width=&quot;90&quot; height=&quot;50&quot; as=&quot;geometry&quot; /&gt;&#xa;        &lt;/mxCell&gt;&#xa;        &lt;mxCell id=&quot;r2&quot; value=&quot;flipV&quot; style=&quot;shape=trapezoid;perimeter=trapezoidPerimeter;html=1;flipV=1&quot; vertex=&quot;1&quot; parent=&quot;1&quot;&gt;&#xa;          &lt;mxGeometry x=&quot;300&quot; y=&quot;240&quot; width=&quot;90&quot; height=&quot;50&quot; as=&quot;geometry&quot; /&gt;&#xa;        &lt;/mxCell&gt;&#xa;        &lt;mxCell id=&quot;r3&quot; value=&quot;south&quot; style=&quot;shape=step;perimeter=stepPerimeter;html=1;direction=south&quot; vertex=&quot;1&quot; parent=&quot;1&quot;&gt;&#xa;          &lt;mxGeometry x=&quot;430&quot; y=&quot;230&quot; width=&quot;50&quot; height=&quot;90&quot; as=&quot;geometry&quot; /&gt;&#xa;        &lt;/mxCell&gt;&#xa;        &lt;mxCell id=&quot;fs0&quot; value=&quot;fs=1&quot; style=&quot;html=1;rounded=0;fontStyle=1&quot; vertex=&quot;1&quot; parent=&quot;1&quot;&gt;&#xa;          &lt;mxGeometry x=&quot;40&quot; y=&quot;360&quot; width=&quot;90&quot; height=&quot;40&quot; as=&quot;geometry&quot; /&gt;&#xa;        &lt;/mxCell&gt;&#xa;        &lt;mxCell id=&quot;fs1&quot; value=&quot;fs=2&quot; style=&quot;html=1;rounded=0;fontStyle=2&quot; vertex=&quot;1&quot; parent=&quot;1&quot;&gt;&#xa;          &lt;mxGeometry x=&quot;150&quot; y=&quot;360&quot; width=&quot;90&quot; height=&quot;40&quot; as=&quot;geometry&quot; /&gt;&#xa;        &lt;/mxCell&gt;&#xa;        &lt;mxCell id=&quot;fs2&quot; value=&quot;fs=4&quot; style=&quot;html=1;rounded=0;fontStyle=4&quot; vertex=&quot;1&quot; parent=&quot;1&quot;&gt;&#xa;          &lt;mxGeometry x=&quot;260&quot; y=&quot;360&quot; width=&quot;90&quot; height=&quot;40&quot; as=&quot;geometry&quot; /&gt;&#xa;        &lt;/mxCell&gt;&#xa;        &lt;mxCell id=&quot;fs3&quot; value=&quot;fs=8&quot; style=&quot;html=1;rounded=0;fontStyle=8&quot; vertex=&quot;1&quot; parent=&quot;1&quot;&gt;&#xa;          &lt;mxGeometry x=&quot;370&quot; y=&quot;360&quot; width=&quot;90&quot; height=&quot;40&quot; as=&quot;geometry&quot; /&gt;&#xa;        &lt;/mxCell&gt;&#xa;        &lt;mxCell id=&quot;fs4&quot; value=&quot;fs=15&quot; style=&quot;html=1;rounded=0;fontStyle=15&quot; vertex=&quot;1&quot; parent=&quot;1&quot;&gt;&#xa;          &lt;mxGeometry x=&quot;480&quot; y=&quot;360&quot; width=&quot;90&quot; height=&quot;40&quot; as=&quot;geometry&quot; /&gt;&#xa;        &lt;/mxCell&gt;&#xa;      &lt;/root&gt;&#xa;    &lt;/mxGraphModel&gt;&#xa;  &lt;/diagram&gt;&#xa;&lt;/mxfile&gt;&#xa;">
+<defs>
+<linearGradient id="qraw-1" x1="0%" y1="0%" x2="0%" y2="100%">
+<stop offset="0%" stop-color="#ff0000" stop-opacity="1"/>
+<stop offset="100%" stop-color="#0000ff" stop-opacity="1"/>
+</linearGradient>
+<linearGradient id="qraw-2" x1="100%" y1="0%" x2="0%" y2="0%">
+<stop offset="0%" stop-color="#ff0000" stop-opacity="1"/>
+<stop offset="100%" stop-color="#0000ff" stop-opacity="1"/>
+</linearGradient>
+<linearGradient id="qraw-3" x1="0%" y1="100%" x2="0%" y2="0%">
+<stop offset="0%" stop-color="#ff0000" stop-opacity="1"/>
+<stop offset="100%" stop-color="#0000ff" stop-opacity="1"/>
+</linearGradient>
+<linearGradient id="qraw-4" x1="0%" y1="0%" x2="100%" y2="0%">
+<stop offset="0%" stop-color="#ff0000" stop-opacity="1"/>
+<stop offset="100%" stop-color="#0000ff" stop-opacity="1"/>
+</linearGradient>
+</defs>
+<g data-cell-id="g0">
+<rect x="4" y="0" width="90" height="60" fill="url(#qraw-1)" stroke="#000000" pointer-events="all"/>
+<g>
+<switch>
+<foreignObject requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" pointer-events="none" width="100%" height="100%" style="overflow: visible; text-align: left;">
+<div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 30px; margin-left: 49px;"><div style="box-sizing: border-box; font-size: 0px; text-align: center; color: #000000; "><div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: nowrap; ">south</div></div></div>
+</foreignObject>
+<text x="49" y="34" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle">south</text>
+</switch>
+</g>
+</g>
+<g data-cell-id="g1">
+<rect x="114" y="0" width="90" height="60" fill="url(#qraw-2)" stroke="#000000" pointer-events="all"/>
+<g>
+<switch>
+<foreignObject requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" pointer-events="none" width="100%" height="100%" style="overflow: visible; text-align: left;">
+<div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 30px; margin-left: 159px;"><div style="box-sizing: border-box; font-size: 0px; text-align: center; color: #000000; "><div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: nowrap; ">west</div></div></div>
+</foreignObject>
+<text x="159" y="34" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle">west</text>
+</switch>
+</g>
+</g>
+<g data-cell-id="g2">
+<rect x="224" y="0" width="90" height="60" fill="url(#qraw-3)" stroke="#000000" pointer-events="all"/>
+<g>
+<switch>
+<foreignObject requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" pointer-events="none" width="100%" height="100%" style="overflow: visible; text-align: left;">
+<div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 30px; margin-left: 269px;"><div style="box-sizing: border-box; font-size: 0px; text-align: center; color: #000000; "><div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: nowrap; ">north</div></div></div>
+</foreignObject>
+<text x="269" y="34" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle">north</text>
+</switch>
+</g>
+</g>
+<g data-cell-id="g3">
+<rect x="334" y="0" width="90" height="60" fill="url(#qraw-4)" stroke="#000000" pointer-events="all"/>
+<g>
+<switch>
+<foreignObject requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" pointer-events="none" width="100%" height="100%" style="overflow: visible; text-align: left;">
+<div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 30px; margin-left: 379px;"><div style="box-sizing: border-box; font-size: 0px; text-align: center; color: #000000; "><div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: nowrap; ">east</div></div></div>
+</foreignObject>
+<text x="379" y="34" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle">east</text>
+</switch>
+</g>
+</g>
+<g data-cell-id="d0">
+<rect x="4" y="100" width="90" height="50" fill="#ffffff" stroke="#000000" stroke-width="2" stroke-dasharray="16 8" pointer-events="all"/>
+<g>
+<switch>
+<foreignObject requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" pointer-events="none" width="100%" height="100%" style="overflow: visible; text-align: left;">
+<div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 125px; margin-left: 49px;"><div style="box-sizing: border-box; font-size: 0px; text-align: center; color: #000000; "><div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: nowrap; ">dashed</div></div></div>
+</foreignObject>
+<text x="49" y="129" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle">dashed</text>
+</switch>
+</g>
+</g>
+<g data-cell-id="d1">
+<rect x="114" y="100" width="90" height="50" fill="#000000" stroke="#000000" opacity="0.25" transform="translate(2,3)" pointer-events="none"/>
+<rect x="114" y="100" width="90" height="50" fill="#dae8fc" stroke="#000000" pointer-events="all"/>
+<g>
+<switch>
+<foreignObject requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" pointer-events="none" width="100%" height="100%" style="overflow: visible; text-align: left;">
+<div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 125px; margin-left: 159px;"><div style="box-sizing: border-box; font-size: 0px; text-align: center; color: #000000; "><div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: nowrap; ">shadow</div></div></div>
+</foreignObject>
+<text x="159" y="129" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle">shadow</text>
+</switch>
+</g>
+</g>
+<g data-cell-id="d2">
+<rect x="224" y="100" width="90" height="50" fill="#f8cecc" fill-opacity="0.5" stroke="#000000" stroke-opacity="0.5" pointer-events="all"/>
+<g>
+<switch>
+<foreignObject requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" pointer-events="none" width="100%" height="100%" style="overflow: visible; text-align: left;">
+<div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 125px; margin-left: 269px;"><div style="box-sizing: border-box; font-size: 0px; text-align: center; color: #000000; "><div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: nowrap; ">opacity</div></div></div>
+</foreignObject>
+<text x="269" y="129" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle">opacity</text>
+</switch>
+</g>
+</g>
+<g data-cell-id="d3">
+<rect x="334" y="100" width="90" height="50" fill="#d5e8d4" fill-opacity="0.3" stroke="#000000" stroke-opacity="0.6" stroke-width="4" pointer-events="all"/>
+<g>
+<switch>
+<foreignObject requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" pointer-events="none" width="100%" height="100%" style="overflow: visible; text-align: left;">
+<div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 125px; margin-left: 379px;"><div style="box-sizing: border-box; font-size: 0px; text-align: center; color: #000000; "><div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: nowrap; ">fill/stroke op</div></div></div>
+</foreignObject>
+<text x="379" y="129" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle">fill/stroke op</text>
+</switch>
+</g>
+</g>
+<g data-cell-id="r0">
+<rect x="4" y="200" width="90" height="50" fill="#fff2cc" stroke="#000000" transform="rotate(45,49,225)" pointer-events="all"/>
+<g transform="rotate(45 49 225)">
+<switch>
+<foreignObject requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" pointer-events="none" width="100%" height="100%" style="overflow: visible; text-align: left;">
+<div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 225px; margin-left: 49px;"><div style="box-sizing: border-box; font-size: 0px; text-align: center; color: #000000; "><div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: nowrap; ">rot 45</div></div></div>
+</foreignObject>
+<text x="49" y="229" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle">rot 45</text>
+</switch>
+</g>
+</g>
+<g data-cell-id="r1">
+<path d="M 134 250 L 152 200 L 206 200 L 224 250 Z" fill="#ffffff" stroke="#000000" stroke-miterlimit="10" transform="translate(179,0)scale(-1,1)translate(-179,0)" pointer-events="all"/>
+<g>
+<switch>
+<foreignObject requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" pointer-events="none" width="100%" height="100%" style="overflow: visible; text-align: left;">
+<div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 225px; margin-left: 179px;"><div style="box-sizing: border-box; font-size: 0px; text-align: center; color: #000000; "><div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: nowrap; ">flipH</div></div></div>
+</foreignObject>
+<text x="179" y="229" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle">flipH</text>
+</switch>
+</g>
+</g>
+<g data-cell-id="r2">
+<path d="M 264 250 L 282 200 L 336 200 L 354 250 Z" fill="#ffffff" stroke="#000000" stroke-miterlimit="10" transform="translate(0,225)scale(1,-1)translate(0,-225)" pointer-events="all"/>
+<g>
+<switch>
+<foreignObject requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" pointer-events="none" width="100%" height="100%" style="overflow: visible; text-align: left;">
+<div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 225px; margin-left: 309px;"><div style="box-sizing: border-box; font-size: 0px; text-align: center; color: #000000; "><div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: nowrap; ">flipV</div></div></div>
+</foreignObject>
+<text x="309" y="229" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle">flipV</text>
+</switch>
+</g>
+</g>
+<g data-cell-id="r3">
+<path d="M 374 210 L 446 210 L 464 235 L 446 260 L 374 260 L 392 235 Z" fill="#ffffff" stroke="#000000" stroke-miterlimit="10" transform="rotate(90,419,235)" pointer-events="all"/>
+<g>
+<switch>
+<foreignObject requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" pointer-events="none" width="100%" height="100%" style="overflow: visible; text-align: left;">
+<div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 235px; margin-left: 419px;"><div style="box-sizing: border-box; font-size: 0px; text-align: center; color: #000000; "><div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: nowrap; ">south</div></div></div>
+</foreignObject>
+<text x="419" y="239" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle">south</text>
+</switch>
+</g>
+</g>
+<g data-cell-id="fs0">
+<rect x="4" y="320" width="90" height="40" fill="#ffffff" stroke="#000000" pointer-events="all"/>
+<g>
+<switch>
+<foreignObject requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" pointer-events="none" width="100%" height="100%" style="overflow: visible; text-align: left;">
+<div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 340px; margin-left: 49px;"><div style="box-sizing: border-box; font-size: 0px; text-align: center; color: #000000; "><div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; font-weight: bold; white-space: nowrap; ">fs=1</div></div></div>
+</foreignObject>
+<text x="49" y="344" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle" font-weight="bold">fs=1</text>
+</switch>
+</g>
+</g>
+<g data-cell-id="fs1">
+<rect x="114" y="320" width="90" height="40" fill="#ffffff" stroke="#000000" pointer-events="all"/>
+<g>
+<switch>
+<foreignObject requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" pointer-events="none" width="100%" height="100%" style="overflow: visible; text-align: left;">
+<div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 340px; margin-left: 159px;"><div style="box-sizing: border-box; font-size: 0px; text-align: center; color: #000000; "><div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; font-style: italic; white-space: nowrap; ">fs=2</div></div></div>
+</foreignObject>
+<text x="159" y="344" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle" font-style="italic">fs=2</text>
+</switch>
+</g>
+</g>
+<g data-cell-id="fs2">
+<rect x="224" y="320" width="90" height="40" fill="#ffffff" stroke="#000000" pointer-events="all"/>
+<g>
+<switch>
+<foreignObject requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" pointer-events="none" width="100%" height="100%" style="overflow: visible; text-align: left;">
+<div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 340px; margin-left: 269px;"><div style="box-sizing: border-box; font-size: 0px; text-align: center; color: #000000; "><div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; text-decoration: underline; white-space: nowrap; ">fs=4</div></div></div>
+</foreignObject>
+<text x="269" y="344" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle" text-decoration="underline">fs=4</text>
+</switch>
+</g>
+</g>
+<g data-cell-id="fs3">
+<rect x="334" y="320" width="90" height="40" fill="#ffffff" stroke="#000000" pointer-events="all"/>
+<g>
+<switch>
+<foreignObject requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" pointer-events="none" width="100%" height="100%" style="overflow: visible; text-align: left;">
+<div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 340px; margin-left: 379px;"><div style="box-sizing: border-box; font-size: 0px; text-align: center; color: #000000; "><div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; text-decoration: line-through; white-space: nowrap; ">fs=8</div></div></div>
+</foreignObject>
+<text x="379" y="344" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle" text-decoration="line-through">fs=8</text>
+</switch>
+</g>
+</g>
+<g data-cell-id="fs4">
+<rect x="444" y="320" width="90" height="40" fill="#ffffff" stroke="#000000" pointer-events="all"/>
+<g>
+<switch>
+<foreignObject requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" pointer-events="none" width="100%" height="100%" style="overflow: visible; text-align: left;">
+<div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 340px; margin-left: 489px;"><div style="box-sizing: border-box; font-size: 0px; text-align: center; color: #000000; "><div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; font-weight: bold; font-style: italic; text-decoration: underline line-through; white-space: nowrap; ">fs=15</div></div></div>
+</foreignObject>
+<text x="489" y="344" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle" font-weight="bold" font-style="italic" text-decoration="underline line-through">fs=15</text>
+</switch>
+</g>
+</g>
+</svg>

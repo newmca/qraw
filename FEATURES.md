@@ -1,0 +1,66 @@
+# Features
+
+What works today. Planned features are in [ROADMAP.md](ROADMAP.md).
+
+## Files
+
+- Open and save `.drawio` (`<mxfile>`) and bare `<mxGraphModel>` `.xml` files without loss. Unknown elements, attributes, comments, CDATA and namespaces survive in their original order.
+- Each page keeps its encoding (compressed or uncompressed), or one encoding can be forced for all pages.
+- Compressed pages from older draw.io versions (no URI encoding, zlib-wrapped) can be read.
+- Saving is deterministic and atomic (`QSaveFile`).
+- Malformed XML is reported with line and column. Model problems (dangling references, duplicate ids, parent cycles) are reported as warnings.
+
+## Command line (`qraw-cli`, also `qraw`)
+
+- `--validate FILE`: load, print diagnostics and statistics. Exits 0 when the file is OK, 1 on errors.
+- `--info FILE`: format, pages (name, id, encoding) and cell, vertex, edge and layer counts.
+- `--convert IN --output OUT [--compressed|--uncompressed]`: rewrite a file, optionally changing the page encoding.
+- `--export IN --output OUT [--format svg|png|jpg|pdf] [--page N | --all-pages] [--scale S] [--border N] [--transparent] [--embed] [--quality Q]`: render a diagram headlessly. `IN` may also be a `.png`, `.svg` or `.pdf` that embeds a diagram. `--embed` stores the editable diagram in the image (draw.io compatible).
+
+## Rendering and export
+
+- Style resolution with draw.io's default stylesheet; 68 native shape painters (basic, flowchart, swimlane/table containers, images, the Shapes.js UML and arrow shapes, BPMN 2 events/gateways/tasks, `basic.rect`, arrows2, floorplan walls and doors) and a stencil interpreter with the vendored draw.io stencil libraries (204 sets, about 9,000 shapes, for example network, flowchart, ER, BPMN, mockup).
+- Hand-drawn styles: `sketch=1` (doubled bowed strokes, hachure, cross-hatch and dashed fills) and `comic=1` (jiggled straight segments) for shapes and edges, on screen and in exports. Deterministic per cell id, so renders are byte-stable. A simplified renderer, not rough.js (KNOWN_ISSUES).
+- Edges: straight, elbow, orthogonal, entity-relation, side-to-side, top-to-bottom and loop routing; perimeters, ports, waypoints, edge-to-edge links; all draw.io arrowheads; edge labels; line jumps (`jumpStyle` arc, gap, sharp, line) over the edges painted before.
+- HTML label subset (bold, italic, lists, links, colors, wrapping, tables) and `%placeholders%`.
+- Dark diagram mode: the page's `adaptiveColors` (automatic, simple, none) and `light-dark(a, b)` colours, on screen (View > Dark Diagram) and in exports (the Export As dialog's Dark appearance, `qraw-cli --export ... --dark`).
+- Export to SVG (own writer, labels as `foreignObject` with a text fallback), PNG, JPEG and PDF; editable diagram embedding in PNG, SVG and PDF, and re-import from those files.
+- The whole bundled corpus (363 files) exports without errors. Gaps are listed in [KNOWN_ISSUES.md](KNOWN_ISSUES.md).
+
+## Editor (`qraw`)
+
+- Containers: drag, Ctrl+drag, palette drop and paste-at-point drop cells into swimlanes and `container=1` shapes (highlighted target, the container grows, dragging out releases the cell), `childLayout=stackLayout` columns and rows (Kanban, UML class boxes) re-stack on every edit, and the +/- control collapses and expands containers.
+- Arrange: Direction > Flip Horizontal / Flip Vertical, Rotate 90 Degrees (Ctrl+R), Autosize (Ctrl+Shift+Y) and Edit Geometry... (Ctrl+Shift+M) from the Arrange menu; Rotate 90 Degrees and Autosize are buttons on the Format panel's Arrange tab, and the first three are in the canvas context menu.
+- Cell data: Edit > Edit Data... (Ctrl+M: id, tags, properties with multi-line values, Add Property, Placeholders; several cells at once; the diagram's own data when nothing is selected), Edit Tooltip..., Edit Link... (a web address or a page of the document, Open in New Window), Edit Image... (a file or the clipboard, embedded in the diagram; Reset to Original Size) and Open Link. Hovering a cell shows its tooltip, a linked vertex shows a link icon that follows the link ([screenshot](docs/screenshots/edit-data.png)).
+- Layout: Arrange > Layout > Horizontal Flow, Vertical Flow, Horizontal Tree, Vertical Tree, Radial Tree, Org Chart, Organic and Circle, each one undo step, on the selection or the whole layer; containers with `childLayout=treeLayout`, `circleLayout` or `flowLayout` keep their children arranged as you edit ([radial](docs/screenshots/layout-radial-tree.png), [flow](docs/screenshots/layout-flow.png), [organic](docs/screenshots/layout-organic.png)).
+- Insert menu: Text (edited in place at once), Image... (a file or the clipboard, embedded; also Ctrl+V of a clipboard image), Link..., Horizontal Line, Vertical Line and Table with a size picker of up to 20 x 20 cells that also works from the keyboard; the same items are in the Insert submenu of the canvas context menu and insert at the click ([screenshot](docs/screenshots/insert-table-picker.png)).
+- Insert > Advanced: From Text... (an indented list as a tree, or `A -> B` lines as a flow), CSV... (draw.io's CSV import with its `#` header, placeholders, connections and layouts; its example is the dialog's example) and Mermaid... (flowcharts and sequence diagrams); errors are listed with their line, the result is one undo step ([flowchart](docs/screenshots/import-mermaid-flowchart.png), [sequence diagram](docs/screenshots/import-mermaid-sequence.png)). PlantUML is not available.
+- Extras: Edit Diagram... (the page's XML in a monospace editor, applied as one undo step; errors show their line and column and keep the dialog open, [screenshot](docs/screenshots/edit-diagram.png)); View > Units and the Diagram tab's Units box (points, inches, millimeters, centimeters, meters) for every length field, [screenshot](docs/screenshots/units-millimeters.png); Edit > Copy as Image (Ctrl+Alt+X); page tabs can be dragged to reorder the pages.
+- Tables: the Arrange tab has Insert Row Above/Below, Insert Column Left/Right, Delete Row and Delete Column for a selected table, row or cell; dragging a row or column border resizes it (Shift gives the size to the next one instead of growing the table); the first click on a table selects the table and the next the cell; edges connect to rows. Merge Cells and Unmerge Cells (Arrange tab, context menu, Arrange > Table) for a range of cells, selected with Shift+click or Ctrl+click; tables with `tableRender=collapsed` (what Insert > Table makes) paint shared borders once, on screen and in exports ([screenshot](docs/screenshots/table-merged.png)).
+- Dark Diagram: View > Dark Diagram shows the diagram in the dark scheme, whatever the application theme is; the Diagram tab's Adaptive colors box (Default (Automatic), Automatic, Simple, None) says how a page follows it ([screenshot](docs/screenshots/dark-diagram.png)).
+- Freehand: Insert > Freehand, the toolbar button or X turns the tool on; drag to draw (the stroke is drawn live), release to insert it as one smoothed, resizable shape with the default style; Escape cancels a stroke ([screenshot](docs/screenshots/freehand-stroke.png)).
+- Accessibility and keyboard: every control has an accessible name (a test enforces it); the canvas is an accessible "Diagram" that describes the page and the selection; icon-only buttons show their tooltip on keyboard focus. On the focused canvas Tab and Shift+Tab select the next and previous cell (the view scrolls to it), Alt+Tab the first child, Alt+Shift+Tab the container, Ctrl+Tab leaves the canvas, arrows move the selection, Enter or F2 edits the label (see COMPATIBILITY.md, "Keyboard navigation").
+- View > Cells: the layers and cells of the page as a tree for keyboard and screen reader users, with a spoken-style description of each row ("Connector from Start to Check input", "Ellipse, at 280, 40, size 120 by 60"); it follows the canvas selection both ways and Enter edits the label ([screenshot](docs/screenshots/cells-panel.png)).
+- Main window with menus, toolbar, status bar, shape palette (left), Format panel (right), page tabs, and optional Layers, Outline, Find/Replace and Cells docks. Light, dark and high-contrast themes; strings go through `tr()`.
+- Canvas: grid, page view, pan, zoom (steps, fit page, fit window, fit selection), click, shift and ctrl selection, rubber band, group drill-down (double click), move with grid snapping and alignment guides, resize and rotate handles (also on the union box of several selected cells: Shift keeps the proportions, Alt resizes around the centre, Ctrl also scales fonts and line widths; a click on the rotation handle turns by 90 degrees), Ctrl+drag duplicate, arrow-key nudge.
+- Connect shapes with hover arrows and connection points; drag edge ends (the preview is the routed edge) and waypoints; orthogonal edges have a handle at the middle of each segment that moves the segment and re-routes the edge; inline label editing (plain text and HTML with bold, italic, underline; transparent editor over the shape, rotated labels edited rotated, `autosize=1` cells resized on commit; a double click on blank canvas inserts a text cell with one undo step); a cell cloned from a hover arrow keeps its label.
+- Format panel for the diagram (grid, page, background, paper) and for selected cells (fill, line, effects, text, arrange); mixed values are shown as such. Every control is one undo step.
+- Edit actions: cut, copy, paste, duplicate, delete, group, ungroup, align, distribute, z-order, lock, copy and paste style (Edit menu, context menu and Style tab), select all/vertices/edges, find and replace (labels, values, styles) across pages; find by shape type ("Shape types", for example `ellipse`, or `rectangle` for cells without a shape style) and Select All in Find, which selects the matches on the current page.
+- Shape palette with 18 palettes (about 3,500 shapes: general, basic, arrows, flowchart, UML, ER, BPMN, network, AWS, Azure, GCP, Kubernetes, mockups, floorplan, tables, containers), search, favorites, recently used, click or drag to insert.
+- Shape libraries: File > New Library / Open Library (or File > Open, or dropping an `.xml` mxlibrary file) shows a draw.io library as a palette section. Add the selection as a new entry, rename or remove entries, export a copy, close it. Changes are saved to the file at once and are not undo steps; open libraries come back on the next start. Plain and compressed entries and image entries are read; files are written like draw.io does.
+- Default style: **Set as Default Style** (Ctrl+Shift+D) makes the style of the selected cell the default for new vertices or new edges, as in draw.io; palette entries, new connectors and text inserted on blank canvas take it, and **Clear Default Style** (Ctrl+Shift+R) removes it. The defaults are application settings and survive a restart.
+- Fonts: the Text tab lists draw.io's default fonts, recently used fonts and all installed families in a searchable combo box; a draw.io font list (`Arial,Helvetica`) can be typed and is kept as written.
+- Edit > Edit Shape...: for a shape that is a stencil, edit its stencil XML with a live preview; OK stores it in the cell's style (`shape=stencil(...)`).
+- Pages and layers: add, duplicate, rename, move, delete pages; add, rename, reorder, hide, lock layers.
+- Files: new, open, save, save as, revert, recent files, template gallery, welcome dialog, autosave with crash recovery (after a crash or kill the next start shows "Qraw Closed Unexpectedly" with the autosaved documents: Recover, Discard or Later, and a link to the crash reports; [screenshot](docs/screenshots/recovery-dialog.png)), a log file with logging categories (Help > Open Log Folder) and crash reports without document content (BUILDING.md, "Logging, crash reports and recovery"), drag and drop of files onto the window.
+- Export dialog (PNG, JPEG, SVG, PDF; scale, DPI, border, transparent, embed diagram), print and print preview, preferences, keyboard shortcut list.
+- `qraw --screenshot OUT.png [FILE] [--panel NAME]... [--size WxH] [--select ID]... [--theme light|dark] [--dark-diagram] [--search TEXT] [--dialog export|welcome]` renders the window (or a dialog) offscreen; used for the pictures in `docs/screenshots/`.
+
+## Editing model (library)
+
+- `commands::Editor` with `UndoStack`, observers and merge by command id. Operations: add, remove, move, resize, connect, waypoints, z-order, edge parents, reparent, group/ungroup, style, label and data, pages and layers. Every operation is verified to undo and redo to identical bytes on the corpus.
+
+## Library API (for contributors)
+
+- `core::Style` with ordered, byte-preserving edits; `core::Cell`, `Geometry`, `Page` and `Document` with typed accessors and structure helpers (children, layers, descendants, id generation, validation).
+- `format::semanticEqual` for canonical comparison of documents or files.

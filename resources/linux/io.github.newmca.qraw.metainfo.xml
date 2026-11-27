@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>io.github.newmca.qraw</id>
+  <name>Qraw</name>
+  <summary>Native diagram editor for draw.io files</summary>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>Apache-2.0</project_license>
+  <developer id="io.github.newmca">
+    <name>newmca</name>
+  </developer>
+  <description>
+    <p>Qraw is a native Qt 6 desktop editor for draw.io (.drawio) diagrams. It opens, edits and saves the files without losing information it does not understand, and exports diagrams to SVG, PNG, JPEG and PDF.</p>
+    <p>Features include shape libraries, a format panel, pages and layers, containers and tables, find and replace, templates, and a command-line exporter.</p>
+  </description>
+  <launchable type="desktop-id">io.github.newmca.qraw.desktop</launchable>
+  <url type="homepage">https://github.com/newmca/qraw</url>
+  <url type="bugtracker">https://github.com/newmca/qraw/issues</url>
+  <url type="vcs-browser">https://github.com/newmca/qraw</url>
+  <branding>
+    <color type="primary" scheme_preference="light">#a9c8f5</color>
+    <color type="primary" scheme_preference="dark">#174f9e</color>
+  </branding>
+  <categories>
+    <category>Graphics</category>
+    <category>VectorGraphics</category>
+  </categories>
+  <provides>
+    <binary>qraw</binary>
+    <mediatype>application/vnd.jgraph.mxfile</mediatype>
+  </provides>
+  <content_rating type="oars-1.1"/>
+  <screenshots>
+    <screenshot type="default">
+      <image>https://raw.githubusercontent.com/newmca/qraw/main/docs/screenshots/main-window.png</image>
+      <caption>The main window with the shape palette and the format panel</caption>
+    </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/newmca/qraw/main/docs/screenshots/containers-tables.png</image>
+      <caption>Swimlanes, containers and tables</caption>
+    </screenshot>
+  </screenshots>
+  <releases>
+    <release version="0.1.0" date="2026-11-26"/>
+  </releases>
+</component>

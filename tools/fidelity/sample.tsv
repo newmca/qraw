@@ -1,0 +1,124 @@
+file	family	feature
+tools/fidelity/probes/fills-shadow-opacity.drawio	probe	fill styles, shadow, gradient, opacity, dash, stroke width, arc size
+tools/fidelity/probes/basic-shapes.drawio	probe	basic shape catalogue
+tools/fidelity/probes/labels.drawio	probe	label fonts, positions, rotation, HTML, wrap
+tools/fidelity/probes/edge-styles.drawio	probe	every edgeStyle, curved, shape=link/flexArrow
+tools/fidelity/probes/edge-waypoints-ports.drawio	probe	waypoints, ports, free edges, loops
+tools/fidelity/probes/arrow-markers.drawio	probe	all arrow markers, fill, widths
+tools/fidelity/probes/arrow-sizes.drawio	probe	marker sizes
+tools/fidelity/probes/line-jumps.drawio	probe	line jumps
+tools/fidelity/probes/containers-swimlanes.drawio	probe	swimlanes, containers, collapsed, stack, table
+tools/fidelity/probes/sketch-comic.drawio	probe	sketch, comic, fill styles
+tests/corpus/generated/flowchart/basic-linear.drawio	flowchart	basic flowchart, waypoints, labels
+tests/corpus/generated/flowchart/shape-catalog.drawio	flowchart	basic flowchart, waypoints, labels
+tests/corpus/generated/flowchart/loops-constraints.drawio	flowchart	basic flowchart, waypoints, labels
+tests/corpus/generated/flowchart/edge-label-offsets.drawio	flowchart	basic flowchart, waypoints, labels
+tests/corpus/generated/flowchart/edges-to-ports.drawio	flowchart	basic flowchart, waypoints, labels
+tests/corpus/generated/flowchart/large-120-nodes.drawio	flowchart	large (265 cells)
+tests/corpus/generated/flowchart/random-compressed.drawio	flowchart	dashed edges, random layout
+tests/corpus/generated/bpmn/approval-with-gateways.drawio	bpmn	BPMN pools, gateways, events
+tests/corpus/generated/bpmn/event-types.drawio	bpmn	BPMN pools, gateways, events
+tests/corpus/generated/bpmn/collaboration-two-pools.drawio	bpmn	BPMN pools, gateways, events
+tests/corpus/generated/uml-class/associations.drawio	uml-class	class swimlanes, associations
+tests/corpus/generated/uml-class/interfaces.drawio	uml-class	class swimlanes, associations
+tests/corpus/generated/uml-class/packages.drawio	uml-class	class swimlanes, associations
+tests/corpus/generated/uml-sequence/checkout.drawio	uml-sequence	lifelines, frames
+tests/corpus/generated/uml-sequence/frames.drawio	uml-sequence	lifelines, frames
+tests/corpus/generated/uml-activity/with-fork-join.drawio	uml-activity	fork/join, partitions
+tests/corpus/generated/uml-activity/partitions.drawio	uml-activity	fork/join, partitions
+tests/corpus/generated/uml-state/composite-state.drawio	uml-state	states, self transitions
+tests/corpus/generated/uml-state/traffic-light.drawio	uml-state	states, self transitions
+tests/corpus/generated/er-tables/shop-schema-tables.drawio	er-tables	tables, rows, crow's foot
+tests/corpus/generated/er-tables/stacked-entities.drawio	er-tables	tables, rows, crow's foot
+tests/corpus/generated/er-tables/chen-notation.drawio	er-tables	tables, rows, crow's foot
+tests/corpus/generated/er-tables/html-table-label.drawio	er-tables	tables, rows, crow's foot
+tests/corpus/generated/network/star-topology.drawio	network	network, cisco, racks, cloud shape
+tests/corpus/generated/network/datacenter-subnets.drawio	network	network, cisco, racks, cloud shape
+tests/corpus/generated/network/wan-vpn.drawio	network	network, cisco, racks, cloud shape
+tests/corpus/generated/network/vlans.drawio	network	network, cisco, racks, cloud shape
+tests/corpus/generated/cloud/aws-three-tier-web.drawio	cloud	AWS4 icons and groups
+tests/corpus/generated/cloud/azure-web-app.drawio	cloud	Azure images
+tests/corpus/generated/cloud/gcp-pipeline.drawio	cloud	GCP stencils
+tests/corpus/generated/cloud/k8s-cluster.drawio	cloud	Kubernetes icons
+tests/corpus/generated/floorplan/apartment.drawio	floorplan	floorplan stencils, walls, rotation
+tests/corpus/generated/floorplan/rotated-furniture.drawio	floorplan	floorplan stencils, walls, rotation
+tests/corpus/generated/mockup/login-page.drawio	mockup	mockup stencils, forms, shadow
+tests/corpus/generated/mockup/form-checkboxes-compressed.drawio	mockup	mockup stencils, forms, shadow
+tests/corpus/generated/mockup/dashboard-cards.drawio	mockup	mockup stencils, forms, shadow
+tests/corpus/generated/mockup/android-phone.drawio	mockup	mockup stencils, forms, shadow
+tests/corpus/generated/labels/breaks-and-nesting.drawio	labels	HTML labels, fonts, rtl, unicode
+tests/corpus/generated/labels/text-style-variants.drawio	labels	HTML labels, fonts, rtl, unicode
+tests/corpus/generated/labels/unicode-scripts.drawio	labels	HTML labels, fonts, rtl, unicode
+tests/corpus/generated/labels/html-entities.drawio	labels	HTML labels, fonts, rtl, unicode
+tests/corpus/generated/edges/arrow-markers-compressed.drawio	edges	markers, edge styles, jumps, edge-to-edge
+tests/corpus/generated/edges/edge-styles.drawio	edges	markers, edge styles, jumps, edge-to-edge
+tests/corpus/generated/edges/line-jumps.drawio	edges	markers, edge styles, jumps, edge-to-edge
+tests/corpus/generated/edges/exit-entry-constraints.drawio	edges	markers, edge styles, jumps, edge-to-edge
+tests/corpus/generated/edges/self-loops-and-parallel.drawio	edges	markers, edge styles, jumps, edge-to-edge
+tests/corpus/generated/edges/edge-label-children.drawio	edges	markers, edge styles, jumps, edge-to-edge
+tests/corpus/generated/containers/nested-eight-deep.drawio	containers	groups, nesting, rotation, collapsed
+tests/corpus/generated/containers/rotated-group-flipped-child.drawio	containers	groups, nesting, rotation, collapsed
+tests/corpus/generated/containers/collapsed-with-edge-from-child.drawio	containers	groups, nesting, rotation, collapsed
+tests/corpus/generated/swimlanes/pool-horizontal-lanes.drawio	swimlanes	pools, lanes, kanban stack
+tests/corpus/generated/swimlanes/vertical-lanes-compressed.drawio	swimlanes	pools, lanes, kanban stack
+tests/corpus/generated/swimlanes/kanban-stack-layout.drawio	swimlanes	pools, lanes, kanban stack
+tests/corpus/generated/orgchart/curved-edges.drawio	orgchart	tree, curved edges
+tests/corpus/generated/orgchart/small-tree.drawio	orgchart	tree, curved edges
+tests/corpus/generated/whiteboard/mind-map-curved.drawio	whiteboard	sketch=1, mind map, sticky notes
+tests/corpus/generated/whiteboard/sticky-notes.drawio	whiteboard	sketch=1, mind map, sticky notes
+tests/corpus/generated/whiteboard/callouts-and-basics.drawio	whiteboard	sketch=1, mind map, sticky notes
+tests/corpus/generated/styles/mxgraph-shape-names.drawio	styles	mxgraph shape names, stencil
+tests/corpus/upstream-templates/basic/classes.xml	upstream/basic	templates: classes, ERD, kanban, mind map
+tests/corpus/upstream-templates/basic/erd.xml	upstream/basic	templates: classes, ERD, kanban, mind map
+tests/corpus/upstream-templates/basic/kanban.xml	upstream/basic	templates: classes, ERD, kanban, mind map
+tests/corpus/upstream-templates/basic/mindmap.xml	upstream/basic	templates: classes, ERD, kanban, mind map
+tests/corpus/upstream-templates/basic/swimlanes.xml	upstream/basic	templates: classes, ERD, kanban, mind map
+tests/corpus/upstream-templates/business/bpmn.xml	upstream/business	gradient and shadow templates: BPMN, ArchiMate, canvas, timelines, PERT
+tests/corpus/upstream-templates/business/archimate.xml	upstream/business	gradient and shadow templates: BPMN, ArchiMate, canvas, timelines, PERT
+tests/corpus/upstream-templates/business/business_model_canvas_1.xml	upstream/business	gradient and shadow templates: BPMN, ArchiMate, canvas, timelines, PERT
+tests/corpus/upstream-templates/business/pert_1.xml	upstream/business	gradient and shadow templates: BPMN, ArchiMate, canvas, timelines, PERT
+tests/corpus/upstream-templates/business/timeline_2.xml	upstream/business	gradient and shadow templates: BPMN, ArchiMate, canvas, timelines, PERT
+tests/corpus/upstream-templates/business/ishikawa_2.xml	upstream/business	gradient and shadow templates: BPMN, ArchiMate, canvas, timelines, PERT
+tests/corpus/upstream-templates/charts/bar_chart_1.xml	upstream/charts	charts and org charts
+tests/corpus/upstream-templates/charts/org_chart_1.xml	upstream/charts	charts and org charts
+tests/corpus/upstream-templates/charts/processbar.xml	upstream/charts	charts and org charts
+tests/corpus/upstream-templates/cloud/aws/aws_1.xml	upstream/cloud	AWS, Azure, GCP, IBM templates
+tests/corpus/upstream-templates/cloud/aws/aws_3d.xml	upstream/cloud	AWS, Azure, GCP, IBM templates
+tests/corpus/upstream-templates/cloud/azure/azure_1.xml	upstream/cloud	AWS, Azure, GCP, IBM templates
+tests/corpus/upstream-templates/cloud/gcp/gcp_websites_content_hosting.xml	upstream/cloud	AWS, Azure, GCP, IBM templates
+tests/corpus/upstream-templates/cloud/ibm/ibm_microservices.xml	upstream/cloud	AWS, Azure, GCP, IBM templates
+tests/corpus/upstream-templates/engineering/electrical_1.xml	upstream/engineering	electrical, cabinet
+tests/corpus/upstream-templates/flowcharts/cross_functional_flowchart_1.xml	upstream/flowcharts	cross-functional, data flow, EPC, workflow
+tests/corpus/upstream-templates/flowcharts/data_flow_1.xml	upstream/flowcharts	cross-functional, data flow, EPC, workflow
+tests/corpus/upstream-templates/flowcharts/epc.xml	upstream/flowcharts	cross-functional, data flow, EPC, workflow
+tests/corpus/upstream-templates/flowcharts/flowchart_2.xml	upstream/flowcharts	cross-functional, data flow, EPC, workflow
+tests/corpus/upstream-templates/layout/wireframe_1.xml	upstream/layout	wireframes
+tests/corpus/upstream-templates/layout/bootstrap.xml	upstream/layout	wireframes
+tests/corpus/upstream-templates/maps/concept_map_1.xml	upstream/maps	concept map, site map
+tests/corpus/upstream-templates/maps/site_map.xml	upstream/maps	concept map, site map
+tests/corpus/upstream-templates/network/cisco_2.xml	upstream/network	network stencils
+tests/corpus/upstream-templates/network/lan.xml	upstream/network	network stencils
+tests/corpus/upstream-templates/network/network.xml	upstream/network	network stencils
+tests/corpus/upstream-templates/network/active_directory.xml	upstream/network	network stencils
+tests/corpus/upstream-templates/other/infographic_1.xml	upstream/other	infographics, decision tree, cycle, floor plan
+tests/corpus/upstream-templates/other/decision_tree.xml	upstream/other	infographics, decision tree, cycle, floor plan
+tests/corpus/upstream-templates/other/cycle_1.xml	upstream/other	infographics, decision tree, cycle, floor plan
+tests/corpus/upstream-templates/other/floor_plan.xml	upstream/other	infographics, decision tree, cycle, floor plan
+tests/corpus/upstream-templates/other/water_cycle.xml	upstream/other	infographics, decision tree, cycle, floor plan
+tests/corpus/upstream-templates/software/class_2.xml	upstream/software	class, component, git flow, database, EIP
+tests/corpus/upstream-templates/software/component.xml	upstream/software	class, component, git flow, database, EIP
+tests/corpus/upstream-templates/software/git_flow_1.xml	upstream/software	class, component, git flow, database, EIP
+tests/corpus/upstream-templates/software/database_2.xml	upstream/software	class, component, git flow, database, EIP
+tests/corpus/upstream-templates/software/eip.xml	upstream/software	class, component, git flow, database, EIP
+tests/corpus/upstream-templates/tables/gantt_2.xml	upstream/tables	gantt, authority matrix
+tests/corpus/upstream-templates/tables/authority_matrix.xml	upstream/tables	gantt, authority matrix
+tests/corpus/upstream-templates/uml/activity_diagram_1.xml	upstream/uml	UML activity, sequence, state, SysML
+tests/corpus/upstream-templates/uml/sequence_1.xml	upstream/uml	UML activity, sequence, state, SysML
+tests/corpus/upstream-templates/uml/state_machine.xml	upstream/uml	UML activity, sequence, state, SysML
+tests/corpus/upstream-templates/uml/sysml.xml	upstream/uml	UML activity, sequence, state, SysML
+tests/corpus/upstream-templates/uml/uml_2.xml	upstream/uml	UML activity, sequence, state, SysML
+tests/corpus/upstream-templates/venn/venn_1.xml	upstream/venn	venn, spider
+tests/corpus/upstream-templates/venn/venn_4.xml	upstream/venn	venn, spider
+tests/corpus/upstream-templates/venn/spider_2.xml	upstream/venn	venn, spider
+tests/corpus/upstream-templates/wireframes/home_page_1.xml	upstream/wireframes	wireframes
+tests/corpus/upstream-templates/wireframes/blog_1.xml	upstream/wireframes	wireframes

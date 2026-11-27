@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="641px" height="152px" viewBox="-0.5 -0.5 641 152" content="&lt;mxfile host=&quot;qraw-fixture&quot;&gt;&#xa;  &lt;diagram name=&quot;tables-merged&quot; id=&quot;tables-merged&quot;&gt;&#xa;    &lt;mxGraphModel dx=&quot;800&quot; dy=&quot;600&quot; grid=&quot;1&quot; gridSize=&quot;10&quot; guides=&quot;1&quot; tooltips=&quot;1&quot; connect=&quot;1&quot; arrows=&quot;1&quot; fold=&quot;1&quot; page=&quot;1&quot; pageScale=&quot;1&quot; pageWidth=&quot;827&quot; pageHeight=&quot;1169&quot; math=&quot;0&quot; shadow=&quot;0&quot;&gt;&#xa;      &lt;root&gt;&#xa;        &lt;mxCell id=&quot;0&quot; /&gt;&#xa;        &lt;mxCell id=&quot;1&quot; parent=&quot;0&quot; /&gt;&#xa;        &lt;mxCell id=&quot;tc&quot; value=&quot;&quot; style=&quot;shape=table;startSize=0;container=1;collapsible=0;childLayout=tableLayout;fixedHeader=1;tableRender=collapsed;&quot; vertex=&quot;1&quot; parent=&quot;1&quot;&gt;&#xa;          &lt;mxGeometry x=&quot;40&quot; y=&quot;40&quot; width=&quot;360&quot; height=&quot;150&quot; as=&quot;geometry&quot; /&gt;&#xa;        &lt;/mxCell&gt;&#xa;        &lt;mxCell id=&quot;tcr0&quot; value=&quot;&quot; style=&quot;shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fixedHeader=1;&quot; vertex=&quot;1&quot; parent=&quot;tc&quot;&gt;&#xa;          &lt;mxGeometry x=&quot;0&quot; y=&quot;0&quot; width=&quot;360&quot; height=&quot;50&quot; as=&quot;geometry&quot; /&gt;&#xa;        &lt;/mxCell&gt;&#xa;        &lt;mxCell id=&quot;tcc00&quot; value=&quot;merged 2x2&quot; style=&quot;shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=#dae8fc;rowspan=2;colspan=2;pointerEvents=1;&quot; vertex=&quot;1&quot; parent=&quot;tcr0&quot;&gt;&#xa;          &lt;mxGeometry x=&quot;0&quot; y=&quot;0&quot; width=&quot;240&quot; height=&quot;100&quot; as=&quot;geometry&quot;&gt;&#xa;            &lt;mxRectangle width=&quot;120&quot; height=&quot;50&quot; as=&quot;alternateBounds&quot; /&gt;&#xa;          &lt;/mxGeometry&gt;&#xa;        &lt;/mxCell&gt;&#xa;        &lt;mxCell id=&quot;tcc01&quot; value=&quot;&quot; style=&quot;shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;pointerEvents=1;&quot; vertex=&quot;1&quot; parent=&quot;tcr0&quot; visible=&quot;0&quot;&gt;&#xa;          &lt;mxGeometry x=&quot;120&quot; y=&quot;0&quot; width=&quot;120&quot; height=&quot;50&quot; as=&quot;geometry&quot; /&gt;&#xa;        &lt;/mxCell&gt;&#xa;        &lt;mxCell id=&quot;tcc02&quot; value=&quot;0,2&quot; style=&quot;shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;pointerEvents=1;&quot; vertex=&quot;1&quot; parent=&quot;tcr0&quot;&gt;&#xa;          &lt;mxGeometry x=&quot;240&quot; y=&quot;0&quot; width=&quot;120&quot; height=&quot;50&quot; as=&quot;geometry&quot; /&gt;&#xa;        &lt;/mxCell&gt;&#xa;        &lt;mxCell id=&quot;tcr1&quot; value=&quot;&quot; style=&quot;shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fixedHeader=1;&quot; vertex=&quot;1&quot; parent=&quot;tc&quot;&gt;&#xa;          &lt;mxGeometry x=&quot;0&quot; y=&quot;50&quot; width=&quot;360&quot; height=&quot;50&quot; as=&quot;geometry&quot; /&gt;&#xa;        &lt;/mxCell&gt;&#xa;        &lt;mxCell id=&quot;tcc10&quot; value=&quot;&quot; style=&quot;shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;pointerEvents=1;&quot; vertex=&quot;1&quot; parent=&quot;tcr1&quot; visible=&quot;0&quot;&gt;&#xa;          &lt;mxGeometry x=&quot;0&quot; y=&quot;0&quot; width=&quot;120&quot; height=&quot;50&quot; as=&quot;geometry&quot; /&gt;&#xa;        &lt;/mxCell&gt;&#xa;        &lt;mxCell id=&quot;tcc11&quot; value=&quot;&quot; style=&quot;shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;pointerEvents=1;&quot; vertex=&quot;1&quot; parent=&quot;tcr1&quot; visible=&quot;0&quot;&gt;&#xa;          &lt;mxGeometry x=&quot;120&quot; y=&quot;0&quot; width=&quot;120&quot; height=&quot;50&quot; as=&quot;geometry&quot; /&gt;&#xa;        &lt;/mxCell&gt;&#xa;        &lt;mxCell id=&quot;tcc12&quot; value=&quot;1,2&quot; style=&quot;shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;pointerEvents=1;&quot; vertex=&quot;1&quot; parent=&quot;tcr1&quot;&gt;&#xa;          &lt;mxGeometry x=&quot;240&quot; y=&quot;0&quot; width=&quot;120&quot; height=&quot;50&quot; as=&quot;geometry&quot; /&gt;&#xa;        &lt;/mxCell&gt;&#xa;        &lt;mxCell id=&quot;tcr2&quot; value=&quot;&quot; style=&quot;shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fixedHeader=1;&quot; vertex=&quot;1&quot; parent=&quot;tc&quot;&gt;&#xa;          &lt;mxGeometry x=&quot;0&quot; y=&quot;100&quot; width=&quot;360&quot; height=&quot;50&quot; as=&quot;geometry&quot; /&gt;&#xa;        &lt;/mxCell&gt;&#xa;        &lt;mxCell id=&quot;tcc20&quot; value=&quot;wide&quot; style=&quot;shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=#fff2cc;colspan=2;pointerEvents=1;&quot; vertex=&quot;1&quot; parent=&quot;tcr2&quot;&gt;&#xa;          &lt;mxGeometry x=&quot;0&quot; y=&quot;0&quot; width=&quot;240&quot; height=&quot;50&quot; as=&quot;geometry&quot;&gt;&#xa;            &lt;mxRectangle width=&quot;120&quot; height=&quot;50&quot; as=&quot;alternateBounds&quot; /&gt;&#xa;          &lt;/mxGeometry&gt;&#xa;        &lt;/mxCell&gt;&#xa;        &lt;mxCell id=&quot;tcc21&quot; value=&quot;&quot; style=&quot;shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;pointerEvents=1;&quot; vertex=&quot;1&quot; parent=&quot;tcr2&quot; visible=&quot;0&quot;&gt;&#xa;          &lt;mxGeometry x=&quot;120&quot; y=&quot;0&quot; width=&quot;120&quot; height=&quot;50&quot; as=&quot;geometry&quot; /&gt;&#xa;        &lt;/mxCell&gt;&#xa;        &lt;mxCell id=&quot;tcc22&quot; value=&quot;red&quot; style=&quot;shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;strokeColor=#d00000;strokeWidth=3;pointerEvents=1;&quot; vertex=&quot;1&quot; parent=&quot;tcr2&quot;&gt;&#xa;          &lt;mxGeometry x=&quot;240&quot; y=&quot;0&quot; width=&quot;120&quot; height=&quot;50&quot; as=&quot;geometry&quot; /&gt;&#xa;        &lt;/mxCell&gt;&#xa;        &lt;mxCell id=&quot;ts&quot; value=&quot;&quot; style=&quot;shape=table;startSize=0;container=1;collapsible=0;childLayout=tableLayout;fixedHeader=1;&quot; vertex=&quot;1&quot; parent=&quot;1&quot;&gt;&#xa;          &lt;mxGeometry x=&quot;440&quot; y=&quot;40&quot; width=&quot;240&quot; height=&quot;100&quot; as=&quot;geometry&quot; /&gt;&#xa;        &lt;/mxCell&gt;&#xa;        &lt;mxCell id=&quot;tsr0&quot; value=&quot;&quot; style=&quot;shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fixedHeader=1;&quot; vertex=&quot;1&quot; parent=&quot;ts&quot;&gt;&#xa;          &lt;mxGeometry x=&quot;0&quot; y=&quot;0&quot; width=&quot;240&quot; height=&quot;50&quot; as=&quot;geometry&quot; /&gt;&#xa;        &lt;/mxCell&gt;&#xa;        &lt;mxCell id=&quot;tsc00&quot; value=&quot;merged 2x1&quot; style=&quot;shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;colspan=2;pointerEvents=1;&quot; vertex=&quot;1&quot; parent=&quot;tsr0&quot;&gt;&#xa;          &lt;mxGeometry x=&quot;0&quot; y=&quot;0&quot; width=&quot;160&quot; height=&quot;50&quot; as=&quot;geometry&quot;&gt;&#xa;            &lt;mxRectangle width=&quot;80&quot; height=&quot;50&quot; as=&quot;alternateBounds&quot; /&gt;&#xa;          &lt;/mxGeometry&gt;&#xa;        &lt;/mxCell&gt;&#xa;        &lt;mxCell id=&quot;tsc01&quot; value=&quot;&quot; style=&quot;shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;&quot; vertex=&quot;1&quot; parent=&quot;tsr0&quot; visible=&quot;0&quot;&gt;&#xa;          &lt;mxGeometry x=&quot;80&quot; y=&quot;0&quot; width=&quot;80&quot; height=&quot;50&quot; as=&quot;geometry&quot; /&gt;&#xa;        &lt;/mxCell&gt;&#xa;        &lt;mxCell id=&quot;tsc02&quot; value=&quot;0,2&quot; style=&quot;shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;&quot; vertex=&quot;1&quot; parent=&quot;tsr0&quot;&gt;&#xa;          &lt;mxGeometry x=&quot;160&quot; y=&quot;0&quot; width=&quot;80&quot; height=&quot;50&quot; as=&quot;geometry&quot; /&gt;&#xa;        &lt;/mxCell&gt;&#xa;        &lt;mxCell id=&quot;tsr1&quot; value=&quot;&quot; style=&quot;shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fixedHeader=1;&quot; vertex=&quot;1&quot; parent=&quot;ts&quot;&gt;&#xa;          &lt;mxGeometry x=&quot;0&quot; y=&quot;50&quot; width=&quot;240&quot; height=&quot;50&quot; as=&quot;geometry&quot; /&gt;&#xa;        &lt;/mxCell&gt;&#xa;        &lt;mxCell id=&quot;tsc10&quot; value=&quot;1,0&quot; style=&quot;shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;&quot; vertex=&quot;1&quot; parent=&quot;tsr1&quot;&gt;&#xa;          &lt;mxGeometry x=&quot;0&quot; y=&quot;0&quot; width=&quot;80&quot; height=&quot;50&quot; as=&quot;geometry&quot; /&gt;&#xa;        &lt;/mxCell&gt;&#xa;        &lt;mxCell id=&quot;tsc11&quot; value=&quot;1,1&quot; style=&quot;shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;&quot; vertex=&quot;1&quot; parent=&quot;tsr1&quot;&gt;&#xa;          &lt;mxGeometry x=&quot;80&quot; y=&quot;0&quot; width=&quot;80&quot; height=&quot;50&quot; as=&quot;geometry&quot; /&gt;&#xa;        &lt;/mxCell&gt;&#xa;        &lt;mxCell id=&quot;tsc12&quot; value=&quot;1,2&quot; style=&quot;shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;&quot; vertex=&quot;1&quot; parent=&quot;tsr1&quot;&gt;&#xa;          &lt;mxGeometry x=&quot;160&quot; y=&quot;0&quot; width=&quot;80&quot; height=&quot;50&quot; as=&quot;geometry&quot; /&gt;&#xa;        &lt;/mxCell&gt;&#xa;      &lt;/root&gt;&#xa;    &lt;/mxGraphModel&gt;&#xa;  &lt;/diagram&gt;&#xa;&lt;/mxfile&gt;&#xa;">
+<defs>
+<clipPath id="qraw-1">
+<rect x="0" y="0" width="240" height="100"/>
+</clipPath>
+<clipPath id="qraw-2">
+<rect x="240" y="0" width="120" height="50"/>
+</clipPath>
+<clipPath id="qraw-3">
+<rect x="240" y="50" width="120" height="50"/>
+</clipPath>
+<clipPath id="qraw-4">
+<rect x="0" y="100" width="240" height="50"/>
+</clipPath>
+<clipPath id="qraw-5">
+<rect x="240" y="100" width="120" height="50"/>
+</clipPath>
+<clipPath id="qraw-6">
+<rect x="400" y="0" width="160" height="50"/>
+</clipPath>
+<clipPath id="qraw-7">
+<rect x="560" y="0" width="80" height="50"/>
+</clipPath>
+<clipPath id="qraw-8">
+<rect x="400" y="50" width="80" height="50"/>
+</clipPath>
+<clipPath id="qraw-9">
+<rect x="480" y="50" width="80" height="50"/>
+</clipPath>
+<clipPath id="qraw-10">
+<rect x="560" y="50" width="80" height="50"/>
+</clipPath>
+</defs>
+<g data-cell-id="tc">
+<path d="M 0 0 L 240 0 L 240 100 L 0 100 Z" fill="#dae8fc" stroke="none" pointer-events="all"/>
+<path d="M 0 100 L 240 100 L 240 150 L 0 150 Z" fill="#fff2cc" stroke="none" pointer-events="all"/>
+<path d="M 240 50 L 360 50 M 0 100 L 240 100 M 240 0 L 240 100" fill="none" stroke="#000000" stroke-linecap="square" stroke-miterlimit="10" pointer-events="all"/>
+<path d="M 240 100 L 360 100 M 240 100 L 240 150" fill="none" stroke="#d00000" stroke-width="3" stroke-linecap="square" stroke-miterlimit="10" pointer-events="all"/>
+<path d="M 360 100 L 360 150 L 240 150" fill="none" stroke="#d00000" stroke-width="3" stroke-miterlimit="10" pointer-events="all"/>
+<path d="M 240 150 L 0 150 L 0 0 L 360 0 L 360 100" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+<g data-cell-id="tcr0">
+<g data-cell-id="tcc00">
+<g>
+<switch>
+<foreignObject requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" pointer-events="none" width="100%" height="100%" style="overflow: visible; text-align: left;">
+<div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 238px; height: 1px; padding-top: 50px; margin-left: 1px;"><div style="box-sizing: border-box; font-size: 0px; text-align: center; max-height: 96px; overflow: hidden; color: #000000; "><div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">merged 2x2</div></div></div>
+</foreignObject>
+<text x="120" y="54" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle" clip-path="url(#qraw-1)">merged 2x2</text>
+</switch>
+</g>
+</g>
+<g data-cell-id="tcc02">
+<g>
+<switch>
+<foreignObject requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" pointer-events="none" width="100%" height="100%" style="overflow: visible; text-align: left;">
+<div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 118px; height: 1px; padding-top: 25px; margin-left: 241px;"><div style="box-sizing: border-box; font-size: 0px; text-align: center; max-height: 46px; overflow: hidden; color: #000000; "><div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">0,2</div></div></div>
+</foreignObject>
+<text x="300" y="29" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle" clip-path="url(#qraw-2)">0,2</text>
+</switch>
+</g>
+</g>
+</g>
+<g data-cell-id="tcr1">
+<g data-cell-id="tcc12">
+<g>
+<switch>
+<foreignObject requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" pointer-events="none" width="100%" height="100%" style="overflow: visible; text-align: left;">
+<div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 118px; height: 1px; padding-top: 75px; margin-left: 241px;"><div style="box-sizing: border-box; font-size: 0px; text-align: center; max-height: 46px; overflow: hidden; color: #000000; "><div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">1,2</div></div></div>
+</foreignObject>
+<text x="300" y="79" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle" clip-path="url(#qraw-3)">1,2</text>
+</switch>
+</g>
+</g>
+</g>
+<g data-cell-id="tcr2">
+<g data-cell-id="tcc20">
+<g>
+<switch>
+<foreignObject requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" pointer-events="none" width="100%" height="100%" style="overflow: visible; text-align: left;">
+<div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 238px; height: 1px; padding-top: 125px; margin-left: 1px;"><div style="box-sizing: border-box; font-size: 0px; text-align: center; max-height: 46px; overflow: hidden; color: #000000; "><div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">wide</div></div></div>
+</foreignObject>
+<text x="120" y="129" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle" clip-path="url(#qraw-4)">wide</text>
+</switch>
+</g>
+</g>
+<g data-cell-id="tcc22">
+<g>
+<switch>
+<foreignObject requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" pointer-events="none" width="100%" height="100%" style="overflow: visible; text-align: left;">
+<div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 118px; height: 1px; padding-top: 125px; margin-left: 241px;"><div style="box-sizing: border-box; font-size: 0px; text-align: center; max-height: 46px; overflow: hidden; color: #000000; "><div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">red</div></div></div>
+</foreignObject>
+<text x="300" y="129" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle" clip-path="url(#qraw-5)">red</text>
+</switch>
+</g>
+</g>
+</g>
+</g>
+<g data-cell-id="ts">
+<path d="M 400 0 L 400 0 L 640 0 L 640 0" fill="#ffffff" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+<path d="M 400 0 L 400 100 L 640 100 L 640 0" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+<path d="M 400 50 L 480 50 L 560 50 L 640 50" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+<path d="M 480 0 M 480 50 L 480 100" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+<path d="M 560 0 L 560 50 L 560 100" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+<g data-cell-id="tsr0">
+<g data-cell-id="tsc00">
+<g>
+<switch>
+<foreignObject requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" pointer-events="none" width="100%" height="100%" style="overflow: visible; text-align: left;">
+<div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 158px; height: 1px; padding-top: 25px; margin-left: 401px;"><div style="box-sizing: border-box; font-size: 0px; text-align: center; max-height: 46px; overflow: hidden; color: #000000; "><div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">merged 2x1</div></div></div>
+</foreignObject>
+<text x="480" y="29" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle" clip-path="url(#qraw-6)">merged 2x1</text>
+</switch>
+</g>
+</g>
+<g data-cell-id="tsc02">
+<g>
+<switch>
+<foreignObject requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" pointer-events="none" width="100%" height="100%" style="overflow: visible; text-align: left;">
+<div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 78px; height: 1px; padding-top: 25px; margin-left: 561px;"><div style="box-sizing: border-box; font-size: 0px; text-align: center; max-height: 46px; overflow: hidden; color: #000000; "><div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">0,2</div></div></div>
+</foreignObject>
+<text x="600" y="29" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle" clip-path="url(#qraw-7)">0,2</text>
+</switch>
+</g>
+</g>
+</g>
+<g data-cell-id="tsr1">
+<g data-cell-id="tsc10">
+<g>
+<switch>
+<foreignObject requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" pointer-events="none" width="100%" height="100%" style="overflow: visible; text-align: left;">
+<div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 78px; height: 1px; padding-top: 75px; margin-left: 401px;"><div style="box-sizing: border-box; font-size: 0px; text-align: center; max-height: 46px; overflow: hidden; color: #000000; "><div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">1,0</div></div></div>
+</foreignObject>
+<text x="440" y="79" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle" clip-path="url(#qraw-8)">1,0</text>
+</switch>
+</g>
+</g>
+<g data-cell-id="tsc11">
+<g>
+<switch>
+<foreignObject requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" pointer-events="none" width="100%" height="100%" style="overflow: visible; text-align: left;">
+<div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 78px; height: 1px; padding-top: 75px; margin-left: 481px;"><div style="box-sizing: border-box; font-size: 0px; text-align: center; max-height: 46px; overflow: hidden; color: #000000; "><div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">1,1</div></div></div>
+</foreignObject>
+<text x="520" y="79" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle" clip-path="url(#qraw-9)">1,1</text>
+</switch>
+</g>
+</g>
+<g data-cell-id="tsc12">
+<g>
+<switch>
+<foreignObject requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" pointer-events="none" width="100%" height="100%" style="overflow: visible; text-align: left;">
+<div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 78px; height: 1px; padding-top: 75px; margin-left: 561px;"><div style="box-sizing: border-box; font-size: 0px; text-align: center; max-height: 46px; overflow: hidden; color: #000000; "><div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">1,2</div></div></div>
+</foreignObject>
+<text x="600" y="79" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle" clip-path="url(#qraw-10)">1,2</text>
+</switch>
+</g>
+</g>
+</g>
+</g>
+</svg>

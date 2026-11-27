@@ -1,0 +1,62 @@
+# Flatpak manifest for Qraw (docs: packaging/flatpak/README.md).
+#
+# This file builds the working tree it sits in (the `dir` source below), for development. The form
+# Flathub wants (a tagged git source) is the commented block at the bottom of the module's sources.
+app-id: io.github.newmca.qraw
+
+# KDE runtime 6.11 is the newest stable one on Flathub (6.10 and 5.15-25.08 are the others listed);
+# it ships Qt 6.11, and Qraw needs Qt >= 6.5. The runtime and the SDK must have the same version.
+runtime: org.kde.Platform
+runtime-version: '6.11'
+sdk: org.kde.Sdk
+
+command: qraw
+
+# Minimal sandbox. There is deliberately no --filesystem and no --share=network: Qraw works on
+# files the user picks and never touches the network.
+finish-args:
+  # Shared memory with the display server: X11 needs it (MIT-SHM), and Qt's Wayland clipboard
+  # and drag and drop work better with it.
+  - --share=ipc
+  # Native Wayland window; the default on Plasma and GNOME.
+  - --socket=wayland
+  # X11 only when there is no Wayland session (unlike `--socket=x11`, which always exposes X11).
+  - --socket=fallback-x11
+  # GPU access for Qt's platform plugins (Qraw paints its canvas on the CPU, but Qt's Wayland
+  # and X11 back ends and the widget style initialise OpenGL through DRI when it is there).
+  - --device=dri
+  # Printing: File > Print uses QPrintDialog, whose CUPS back end talks to the host's CUPS
+  # socket. Qt 6.11 has no client for the print portal (no `org.freedesktop.portal.Print` in QtGui, QtPrintSupport or its platform themes), so the socket is the only way
+  # to list printers. PDF export and Print Preview do not need it.
+  - --socket=cups
+  # Open and Save dialogs: Qt's xdg-desktop-portal and KDE platform themes call the FileChooser
+  # portal on their own inside a sandbox, and the portal grants access to the chosen files only.
+  # Links (Open Link) go through the OpenURI portal. Neither needs a finish-arg.
+
+modules:
+  - name: qraw
+    buildsystem: cmake-ninja
+    builddir: true
+    config-opts:
+      # Optimised, with debug info that flatpak-builder splits into the -debug extension.
+      - -DCMAKE_BUILD_TYPE=RelWithDebInfo
+      - -DBUILD_TESTING=OFF
+      - -DQRAW_WARNINGS_AS_ERRORS=OFF
+    sources:
+      # Development: the repository this manifest is in (relative to this file).
+      - type: dir
+        path: ../..
+        skip:
+          - .git
+          - build
+          - dist
+          - .flatpak-builder
+          - packaging
+
+      # Flathub: replace the `dir` source above with a tagged git source, once a release is tagged.
+      # Flathub requires a tag and the commit it points at.
+      #
+      # - type: git
+      #   url: https://github.com/newmca/qraw.git
+      #   tag: v0.1.0
+      #   commit: <the 40-digit commit id of v0.1.0>

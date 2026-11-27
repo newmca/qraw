@@ -1,0 +1,5 @@
+# LeakSanitizer suppressions for the asan preset (BUILDING.md "Sanitizers").
+# Policy: only frames in third-party libraries (Qt, fontconfig, glib, the
+# offscreen platform plugin, ...), each with a comment naming the library and
+# why the leak is not ours. A leak whose stack passes through qraw code is a
+# real finding and must be fixed, never suppressed.

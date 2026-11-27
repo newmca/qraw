@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="499px" height="735px" viewBox="-0.5 -0.5 499 735" content="&lt;mxfile host=&quot;qraw-fixture&quot;&gt;&#xa;  &lt;diagram name=&quot;edge-markers&quot; id=&quot;edge-markers&quot;&gt;&#xa;    &lt;mxGraphModel dx=&quot;800&quot; dy=&quot;600&quot; grid=&quot;1&quot; gridSize=&quot;10&quot; guides=&quot;1&quot; tooltips=&quot;1&quot; connect=&quot;1&quot; arrows=&quot;1&quot; fold=&quot;1&quot; page=&quot;1&quot; pageScale=&quot;1&quot; pageWidth=&quot;827&quot; pageHeight=&quot;1169&quot; math=&quot;0&quot; shadow=&quot;0&quot;&gt;&#xa;      &lt;root&gt;&#xa;        &lt;mxCell id=&quot;0&quot; /&gt;&#xa;        &lt;mxCell id=&quot;1&quot; parent=&quot;0&quot; /&gt;&#xa;        &lt;mxCell id=&quot;m0&quot; value=&quot;&quot; style=&quot;html=1;startArrow=classic;endArrow=classic;startFill=1;endFill=0;startSize=6;endSize=6;strokeWidth=1&quot; edge=&quot;1&quot; parent=&quot;1&quot;&gt;&#xa;          &lt;mxGeometry relative=&quot;1&quot; as=&quot;geometry&quot;&gt;&#xa;            &lt;mxPoint x=&quot;80&quot; y=&quot;30&quot; as=&quot;sourcePoint&quot; /&gt;&#xa;            &lt;mxPoint x=&quot;360&quot; y=&quot;30&quot; as=&quot;targetPoint&quot; /&gt;&#xa;          &lt;/mxGeometry&gt;&#xa;        &lt;/mxCell&gt;&#xa;        &lt;mxCell id=&quot;m1&quot; value=&quot;&quot; style=&quot;html=1;startArrow=classicThin;endArrow=classicThin;startFill=0;endFill=1;startSize=10;endSize=10;strokeWidth=2&quot; edge=&quot;1&quot; parent=&quot;1&quot;&gt;&#xa;          &lt;mxGeometry relative=&quot;1&quot; as=&quot;geometry&quot;&gt;&#xa;            &lt;mxPoint x=&quot;80&quot; y=&quot;60&quot; as=&quot;sourcePoint&quot; /&gt;&#xa;            &lt;mxPoint x=&quot;360&quot; y=&quot;60&quot; as=&quot;targetPoint&quot; /&gt;&#xa;          &lt;/mxGeometry&gt;&#xa;        &lt;/mxCell&gt;&#xa;        &lt;mxCell id=&quot;m2&quot; value=&quot;&quot; style=&quot;html=1;startArrow=block;endArrow=block;startFill=1;endFill=0;startSize=16;endSize=16;strokeWidth=3&quot; edge=&quot;1&quot; parent=&quot;1&quot;&gt;&#xa;          &lt;mxGeometry relative=&quot;1&quot; as=&quot;geometry&quot;&gt;&#xa;            &lt;mxPoint x=&quot;80&quot; y=&quot;90&quot; as=&quot;sourcePoint&quot; /&gt;&#xa;            &lt;mxPoint x=&quot;360&quot; y=&quot;90&quot; as=&quot;targetPoint&quot; /&gt;&#xa;          &lt;/mxGeometry&gt;&#xa;        &lt;/mxCell&gt;&#xa;        &lt;mxCell id=&quot;m3&quot; value=&quot;&quot; style=&quot;html=1;startArrow=blockThin;endArrow=blockThin;startFill=0;endFill=1;startSize=6;endSize=6;strokeWidth=1&quot; edge=&quot;1&quot; parent=&quot;1&quot;&gt;&#xa;          &lt;mxGeometry relative=&quot;1&quot; as=&quot;geometry&quot;&gt;&#xa;            &lt;mxPoint x=&quot;80&quot; y=&quot;120&quot; as=&quot;sourcePoint&quot; /&gt;&#xa;            &lt;mxPoint x=&quot;360&quot; y=&quot;120&quot; as=&quot;targetPoint&quot; /&gt;&#xa;          &lt;/mxGeometry&gt;&#xa;        &lt;/mxCell&gt;&#xa;        &lt;mxCell id=&quot;m4&quot; value=&quot;&quot; style=&quot;html=1;startArrow=open;endArrow=open;startFill=1;endFill=0;startSize=10;endSize=10;strokeWidth=2&quot; edge=&quot;1&quot; parent=&quot;1&quot;&gt;&#xa;          &lt;mxGeometry relative=&quot;1&quot; as=&quot;geometry&quot;&gt;&#xa;            &lt;mxPoint x=&quot;80&quot; y=&quot;150&quot; as=&quot;sourcePoint&quot; /&gt;&#xa;            &lt;mxPoint x=&quot;360&quot; y=&quot;150&quot; as=&quot;targetPoint&quot; /&gt;&#xa;          &lt;/mxGeometry&gt;&#xa;        &lt;/mxCell&gt;&#xa;        &lt;mxCell id=&quot;m5&quot; value=&quot;&quot; style=&quot;html=1;startArrow=openThin;endArrow=openThin;startFill=0;endFill=1;startSize=16;endSize=16;strokeWidth=3&quot; edge=&quot;1&quot; parent=&quot;1&quot;&gt;&#xa;          &lt;mxGeometry relative=&quot;1&quot; as=&quot;geometry&quot;&gt;&#xa;            &lt;mxPoint x=&quot;80&quot; y=&quot;180&quot; as=&quot;sourcePoint&quot; /&gt;&#xa;            &lt;mxPoint x=&quot;360&quot; y=&quot;180&quot; as=&quot;targetPoint&quot; /&gt;&#xa;          &lt;/mxGeometry&gt;&#xa;        &lt;/mxCell&gt;&#xa;        &lt;mxCell id=&quot;m6&quot; value=&quot;&quot; style=&quot;html=1;startArrow=oval;endArrow=oval;startFill=1;endFill=0;startSize=6;endSize=6;strokeWidth=1&quot; edge=&quot;1&quot; parent=&quot;1&quot;&gt;&#xa;          &lt;mxGeometry relative=&quot;1&quot; as=&quot;geometry&quot;&gt;&#xa;            &lt;mxPoint x=&quot;80&quot; y=&quot;210&quot; as=&quot;sourcePoint&quot; /&gt;&#xa;            &lt;mxPoint x=&quot;360&quot; y=&quot;210&quot; as=&quot;targetPoint&quot; /&gt;&#xa;          &lt;/mxGeometry&gt;&#xa;        &lt;/mxCell&gt;&#xa;        &lt;mxCell id=&quot;m7&quot; value=&quot;&quot; style=&quot;html=1;startArrow=diamond;endArrow=diamond;startFill=0;endFill=1;startSize=10;endSize=10;strokeWidth=2&quot; edge=&quot;1&quot; parent=&quot;1&quot;&gt;&#xa;          &lt;mxGeometry relative=&quot;1&quot; as=&quot;geometry&quot;&gt;&#xa;            &lt;mxPoint x=&quot;80&quot; y=&quot;240&quot; as=&quot;sourcePoint&quot; /&gt;&#xa;            &lt;mxPoint x=&quot;360&quot; y=&quot;240&quot; as=&quot;targetPoint&quot; /&gt;&#xa;          &lt;/mxGeometry&gt;&#xa;        &lt;/mxCell&gt;&#xa;        &lt;mxCell id=&quot;m8&quot; value=&quot;&quot; style=&quot;html=1;startArrow=diamondThin;endArrow=diamondThin;startFill=1;endFill=0;startSize=16;endSize=16;strokeWidth=3&quot; edge=&quot;1&quot; parent=&quot;1&quot;&gt;&#xa;          &lt;mxGeometry relative=&quot;1&quot; as=&quot;geometry&quot;&gt;&#xa;            &lt;mxPoint x=&quot;80&quot; y=&quot;270&quot; as=&quot;sourcePoint&quot; /&gt;&#xa;            &lt;mxPoint x=&quot;360&quot; y=&quot;270&quot; as=&quot;targetPoint&quot; /&gt;&#xa;          &lt;/mxGeometry&gt;&#xa;        &lt;/mxCell&gt;&#xa;        &lt;mxCell id=&quot;m9&quot; value=&quot;&quot; style=&quot;html=1;startArrow=dash;endArrow=dash;startFill=0;endFill=1;startSize=6;endSize=6;strokeWidth=1&quot; edge=&quot;1&quot; parent=&quot;1&quot;&gt;&#xa;          &lt;mxGeometry relative=&quot;1&quot; as=&quot;geometry&quot;&gt;&#xa;            &lt;mxPoint x=&quot;80&quot; y=&quot;300&quot; as=&quot;sourcePoint&quot; /&gt;&#xa;            &lt;mxPoint x=&quot;360&quot; y=&quot;300&quot; as=&quot;targetPoint&quot; /&gt;&#xa;          &lt;/mxGeometry&gt;&#xa;        &lt;/mxCell&gt;&#xa;        &lt;mxCell id=&quot;m10&quot; value=&quot;&quot; style=&quot;html=1;startArrow=cross;endArrow=cross;startFill=1;endFill=0;startSize=10;endSize=10;strokeWidth=2&quot; edge=&quot;1&quot; parent=&quot;1&quot;&gt;&#xa;          &lt;mxGeometry relative=&quot;1&quot; as=&quot;geometry&quot;&gt;&#xa;            &lt;mxPoint x=&quot;80&quot; y=&quot;330&quot; as=&quot;sourcePoint&quot; /&gt;&#xa;            &lt;mxPoint x=&quot;360&quot; y=&quot;330&quot; as=&quot;targetPoint&quot; /&gt;&#xa;          &lt;/mxGeometry&gt;&#xa;        &lt;/mxCell&gt;&#xa;        &lt;mxCell id=&quot;m11&quot; value=&quot;&quot; style=&quot;html=1;startArrow=async;endArrow=async;startFill=0;endFill=1;startSize=16;endSize=16;strokeWidth=3&quot; edge=&quot;1&quot; parent=&quot;1&quot;&gt;&#xa;          &lt;mxGeometry relative=&quot;1&quot; as=&quot;geometry&quot;&gt;&#xa;            &lt;mxPoint x=&quot;80&quot; y=&quot;360&quot; as=&quot;sourcePoint&quot; /&gt;&#xa;            &lt;mxPoint x=&quot;360&quot; y=&quot;360&quot; as=&quot;targetPoint&quot; /&gt;&#xa;          &lt;/mxGeometry&gt;&#xa;        &lt;/mxCell&gt;&#xa;        &lt;mxCell id=&quot;m12&quot; value=&quot;&quot; style=&quot;html=1;startArrow=circle;endArrow=circle;startFill=1;endFill=0;startSize=6;endSize=6;strokeWidth=1&quot; edge=&quot;1&quot; parent=&quot;1&quot;&gt;&#xa;          &lt;mxGeometry relative=&quot;1&quot; as=&quot;geometry&quot;&gt;&#xa;            &lt;mxPoint x=&quot;80&quot; y=&quot;390&quot; as=&quot;sourcePoint&quot; /&gt;&#xa;            &lt;mxPoint x=&quot;360&quot; y=&quot;390&quot; as=&quot;targetPoint&quot; /&gt;&#xa;          &lt;/mxGeometry&gt;&#xa;        &lt;/mxCell&gt;&#xa;        &lt;mxCell id=&quot;m13&quot; value=&quot;&quot; style=&quot;html=1;startArrow=circlePlus;endArrow=circlePlus;startFill=0;endFill=1;startSize=10;endSize=10;strokeWidth=2&quot; edge=&quot;1&quot; parent=&quot;1&quot;&gt;&#xa;          &lt;mxGeometry relative=&quot;1&quot; as=&quot;geometry&quot;&gt;&#xa;            &lt;mxPoint x=&quot;80&quot; y=&quot;420&quot; as=&quot;sourcePoint&quot; /&gt;&#xa;            &lt;mxPoint x=&quot;360&quot; y=&quot;420&quot; as=&quot;targetPoint&quot; /&gt;&#xa;          &lt;/mxGeometry&gt;&#xa;        &lt;/mxCell&gt;&#xa;        &lt;mxCell id=&quot;m14&quot; value=&quot;&quot; style=&quot;html=1;startArrow=halfCircle;endArrow=halfCircle;startFill=1;endFill=0;startSize=16;endSize=16;strokeWidth=3&quot; edge=&quot;1&quot; parent=&quot;1&quot;&gt;&#xa;          &lt;mxGeometry relative=&quot;1&quot; as=&quot;geometry&quot;&gt;&#xa;            &lt;mxPoint x=&quot;80&quot; y=&quot;450&quot; as=&quot;sourcePoint&quot; /&gt;&#xa;            &lt;mxPoint x=&quot;360&quot; y=&quot;450&quot; as=&quot;targetPoint&quot; /&gt;&#xa;          &lt;/mxGeometry&gt;&#xa;        &lt;/mxCell&gt;&#xa;        &lt;mxCell id=&quot;m15&quot; value=&quot;&quot; style=&quot;html=1;startArrow=box;endArrow=box;startFill=0;endFill=1;startSize=6;endSize=6;strokeWidth=1&quot; edge=&quot;1&quot; parent=&quot;1&quot;&gt;&#xa;          &lt;mxGeometry relative=&quot;1&quot; as=&quot;geometry&quot;&gt;&#xa;            &lt;mxPoint x=&quot;80&quot; y=&quot;480&quot; as=&quot;sourcePoint&quot; /&gt;&#xa;            &lt;mxPoint x=&quot;360&quot; y=&quot;480&quot; as=&quot;targetPoint&quot; /&gt;&#xa;          &lt;/mxGeometry&gt;&#xa;        &lt;/mxCell&gt;&#xa;        &lt;mxCell id=&quot;m16&quot; value=&quot;&quot; style=&quot;html=1;startArrow=ERone;endArrow=ERone;startFill=1;endFill=0;startSize=10;endSize=10;strokeWidth=2&quot; edge=&quot;1&quot; parent=&quot;1&quot;&gt;&#xa;          &lt;mxGeometry relative=&quot;1&quot; as=&quot;geometry&quot;&gt;&#xa;            &lt;mxPoint x=&quot;80&quot; y=&quot;510&quot; as=&quot;sourcePoint&quot; /&gt;&#xa;            &lt;mxPoint x=&quot;360&quot; y=&quot;510&quot; as=&quot;targetPoint&quot; /&gt;&#xa;          &lt;/mxGeometry&gt;&#xa;        &lt;/mxCell&gt;&#xa;        &lt;mxCell id=&quot;m17&quot; value=&quot;&quot; style=&quot;html=1;startArrow=ERmandOne;endArrow=ERmandOne;startFill=0;endFill=1;startSize=16;endSize=16;strokeWidth=3&quot; edge=&quot;1&quot; parent=&quot;1&quot;&gt;&#xa;          &lt;mxGeometry relative=&quot;1&quot; as=&quot;geometry&quot;&gt;&#xa;            &lt;mxPoint x=&quot;80&quot; y=&quot;540&quot; as=&quot;sourcePoint&quot; /&gt;&#xa;            &lt;mxPoint x=&quot;360&quot; y=&quot;540&quot; as=&quot;targetPoint&quot; /&gt;&#xa;          &lt;/mxGeometry&gt;&#xa;        &lt;/mxCell&gt;&#xa;        &lt;mxCell id=&quot;m18&quot; value=&quot;&quot; style=&quot;html=1;startArrow=ERmany;endArrow=ERmany;startFill=1;endFill=0;startSize=6;endSize=6;strokeWidth=1&quot; edge=&quot;1&quot; parent=&quot;1&quot;&gt;&#xa;          &lt;mxGeometry relative=&quot;1&quot; as=&quot;geometry&quot;&gt;&#xa;            &lt;mxPoint x=&quot;80&quot; y=&quot;570&quot; as=&quot;sourcePoint&quot; /&gt;&#xa;            &lt;mxPoint x=&quot;360&quot; y=&quot;570&quot; as=&quot;targetPoint&quot; /&gt;&#xa;          &lt;/mxGeometry&gt;&#xa;        &lt;/mxCell&gt;&#xa;        &lt;mxCell id=&quot;m19&quot; value=&quot;&quot; style=&quot;html=1;startArrow=ERoneToMany;endArrow=ERoneToMany;startFill=0;endFill=1;startSize=10;endSize=10;strokeWidth=2&quot; edge=&quot;1&quot; parent=&quot;1&quot;&gt;&#xa;          &lt;mxGeometry relative=&quot;1&quot; as=&quot;geometry&quot;&gt;&#xa;            &lt;mxPoint x=&quot;80&quot; y=&quot;600&quot; as=&quot;sourcePoint&quot; /&gt;&#xa;            &lt;mxPoint x=&quot;360&quot; y=&quot;600&quot; as=&quot;targetPoint&quot; /&gt;&#xa;          &lt;/mxGeometry&gt;&#xa;        &lt;/mxCell&gt;&#xa;        &lt;mxCell id=&quot;m20&quot; value=&quot;&quot; style=&quot;html=1;startArrow=ERzeroToOne;endArrow=ERzeroToOne;startFill=1;endFill=0;startSize=16;endSize=16;strokeWidth=3&quot; edge=&quot;1&quot; parent=&quot;1&quot;&gt;&#xa;          &lt;mxGeometry relative=&quot;1&quot; as=&quot;geometry&quot;&gt;&#xa;            &lt;mxPoint x=&quot;80&quot; y=&quot;630&quot; as=&quot;sourcePoint&quot; /&gt;&#xa;            &lt;mxPoint x=&quot;360&quot; y=&quot;630&quot; as=&quot;targetPoint&quot; /&gt;&#xa;          &lt;/mxGeometry&gt;&#xa;        &lt;/mxCell&gt;&#xa;        &lt;mxCell id=&quot;m21&quot; value=&quot;&quot; style=&quot;html=1;startArrow=ERzeroToMany;endArrow=ERzeroToMany;startFill=0;endFill=1;startSize=6;endSize=6;strokeWidth=1&quot; edge=&quot;1&quot; parent=&quot;1&quot;&gt;&#xa;          &lt;mxGeometry relative=&quot;1&quot; as=&quot;geometry&quot;&gt;&#xa;            &lt;mxPoint x=&quot;80&quot; y=&quot;660&quot; as=&quot;sourcePoint&quot; /&gt;&#xa;            &lt;mxPoint x=&quot;360&quot; y=&quot;660&quot; as=&quot;targetPoint&quot; /&gt;&#xa;          &lt;/mxGeometry&gt;&#xa;        &lt;/mxCell&gt;&#xa;        &lt;mxCell id=&quot;m22&quot; value=&quot;&quot; style=&quot;html=1;startArrow=baseDash;endArrow=baseDash;startFill=1;endFill=0;startSize=10;endSize=10;strokeWidth=2&quot; edge=&quot;1&quot; parent=&quot;1&quot;&gt;&#xa;          &lt;mxGeometry relative=&quot;1&quot; as=&quot;geometry&quot;&gt;&#xa;            &lt;mxPoint x=&quot;80&quot; y=&quot;690&quot; as=&quot;sourcePoint&quot; /&gt;&#xa;            &lt;mxPoint x=&quot;360&quot; y=&quot;690&quot; as=&quot;targetPoint&quot; /&gt;&#xa;          &lt;/mxGeometry&gt;&#xa;        &lt;/mxCell&gt;&#xa;        &lt;mxCell id=&quot;m23&quot; value=&quot;&quot; style=&quot;html=1;startArrow=doubleBlock;endArrow=doubleBlock;startFill=0;endFill=1;startSize=16;endSize=16;strokeWidth=3&quot; edge=&quot;1&quot; parent=&quot;1&quot;&gt;&#xa;          &lt;mxGeometry relative=&quot;1&quot; as=&quot;geometry&quot;&gt;&#xa;            &lt;mxPoint x=&quot;80&quot; y=&quot;720&quot; as=&quot;sourcePoint&quot; /&gt;&#xa;            &lt;mxPoint x=&quot;360&quot; y=&quot;720&quot; as=&quot;targetPoint&quot; /&gt;&#xa;          &lt;/mxGeometry&gt;&#xa;        &lt;/mxCell&gt;&#xa;        &lt;mxCell id=&quot;m24&quot; value=&quot;&quot; style=&quot;html=1;startArrow=manyOptional;endArrow=manyOptional;startFill=1;endFill=0;startSize=6;endSize=6;strokeWidth=1&quot; edge=&quot;1&quot; parent=&quot;1&quot;&gt;&#xa;          &lt;mxGeometry relative=&quot;1&quot; as=&quot;geometry&quot;&gt;&#xa;            &lt;mxPoint x=&quot;80&quot; y=&quot;750&quot; as=&quot;sourcePoint&quot; /&gt;&#xa;            &lt;mxPoint x=&quot;360&quot; y=&quot;750&quot; as=&quot;targetPoint&quot; /&gt;&#xa;          &lt;/mxGeometry&gt;&#xa;        &lt;/mxCell&gt;&#xa;        &lt;mxCell id=&quot;m-none&quot; value=&quot;&quot; style=&quot;html=1;endArrow=none;startArrow=none&quot; edge=&quot;1&quot; parent=&quot;1&quot;&gt;&#xa;          &lt;mxGeometry relative=&quot;1&quot; as=&quot;geometry&quot;&gt;&#xa;            &lt;mxPoint x=&quot;420&quot; y=&quot;30&quot; as=&quot;sourcePoint&quot; /&gt;&#xa;            &lt;mxPoint x=&quot;560&quot; y=&quot;30&quot; as=&quot;targetPoint&quot; /&gt;&#xa;          &lt;/mxGeometry&gt;&#xa;        &lt;/mxCell&gt;&#xa;      &lt;/root&gt;&#xa;    &lt;/mxGraphModel&gt;&#xa;  &lt;/diagram&gt;&#xa;&lt;/mxfile&gt;&#xa;">
+<defs/>
+<g data-cell-id="m0">
+<path d="M 24.37 7 L 291.63 7" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+<path d="M 19.12 7 L 26.12 3.5 L 24.37 7 L 26.12 10.5 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+<path d="M 296.88 7 L 289.88 10.5 L 291.63 7 L 289.88 3.5 Z" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+</g>
+<g data-cell-id="m1">
+<path d="M 29.24 37 L 286.76 37" fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" pointer-events="all"/>
+<path d="M 20.24 37 L 32.24 33 L 29.24 37 L 32.24 41 Z" fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" pointer-events="all"/>
+<path d="M 295.76 37 L 283.76 41 L 286.76 37 L 283.76 33 Z" fill="#000000" stroke="#000000" stroke-width="2" stroke-miterlimit="10" pointer-events="all"/>
+</g>
+<g data-cell-id="m2">
+<path d="M 40.35 67 L 275.65 67" fill="none" stroke="#000000" stroke-width="3" stroke-miterlimit="10" pointer-events="all"/>
+<path d="M 21.35 67 L 40.35 57.5 L 40.35 76.5 Z" fill="#000000" stroke="#000000" stroke-width="3" stroke-miterlimit="10" pointer-events="all"/>
+<path d="M 294.65 67 L 275.65 76.5 L 275.65 57.5 Z" fill="none" stroke="#000000" stroke-width="3" stroke-miterlimit="10" pointer-events="all"/>
+</g>
+<g data-cell-id="m3">
+<path d="M 26.12 97 L 289.88 97" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+<path d="M 19.12 97 L 26.12 94.67 L 26.12 99.33 Z" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+<path d="M 296.88 97 L 289.88 99.33 L 289.88 94.67 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+</g>
+<g data-cell-id="m4">
+<path d="M 22.47 127 L 293.53 127" fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" pointer-events="all"/>
+<path d="M 32.24 121 L 20.24 127 L 32.24 133" fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" pointer-events="all"/>
+<path d="M 283.76 133 L 295.76 127 L 283.76 121" fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" pointer-events="all"/>
+</g>
+<g data-cell-id="m5">
+<path d="M 24.71 157 L 291.29 157" fill="none" stroke="#000000" stroke-width="3" stroke-miterlimit="10" pointer-events="all"/>
+<path d="M 40.35 150.67 L 21.35 157 L 40.35 163.33" fill="none" stroke="#000000" stroke-width="3" stroke-miterlimit="10" pointer-events="all"/>
+<path d="M 275.65 163.33 L 294.65 157 L 275.65 150.67" fill="none" stroke="#000000" stroke-width="3" stroke-miterlimit="10" pointer-events="all"/>
+</g>
+<g data-cell-id="m6">
+<path d="M 21 187 L 295 187" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+<ellipse cx="18" cy="187" rx="3" ry="3" fill="#000000" stroke="#000000" pointer-events="all"/>
+<ellipse cx="298" cy="187" rx="3" ry="3" fill="none" stroke="#000000" pointer-events="all"/>
+</g>
+<g data-cell-id="m7">
+<path d="M 31.41 217 L 284.59 217" fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" pointer-events="all"/>
+<path d="M 19.41 217 L 25.41 211 L 31.41 217 L 25.41 223 Z" fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" pointer-events="all"/>
+<path d="M 296.59 217 L 290.59 223 L 284.59 217 L 290.59 211 Z" fill="#000000" stroke="#000000" stroke-width="2" stroke-miterlimit="10" pointer-events="all"/>
+</g>
+<g data-cell-id="m8">
+<path d="M 39.96 247 L 276.04 247" fill="none" stroke="#000000" stroke-width="3" stroke-miterlimit="10" pointer-events="all"/>
+<path d="M 20.96 247 L 30.46 241.41 L 39.96 247 L 30.46 252.59 Z" fill="#000000" stroke="#000000" stroke-width="3" stroke-miterlimit="10" pointer-events="all"/>
+<path d="M 295.04 247 L 285.54 252.59 L 276.04 247 L 285.54 241.41 Z" fill="none" stroke="#000000" stroke-width="3" stroke-miterlimit="10" pointer-events="all"/>
+</g>
+<g data-cell-id="m9">
+<path d="M 18 277 L 298 277" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+<path d="M 22 273 L 30 281" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+<path d="M 294 281 L 286 273" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+</g>
+<g data-cell-id="m10">
+<path d="M 18 307 L 298 307" fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" pointer-events="all"/>
+<path d="M 24.5 300.5 L 37.5 313.5 M 24.5 313.5 L 37.5 300.5" fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" pointer-events="all"/>
+<path d="M 291.5 313.5 L 278.5 300.5 M 291.5 300.5 L 278.5 313.5" fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" pointer-events="all"/>
+</g>
+<g data-cell-id="m11">
+<path d="M 40.35 337 L 275.65 337" fill="none" stroke="#000000" stroke-width="3" stroke-miterlimit="10" pointer-events="all"/>
+<path d="M 21.35 337 L 40.35 327.5 L 40.35 337 Z" fill="none" stroke="#000000" stroke-width="3" stroke-miterlimit="10" pointer-events="all"/>
+<path d="M 294.65 337 L 275.65 327.5 L 275.65 337 Z" fill="#000000" stroke="#000000" stroke-width="3" stroke-miterlimit="10" pointer-events="all"/>
+</g>
+<g data-cell-id="m12">
+<path d="M 33 367 L 283 367" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+<ellipse cx="26" cy="367" rx="7" ry="7" fill="#000000" stroke="#000000" pointer-events="all"/>
+<ellipse cx="290" cy="367" rx="7" ry="7" fill="none" stroke="#000000" pointer-events="all"/>
+</g>
+<g data-cell-id="m13">
+<path d="M 44 397 L 272 397" fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" pointer-events="all"/>
+<ellipse cx="32" cy="397" rx="12" ry="12" fill="none" stroke="#000000" stroke-width="2" pointer-events="all"/>
+<path d="M 20 397 L 44 397 M 32 385 L 32 409" fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" pointer-events="all"/>
+<ellipse cx="284" cy="397" rx="12" ry="12" fill="#000000" stroke="#000000" stroke-width="2" pointer-events="all"/>
+<path d="M 296 397 L 272 397 M 284 409 L 284 385" fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" pointer-events="all"/>
+</g>
+<g data-cell-id="m14">
+<path d="M 38 427 L 278 427" fill="none" stroke="#000000" stroke-width="3" stroke-miterlimit="10" pointer-events="all"/>
+<path d="M 18 407 Q 38 407 38 427 Q 38 447 18 447" fill="none" stroke="#000000" stroke-width="3" stroke-miterlimit="10" pointer-events="all"/>
+<path d="M 298 447 Q 278 447 278 427 Q 278 407 298 407" fill="none" stroke="#000000" stroke-width="3" stroke-miterlimit="10" pointer-events="all"/>
+</g>
+<g data-cell-id="m15">
+<path d="M 26 457 L 290 457" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+<path d="M 18 453 L 18 461 L 26 461 L 26 453 Z" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+<path d="M 298 461 L 298 453 L 290 453 L 290 461 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+</g>
+<g data-cell-id="m16">
+<path d="M 18 487 L 298 487" fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" pointer-events="all"/>
+<path d="M 24.5 480.5 L 24.5 493.5" fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" pointer-events="all"/>
+<path d="M 291.5 493.5 L 291.5 480.5" fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" pointer-events="all"/>
+</g>
+<g data-cell-id="m17">
+<path d="M 18 517 L 298 517" fill="none" stroke="#000000" stroke-width="3" stroke-miterlimit="10" pointer-events="all"/>
+<path d="M 28 507 L 28 527 M 38 507 L 38 527" fill="none" stroke="#000000" stroke-width="3" stroke-miterlimit="10" pointer-events="all"/>
+<path d="M 288 527 L 288 507 M 278 527 L 278 507" fill="none" stroke="#000000" stroke-width="3" stroke-miterlimit="10" pointer-events="all"/>
+</g>
+<g data-cell-id="m18">
+<path d="M 18 547 L 298 547" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+<path d="M 18 551 L 26 547 L 18 543" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+<path d="M 298 543 L 290 547 L 298 551" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+</g>
+<g data-cell-id="m19">
+<path d="M 18 577 L 298 577" fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" pointer-events="all"/>
+<path d="M 31 570.5 L 31 583.5 M 18 583.5 L 31 577 L 18 570.5" fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" pointer-events="all"/>
+<path d="M 285 583.5 L 285 570.5 M 298 570.5 L 285 577 L 298 583.5" fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" pointer-events="all"/>
+</g>
+<g data-cell-id="m20">
+<path d="M 18 607 L 259.5 607" fill="none" stroke="#000000" stroke-width="3" stroke-miterlimit="10" pointer-events="all"/>
+<ellipse cx="48" cy="607" rx="8" ry="8" fill="#ffffff" stroke="#000000" stroke-width="3" pointer-events="all"/>
+<path d="M 28 597 L 28 617" fill="none" stroke="#000000" stroke-width="3" stroke-miterlimit="10" pointer-events="all"/>
+<ellipse cx="268" cy="607" rx="8" ry="8" fill="none" stroke="#000000" stroke-width="3" pointer-events="all"/>
+<path d="M 288 617 L 288 597 M 276.5 607 L 298 607" fill="none" stroke="#000000" stroke-width="3" stroke-miterlimit="10" pointer-events="all"/>
+</g>
+<g data-cell-id="m21">
+<path d="M 33.5 637 L 298 637" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+<ellipse cx="30" cy="637" rx="3" ry="3" fill="none" stroke="#000000" pointer-events="all"/>
+<path d="M 18 641 L 26 637 L 18 633 M 26 637 L 18 637" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+<ellipse cx="286" cy="637" rx="3" ry="3" fill="#ffffff" stroke="#000000" pointer-events="all"/>
+<path d="M 298 633 L 290 637 L 298 641" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+</g>
+<g data-cell-id="m22">
+<path d="M 18 667 L 298 667" fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" pointer-events="all"/>
+<path d="M 18 660.5 L 18 673.5" fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" pointer-events="all"/>
+<path d="M 298 673.5 L 298 660.5" fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" pointer-events="all"/>
+</g>
+<g data-cell-id="m23">
+<path d="M 59.35 697 L 256.65 697" fill="none" stroke="#000000" stroke-width="3" stroke-miterlimit="10" pointer-events="all"/>
+<path d="M 21.35 697 L 40.35 687.5 L 40.35 706.5 Z M 40.35 697 L 59.35 687.5 L 59.35 706.5 Z" fill="none" stroke="#000000" stroke-width="3" stroke-miterlimit="10" pointer-events="all"/>
+<path d="M 294.65 697 L 275.65 706.5 L 275.65 687.5 Z M 275.65 697 L 256.65 706.5 L 256.65 687.5 Z" fill="#000000" stroke="#000000" stroke-width="3" stroke-miterlimit="10" pointer-events="all"/>
+</g>
+<g data-cell-id="m24">
+<path d="M 33.5 727 L 282.5 727" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+<ellipse cx="30" cy="727" rx="3" ry="3" fill="#000000" stroke="#000000" pointer-events="all"/>
+<path d="M 18 727 L 26 727 M 18 731 L 26 727 L 18 723" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+<ellipse cx="286" cy="727" rx="3" ry="3" fill="none" stroke="#000000" pointer-events="all"/>
+<path d="M 298 727 L 290 727 M 298 723 L 290 727 L 298 731" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+</g>
+<g data-cell-id="m-none">
+<path d="M 358 7 L 498 7" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+</g>
+</svg>

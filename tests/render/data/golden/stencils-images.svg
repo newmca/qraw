@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="481px" height="281px" viewBox="-0.5 -0.5 481 281" content="&lt;mxfile host=&quot;qraw-fixture&quot;&gt;&#xa;  &lt;diagram name=&quot;stencils-images&quot; id=&quot;stencils-images&quot;&gt;&#xa;    &lt;mxGraphModel dx=&quot;800&quot; dy=&quot;600&quot; grid=&quot;1&quot; gridSize=&quot;10&quot; guides=&quot;1&quot; tooltips=&quot;1&quot; connect=&quot;1&quot; arrows=&quot;1&quot; fold=&quot;1&quot; page=&quot;1&quot; pageScale=&quot;1&quot; pageWidth=&quot;827&quot; pageHeight=&quot;1169&quot; math=&quot;0&quot; shadow=&quot;0&quot;&gt;&#xa;      &lt;root&gt;&#xa;        &lt;mxCell id=&quot;0&quot; /&gt;&#xa;        &lt;mxCell id=&quot;1&quot; parent=&quot;0&quot; /&gt;&#xa;        &lt;mxCell id=&quot;st0&quot; value=&quot;decision&quot; style=&quot;shape=mxgraph.flowchart.decision;whiteSpace=wrap;html=1;fillColor=#e1d5e7&quot; vertex=&quot;1&quot; parent=&quot;1&quot;&gt;&#xa;          &lt;mxGeometry x=&quot;40&quot; y=&quot;40&quot; width=&quot;90&quot; height=&quot;60&quot; as=&quot;geometry&quot; /&gt;&#xa;        &lt;/mxCell&gt;&#xa;        &lt;mxCell id=&quot;st1&quot; value=&quot;document&quot; style=&quot;shape=mxgraph.flowchart.document;whiteSpace=wrap;html=1;fillColor=#e1d5e7&quot; vertex=&quot;1&quot; parent=&quot;1&quot;&gt;&#xa;          &lt;mxGeometry x=&quot;170&quot; y=&quot;40&quot; width=&quot;90&quot; height=&quot;60&quot; as=&quot;geometry&quot; /&gt;&#xa;        &lt;/mxCell&gt;&#xa;        &lt;mxCell id=&quot;st2&quot; value=&quot;database&quot; style=&quot;shape=mxgraph.flowchart.database;whiteSpace=wrap;html=1;fillColor=#e1d5e7&quot; vertex=&quot;1&quot; parent=&quot;1&quot;&gt;&#xa;          &lt;mxGeometry x=&quot;300&quot; y=&quot;40&quot; width=&quot;90&quot; height=&quot;60&quot; as=&quot;geometry&quot; /&gt;&#xa;        &lt;/mxCell&gt;&#xa;        &lt;mxCell id=&quot;st3&quot; value=&quot;4_point_star&quot; style=&quot;shape=mxgraph.basic.4_point_star;whiteSpace=wrap;html=1;fillColor=#e1d5e7&quot; vertex=&quot;1&quot; parent=&quot;1&quot;&gt;&#xa;          &lt;mxGeometry x=&quot;430&quot; y=&quot;40&quot; width=&quot;90&quot; height=&quot;60&quot; as=&quot;geometry&quot; /&gt;&#xa;        &lt;/mxCell&gt;&#xa;        &lt;mxCell id=&quot;st4&quot; value=&quot;heart&quot; style=&quot;shape=mxgraph.basic.heart;whiteSpace=wrap;html=1;fillColor=#e1d5e7&quot; vertex=&quot;1&quot; parent=&quot;1&quot;&gt;&#xa;          &lt;mxGeometry x=&quot;40&quot; y=&quot;140&quot; width=&quot;90&quot; height=&quot;60&quot; as=&quot;geometry&quot; /&gt;&#xa;        &lt;/mxCell&gt;&#xa;        &lt;mxCell id=&quot;st5&quot; value=&quot;cloud_callout&quot; style=&quot;shape=mxgraph.basic.cloud_callout;whiteSpace=wrap;html=1;fillColor=#e1d5e7&quot; vertex=&quot;1&quot; parent=&quot;1&quot;&gt;&#xa;          &lt;mxGeometry x=&quot;170&quot; y=&quot;140&quot; width=&quot;90&quot; height=&quot;60&quot; as=&quot;geometry&quot; /&gt;&#xa;        &lt;/mxCell&gt;&#xa;        &lt;mxCell id=&quot;st6&quot; value=&quot;octagon&quot; style=&quot;shape=mxgraph.basic.octagon;whiteSpace=wrap;html=1;fillColor=#e1d5e7&quot; vertex=&quot;1&quot; parent=&quot;1&quot;&gt;&#xa;          &lt;mxGeometry x=&quot;300&quot; y=&quot;140&quot; width=&quot;90&quot; height=&quot;60&quot; as=&quot;geometry&quot; /&gt;&#xa;        &lt;/mxCell&gt;&#xa;        &lt;mxCell id=&quot;st7&quot; value=&quot;delay&quot; style=&quot;shape=mxgraph.flowchart.delay;whiteSpace=wrap;html=1;fillColor=#e1d5e7&quot; vertex=&quot;1&quot; parent=&quot;1&quot;&gt;&#xa;          &lt;mxGeometry x=&quot;430&quot; y=&quot;140&quot; width=&quot;90&quot; height=&quot;60&quot; as=&quot;geometry&quot; /&gt;&#xa;        &lt;/mxCell&gt;&#xa;        &lt;mxCell id=&quot;in0&quot; value=&quot;inline&quot; style=&quot;shape=stencil(VY9BDsMgDAS/gvwB6KE34C8OcYsVAgho0vw+KlRVetrV2FqvdfWYSURcyUArDGI3cFMKhP8q1kyuGdiwME6BQNRW0kI7z80b4OipcAOrJ3TLs6RXnK3O2LzVa9pIvA3cFYjDgAJpdeDYWc8+hl7wH3QhVZJWyxEnrxceqdDPcwij1Gf5OpH9PXsC);whiteSpace=wrap;html=1;fillColor=#ffe6cc&quot; vertex=&quot;1&quot; parent=&quot;1&quot;&gt;&#xa;          &lt;mxGeometry x=&quot;40&quot; y=&quot;260&quot; width=&quot;90&quot; height=&quot;60&quot; as=&quot;geometry&quot; /&gt;&#xa;        &lt;/mxCell&gt;&#xa;        &lt;mxCell id=&quot;im0&quot; value=&quot;&quot; style=&quot;shape=image;image=data:image/png,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAEElEQVR4nGMwaLgARwzEcQBmUhgBRJ7megAAAABJRU5ErkJggg==;html=1&quot; vertex=&quot;1&quot; parent=&quot;1&quot;&gt;&#xa;          &lt;mxGeometry x=&quot;170&quot; y=&quot;260&quot; width=&quot;60&quot; height=&quot;60&quot; as=&quot;geometry&quot; /&gt;&#xa;        &lt;/mxCell&gt;&#xa;        &lt;mxCell id=&quot;im1&quot; value=&quot;&quot; style=&quot;shape=image;image=data:image/svg+xml,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCI+PGNpcmNsZSBjeD0iMjAiIGN5PSIyMCIgcj0iMTgiIGZpbGw9IiNjMDAiLz48L3N2Zz4=;html=1&quot; vertex=&quot;1&quot; parent=&quot;1&quot;&gt;&#xa;          &lt;mxGeometry x=&quot;270&quot; y=&quot;260&quot; width=&quot;60&quot; height=&quot;60&quot; as=&quot;geometry&quot; /&gt;&#xa;        &lt;/mxCell&gt;&#xa;        &lt;mxCell id=&quot;unk&quot; value=&quot;unknown&quot; style=&quot;shape=notARealShape;html=1&quot; vertex=&quot;1&quot; parent=&quot;1&quot;&gt;&#xa;          &lt;mxGeometry x=&quot;370&quot; y=&quot;260&quot; width=&quot;90&quot; height=&quot;60&quot; as=&quot;geometry&quot; /&gt;&#xa;        &lt;/mxCell&gt;&#xa;      &lt;/root&gt;&#xa;    &lt;/mxGraphModel&gt;&#xa;  &lt;/diagram&gt;&#xa;&lt;/mxfile&gt;&#xa;">
+<defs/>
+<g data-cell-id="st0">
+<path d="M 45 0 L 90 30 L 45 60 L 0 30 Z" fill="#e1d5e7" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+<g>
+<switch>
+<foreignObject requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" pointer-events="none" width="100%" height="100%" style="overflow: visible; text-align: left;">
+<div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 88px; height: 1px; padding-top: 30px; margin-left: 1px;"><div style="box-sizing: border-box; font-size: 0px; text-align: center; color: #000000; "><div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">decision</div></div></div>
+</foreignObject>
+<text x="45" y="34" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle">decision</text>
+</switch>
+</g>
+</g>
+<g data-cell-id="st1">
+<path d="M 130 4.93 C 130 2.21 132.06 0 134.59 0 L 215.41 0 C 217.94 0 220 2.21 220 4.93 L 220 54.19 C 205.49 48.37 189.51 48.37 175 54.19 C 160.49 60 144.51 60 130 54.19 Z" fill="#e1d5e7" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+<g>
+<switch>
+<foreignObject requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" pointer-events="none" width="100%" height="100%" style="overflow: visible; text-align: left;">
+<div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 88px; height: 1px; padding-top: 30px; margin-left: 131px;"><div style="box-sizing: border-box; font-size: 0px; text-align: center; color: #000000; "><div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">document</div></div></div>
+</foreignObject>
+<text x="175" y="34" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle">document</text>
+</switch>
+</g>
+</g>
+<g data-cell-id="st2">
+<path d="M 260 50 L 260 10 C 260 4.48 280.15 0 305 0 C 329.85 0 350 4.48 350 10 L 350 50 C 350 55.52 329.85 60 305 60 C 280.15 60 260 55.52 260 50 Z" fill="#e1d5e7" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+<path d="M 260 10 C 260 15.52 280.15 20 305 20 C 329.85 20 350 15.52 350 10" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+<g>
+<switch>
+<foreignObject requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" pointer-events="none" width="100%" height="100%" style="overflow: visible; text-align: left;">
+<div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 88px; height: 1px; padding-top: 30px; margin-left: 261px;"><div style="box-sizing: border-box; font-size: 0px; text-align: center; color: #000000; "><div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">database</div></div></div>
+</foreignObject>
+<text x="305" y="34" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle">database</text>
+</switch>
+</g>
+</g>
+<g data-cell-id="st3">
+<path d="M 435 0 L 444.78 23.48 L 480 30 L 444.78 36.52 L 435 60 L 425.22 36.52 L 390 30 L 425.22 23.48 Z" fill="#e1d5e7" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+<g>
+<switch>
+<foreignObject requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" pointer-events="none" width="100%" height="100%" style="overflow: visible; text-align: left;">
+<div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 88px; height: 1px; padding-top: 30px; margin-left: 391px;"><div style="box-sizing: border-box; font-size: 0px; text-align: center; color: #000000; "><div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">4_point_star</div></div></div>
+</foreignObject>
+<text x="435" y="34" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle">4_point_star</text>
+</switch>
+</g>
+</g>
+<g data-cell-id="st4">
+<path d="M 45 160 C 48.33 157.49 67.4 143.17 79.32 134.22 C 90 126.2 89.77 114.51 80.06 107.26 C 70.35 100 54.65 100.03 45 107.32 C 35.34 100.03 19.64 100 9.94 107.25 C 0.23 114.5 0 126.19 10.67 134.22 C 22.59 143.17 41.66 157.49 45 160 Z" fill="#e1d5e7" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+<g>
+<switch>
+<foreignObject requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" pointer-events="none" width="100%" height="100%" style="overflow: visible; text-align: left;">
+<div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 88px; height: 1px; padding-top: 130px; margin-left: 1px;"><div style="box-sizing: border-box; font-size: 0px; text-align: center; color: #000000; "><div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">heart</div></div></div>
+</foreignObject>
+<text x="45" y="134" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle">heart</text>
+</switch>
+</g>
+</g>
+<g data-cell-id="st5">
+<path d="M 142.05 131.07 C 138.73 132.28 135.01 131.2 132.9 128.43 C 130.78 125.65 130.78 121.84 132.9 119.06 C 135.01 116.29 138.73 115.21 142.05 116.42 C 142.02 111.53 145.08 107.14 149.74 105.4 C 154.39 103.66 159.66 104.93 162.95 108.6 C 165.07 103.4 170.19 100 175.89 100 C 181.59 100 186.72 103.4 188.83 108.6 C 192.22 105.61 197.04 104.76 201.27 106.42 C 205.5 108.08 208.39 111.96 208.74 116.42 C 212.05 115.21 215.78 116.29 217.89 119.06 C 220 121.84 220 125.65 217.89 128.43 C 215.78 131.2 212.05 132.28 208.74 131.07 C 208.38 135.79 205.17 139.83 200.61 141.32 C 196.04 142.82 191.01 141.47 187.84 137.92 C 185.32 142.03 180.78 144.55 175.89 144.55 C 171 144.55 166.47 142.03 163.95 137.92 C 161.54 142.66 154.69 144.98 148.64 143.09 C 142.59 141.21 139.64 135.82 142.05 131.07 Z" fill="#e1d5e7" stroke="#000000" stroke-linejoin="round" pointer-events="all"/>
+<rect x="130" y="100" width="0" height="0" fill="none" stroke="#000000" pointer-events="all"/>
+<ellipse cx="145.03" cy="147.69" rx="5.97" ry="2.64" fill="#e1d5e7" stroke="#000000" pointer-events="all"/>
+<ellipse cx="138.06" cy="154.04" rx="3.78" ry="1.76" fill="#e1d5e7" stroke="#000000" pointer-events="all"/>
+<ellipse cx="132.39" cy="158.73" rx="2.39" ry="1.27" fill="#e1d5e7" stroke="#000000" pointer-events="all"/>
+<g>
+<switch>
+<foreignObject requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" pointer-events="none" width="100%" height="100%" style="overflow: visible; text-align: left;">
+<div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 88px; height: 1px; padding-top: 130px; margin-left: 131px;"><div style="box-sizing: border-box; font-size: 0px; text-align: center; color: #000000; "><div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">cloud_callout</div></div></div>
+</foreignObject>
+<text x="175" y="134" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle">cloud_callout</text>
+</switch>
+</g>
+</g>
+<g data-cell-id="st6">
+<path d="M 260 117.76 L 286.63 100 L 323.37 100 L 350 117.76 L 350 142.24 L 323.37 160 L 286.63 160 L 260 142.24 Z" fill="#e1d5e7" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+<g>
+<switch>
+<foreignObject requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" pointer-events="none" width="100%" height="100%" style="overflow: visible; text-align: left;">
+<div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 88px; height: 1px; padding-top: 130px; margin-left: 261px;"><div style="box-sizing: border-box; font-size: 0px; text-align: center; color: #000000; "><div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">octagon</div></div></div>
+</foreignObject>
+<text x="305" y="134" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle">octagon</text>
+</switch>
+</g>
+</g>
+<g data-cell-id="st7">
+<path d="M 390 105 C 390 102.24 392.05 100 394.58 100 L 462.37 100 C 473.11 105.38 480 117.1 480 130 C 480 142.9 473.11 154.62 462.37 160 L 394.58 160 C 392.05 160 390 157.76 390 155 L 390 105 Z" fill="#e1d5e7" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+<g>
+<switch>
+<foreignObject requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" pointer-events="none" width="100%" height="100%" style="overflow: visible; text-align: left;">
+<div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 88px; height: 1px; padding-top: 130px; margin-left: 391px;"><div style="box-sizing: border-box; font-size: 0px; text-align: center; color: #000000; "><div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">delay</div></div></div>
+</foreignObject>
+<text x="435" y="134" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle">delay</text>
+</switch>
+</g>
+</g>
+<g data-cell-id="in0">
+<path d="M 45 220 L 90 280 L 0 280 Z" fill="#ffe6cc" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+<g>
+<switch>
+<foreignObject requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" pointer-events="none" width="100%" height="100%" style="overflow: visible; text-align: left;">
+<div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 88px; height: 1px; padding-top: 250px; margin-left: 1px;"><div style="box-sizing: border-box; font-size: 0px; text-align: center; color: #000000; "><div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">inline</div></div></div>
+</foreignObject>
+<text x="45" y="254" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle">inline</text>
+</switch>
+</g>
+</g>
+<g data-cell-id="im0">
+<image x="130" y="220" width="60" height="60" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAEElEQVR4nGMwaLgARwzEcQBmUhgBRJ7megAAAABJRU5ErkJggg==" preserveAspectRatio="xMidYMid meet" pointer-events="none"/>
+</g>
+<g data-cell-id="im1">
+<image x="230" y="220" width="60" height="60" xlink:href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCI+PGNpcmNsZSBjeD0iMjAiIGN5PSIyMCIgcj0iMTgiIGZpbGw9IiNjMDAiLz48L3N2Zz4=" preserveAspectRatio="xMidYMid meet" pointer-events="none"/>
+</g>
+<g data-cell-id="unk">
+<rect x="330" y="220" width="90" height="60" fill="#ffffff" stroke="#000000" pointer-events="all"/>
+<g>
+<switch>
+<foreignObject requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" pointer-events="none" width="100%" height="100%" style="overflow: visible; text-align: left;">
+<div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 250px; margin-left: 375px;"><div style="box-sizing: border-box; font-size: 0px; text-align: center; color: #000000; "><div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: nowrap; ">unknown</div></div></div>
+</foreignObject>
+<text x="375" y="254" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle">unknown</text>
+</switch>
+</g>
+</g>
+</svg>

@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="481px" height="461px" viewBox="-0.5 -0.5 481 461" content="&lt;mxfile host=&quot;qraw-fixture&quot;&gt;&#xa;  &lt;diagram name=&quot;containers-tables&quot; id=&quot;containers-tables&quot;&gt;&#xa;    &lt;mxGraphModel dx=&quot;800&quot; dy=&quot;600&quot; grid=&quot;1&quot; gridSize=&quot;10&quot; guides=&quot;1&quot; tooltips=&quot;1&quot; connect=&quot;1&quot; arrows=&quot;1&quot; fold=&quot;1&quot; page=&quot;1&quot; pageScale=&quot;1&quot; pageWidth=&quot;827&quot; pageHeight=&quot;1169&quot; math=&quot;0&quot; shadow=&quot;0&quot;&gt;&#xa;      &lt;root&gt;&#xa;        &lt;mxCell id=&quot;0&quot; /&gt;&#xa;        &lt;mxCell id=&quot;1&quot; parent=&quot;0&quot; /&gt;&#xa;        &lt;mxCell id=&quot;sh&quot; value=&quot;Swimlane H&quot; style=&quot;swimlane;horizontal=1;startSize=30;html=1&quot; vertex=&quot;1&quot; parent=&quot;1&quot;&gt;&#xa;          &lt;mxGeometry x=&quot;40&quot; y=&quot;40&quot; width=&quot;240&quot; height=&quot;160&quot; as=&quot;geometry&quot; /&gt;&#xa;        &lt;/mxCell&gt;&#xa;        &lt;mxCell id=&quot;sh1&quot; value=&quot;inner&quot; style=&quot;rounded=0;html=1&quot; vertex=&quot;1&quot; parent=&quot;sh&quot;&gt;&#xa;          &lt;mxGeometry x=&quot;20&quot; y=&quot;50&quot; width=&quot;80&quot; height=&quot;40&quot; as=&quot;geometry&quot; /&gt;&#xa;        &lt;/mxCell&gt;&#xa;        &lt;mxCell id=&quot;sh2&quot; value=&quot;inner 2&quot; style=&quot;rounded=1;html=1&quot; vertex=&quot;1&quot; parent=&quot;sh&quot;&gt;&#xa;          &lt;mxGeometry x=&quot;120&quot; y=&quot;90&quot; width=&quot;80&quot; height=&quot;40&quot; as=&quot;geometry&quot; /&gt;&#xa;        &lt;/mxCell&gt;&#xa;        &lt;mxCell id=&quot;sv&quot; value=&quot;Swimlane V&quot; style=&quot;swimlane;horizontal=0;startSize=30;html=1&quot; vertex=&quot;1&quot; parent=&quot;1&quot;&gt;&#xa;          &lt;mxGeometry x=&quot;320&quot; y=&quot;40&quot; width=&quot;200&quot; height=&quot;160&quot; as=&quot;geometry&quot; /&gt;&#xa;        &lt;/mxCell&gt;&#xa;        &lt;mxCell id=&quot;sv1&quot; value=&quot;child&quot; style=&quot;rounded=0;html=1&quot; vertex=&quot;1&quot; parent=&quot;sv&quot;&gt;&#xa;          &lt;mxGeometry x=&quot;50&quot; y=&quot;20&quot; width=&quot;80&quot; height=&quot;40&quot; as=&quot;geometry&quot; /&gt;&#xa;        &lt;/mxCell&gt;&#xa;        &lt;mxCell id=&quot;grp&quot; value=&quot;&quot; style=&quot;group;&quot; vertex=&quot;1&quot; parent=&quot;1&quot;&gt;&#xa;          &lt;mxGeometry x=&quot;40&quot; y=&quot;240&quot; width=&quot;160&quot; height=&quot;100&quot; as=&quot;geometry&quot; /&gt;&#xa;        &lt;/mxCell&gt;&#xa;        &lt;mxCell id=&quot;grp1&quot; value=&quot;g1&quot; style=&quot;rounded=0;html=1;fillColor=#fff2cc&quot; vertex=&quot;1&quot; parent=&quot;grp&quot;&gt;&#xa;          &lt;mxGeometry x=&quot;10&quot; y=&quot;10&quot; width=&quot;60&quot; height=&quot;30&quot; as=&quot;geometry&quot; /&gt;&#xa;        &lt;/mxCell&gt;&#xa;        &lt;mxCell id=&quot;grp2&quot; value=&quot;g2&quot; style=&quot;ellipse;html=1;fillColor=#d5e8d4&quot; vertex=&quot;1&quot; parent=&quot;grp&quot;&gt;&#xa;          &lt;mxGeometry x=&quot;80&quot; y=&quot;50&quot; width=&quot;60&quot; height=&quot;40&quot; as=&quot;geometry&quot; /&gt;&#xa;        &lt;/mxCell&gt;&#xa;        &lt;mxCell id=&quot;col&quot; value=&quot;Collapsed&quot; style=&quot;swimlane;html=1;startSize=26;collapsible=1&quot; collapsed=&quot;1&quot; vertex=&quot;1&quot; parent=&quot;1&quot;&gt;&#xa;          &lt;mxGeometry x=&quot;260&quot; y=&quot;240&quot; width=&quot;160&quot; height=&quot;26&quot; as=&quot;geometry&quot; /&gt;&#xa;        &lt;/mxCell&gt;&#xa;        &lt;mxCell id=&quot;col1&quot; value=&quot;hidden&quot; style=&quot;rounded=0;html=1&quot; vertex=&quot;1&quot; parent=&quot;col&quot;&gt;&#xa;          &lt;mxGeometry x=&quot;10&quot; y=&quot;40&quot; width=&quot;60&quot; height=&quot;30&quot; as=&quot;geometry&quot; /&gt;&#xa;        &lt;/mxCell&gt;&#xa;        &lt;mxCell id=&quot;tb&quot; value=&quot;Table&quot; style=&quot;shape=table;startSize=30;container=1;collapsible=0;childLayout=tableLayout;html=1&quot; vertex=&quot;1&quot; parent=&quot;1&quot;&gt;&#xa;          &lt;mxGeometry x=&quot;40&quot; y=&quot;380&quot; width=&quot;240&quot; height=&quot;120&quot; as=&quot;geometry&quot; /&gt;&#xa;        &lt;/mxCell&gt;&#xa;        &lt;mxCell id=&quot;tr0&quot; value=&quot;&quot; style=&quot;shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1&quot; vertex=&quot;1&quot; parent=&quot;tb&quot;&gt;&#xa;          &lt;mxGeometry x=&quot;0&quot; y=&quot;30&quot; width=&quot;240&quot; height=&quot;45&quot; as=&quot;geometry&quot; /&gt;&#xa;        &lt;/mxCell&gt;&#xa;        &lt;mxCell id=&quot;tc00&quot; value=&quot;r0c0&quot; style=&quot;shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;&quot; vertex=&quot;1&quot; parent=&quot;tr0&quot;&gt;&#xa;          &lt;mxGeometry x=&quot;0&quot; y=&quot;0&quot; width=&quot;120&quot; height=&quot;45&quot; as=&quot;geometry&quot; /&gt;&#xa;        &lt;/mxCell&gt;&#xa;        &lt;mxCell id=&quot;tc01&quot; value=&quot;r0c1&quot; style=&quot;shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;&quot; vertex=&quot;1&quot; parent=&quot;tr0&quot;&gt;&#xa;          &lt;mxGeometry x=&quot;120&quot; y=&quot;0&quot; width=&quot;120&quot; height=&quot;45&quot; as=&quot;geometry&quot; /&gt;&#xa;        &lt;/mxCell&gt;&#xa;        &lt;mxCell id=&quot;tr1&quot; value=&quot;&quot; style=&quot;shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1&quot; vertex=&quot;1&quot; parent=&quot;tb&quot;&gt;&#xa;          &lt;mxGeometry x=&quot;0&quot; y=&quot;75&quot; width=&quot;240&quot; height=&quot;45&quot; as=&quot;geometry&quot; /&gt;&#xa;        &lt;/mxCell&gt;&#xa;        &lt;mxCell id=&quot;tc10&quot; value=&quot;r1c0&quot; style=&quot;shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;&quot; vertex=&quot;1&quot; parent=&quot;tr1&quot;&gt;&#xa;          &lt;mxGeometry x=&quot;0&quot; y=&quot;0&quot; width=&quot;120&quot; height=&quot;45&quot; as=&quot;geometry&quot; /&gt;&#xa;        &lt;/mxCell&gt;&#xa;        &lt;mxCell id=&quot;tc11&quot; value=&quot;r1c1&quot; style=&quot;shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;&quot; vertex=&quot;1&quot; parent=&quot;tr1&quot;&gt;&#xa;          &lt;mxGeometry x=&quot;120&quot; y=&quot;0&quot; width=&quot;120&quot; height=&quot;45&quot; as=&quot;geometry&quot; /&gt;&#xa;        &lt;/mxCell&gt;&#xa;        &lt;mxCell id=&quot;pr&quot; value=&quot;partial&quot; style=&quot;shape=partialRectangle;top=1;bottom=0;left=0;right=0;html=1;fillColor=none&quot; vertex=&quot;1&quot; parent=&quot;1&quot;&gt;&#xa;          &lt;mxGeometry x=&quot;320&quot; y=&quot;380&quot; width=&quot;120&quot; height=&quot;60&quot; as=&quot;geometry&quot; /&gt;&#xa;        &lt;/mxCell&gt;&#xa;      &lt;/root&gt;&#xa;    &lt;/mxGraphModel&gt;&#xa;  &lt;/diagram&gt;&#xa;&lt;/mxfile&gt;&#xa;">
+<defs>
+<clipPath id="qraw-1">
+<rect x="0" y="370" width="120" height="45"/>
+</clipPath>
+<clipPath id="qraw-2">
+<rect x="120" y="370" width="120" height="45"/>
+</clipPath>
+<clipPath id="qraw-3">
+<rect x="0" y="415" width="120" height="45"/>
+</clipPath>
+<clipPath id="qraw-4">
+<rect x="120" y="415" width="120" height="45"/>
+</clipPath>
+</defs>
+<g data-cell-id="sh">
+<path d="M 0 30 L 0 0 L 240 0 L 240 30" fill="#ffffff" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+<path d="M 0 30 L 0 160 L 240 160 L 240 30" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+<path d="M 0 30 L 240 30" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+<g>
+<switch>
+<foreignObject requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" pointer-events="none" width="100%" height="100%" style="overflow: visible; text-align: left;">
+<div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 15px; margin-left: 120px;"><div style="box-sizing: border-box; font-size: 0px; text-align: center; color: #000000; "><div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; font-weight: bold; white-space: nowrap; ">Swimlane H</div></div></div>
+</foreignObject>
+<text x="120" y="19" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle" font-weight="bold">Swimlane H</text>
+</switch>
+</g>
+<g data-cell-id="sh1">
+<rect x="20" y="50" width="80" height="40" fill="#ffffff" stroke="#000000" pointer-events="all"/>
+<g>
+<switch>
+<foreignObject requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" pointer-events="none" width="100%" height="100%" style="overflow: visible; text-align: left;">
+<div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 70px; margin-left: 60px;"><div style="box-sizing: border-box; font-size: 0px; text-align: center; color: #000000; "><div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: nowrap; ">inner</div></div></div>
+</foreignObject>
+<text x="60" y="74" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle">inner</text>
+</switch>
+</g>
+</g>
+<g data-cell-id="sh2">
+<rect x="120" y="90" width="80" height="40" rx="6" ry="6" fill="#ffffff" stroke="#000000" pointer-events="all"/>
+<g>
+<switch>
+<foreignObject requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" pointer-events="none" width="100%" height="100%" style="overflow: visible; text-align: left;">
+<div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 110px; margin-left: 160px;"><div style="box-sizing: border-box; font-size: 0px; text-align: center; color: #000000; "><div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: nowrap; ">inner 2</div></div></div>
+</foreignObject>
+<text x="160" y="114" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle">inner 2</text>
+</switch>
+</g>
+</g>
+</g>
+<g data-cell-id="sv">
+<path d="M 310 0 L 280 0 L 280 160 L 310 160" fill="#ffffff" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+<path d="M 310 0 L 480 0 L 480 160 L 310 160" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+<path d="M 310 0 L 310 160" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+<g transform="rotate(-90 295 80)">
+<switch>
+<foreignObject requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" pointer-events="none" width="100%" height="100%" style="overflow: visible; text-align: left;">
+<div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 80px; margin-left: 295px;"><div style="box-sizing: border-box; font-size: 0px; text-align: center; color: #000000; "><div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; font-weight: bold; white-space: nowrap; ">Swimlane V</div></div></div>
+</foreignObject>
+<text x="295" y="84" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle" font-weight="bold">Swimlane V</text>
+</switch>
+</g>
+<g data-cell-id="sv1">
+<rect x="330" y="20" width="80" height="40" fill="#ffffff" stroke="#000000" pointer-events="all"/>
+<g>
+<switch>
+<foreignObject requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" pointer-events="none" width="100%" height="100%" style="overflow: visible; text-align: left;">
+<div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 40px; margin-left: 370px;"><div style="box-sizing: border-box; font-size: 0px; text-align: center; color: #000000; "><div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: nowrap; ">child</div></div></div>
+</foreignObject>
+<text x="370" y="44" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle">child</text>
+</switch>
+</g>
+</g>
+</g>
+<g data-cell-id="grp">
+<g data-cell-id="grp1">
+<rect x="10" y="210" width="60" height="30" fill="#fff2cc" stroke="#000000" pointer-events="all"/>
+<g>
+<switch>
+<foreignObject requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" pointer-events="none" width="100%" height="100%" style="overflow: visible; text-align: left;">
+<div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 225px; margin-left: 40px;"><div style="box-sizing: border-box; font-size: 0px; text-align: center; color: #000000; "><div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: nowrap; ">g1</div></div></div>
+</foreignObject>
+<text x="40" y="229" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle">g1</text>
+</switch>
+</g>
+</g>
+<g data-cell-id="grp2">
+<ellipse cx="110" cy="270" rx="30" ry="20" fill="#d5e8d4" stroke="#000000" pointer-events="all"/>
+<g>
+<switch>
+<foreignObject requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" pointer-events="none" width="100%" height="100%" style="overflow: visible; text-align: left;">
+<div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 270px; margin-left: 110px;"><div style="box-sizing: border-box; font-size: 0px; text-align: center; color: #000000; "><div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: nowrap; ">g2</div></div></div>
+</foreignObject>
+<text x="110" y="274" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle">g2</text>
+</switch>
+</g>
+</g>
+</g>
+<g data-cell-id="col">
+<path d="M 220 226 L 220 200 L 380 200 L 380 226" fill="#ffffff" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+<path d="M 220 226 L 380 226" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+<g>
+<switch>
+<foreignObject requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" pointer-events="none" width="100%" height="100%" style="overflow: visible; text-align: left;">
+<div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 213px; margin-left: 300px;"><div style="box-sizing: border-box; font-size: 0px; text-align: center; color: #000000; "><div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; font-weight: bold; white-space: nowrap; ">Collapsed</div></div></div>
+</foreignObject>
+<text x="300" y="217" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle" font-weight="bold">Collapsed</text>
+</switch>
+</g>
+</g>
+<g data-cell-id="tb">
+<path d="M 0 370 L 0 340 L 240 340 L 240 370" fill="#ffffff" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+<path d="M 0 370 L 0 460 L 240 460 L 240 370" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+<path d="M 0 370 L 240 370" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+<path d="M 0 415 L 120 415 L 240 415" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+<path d="M 120 370 L 120 415 L 120 460" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+<g>
+<switch>
+<foreignObject requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" pointer-events="none" width="100%" height="100%" style="overflow: visible; text-align: left;">
+<div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 355px; margin-left: 120px;"><div style="box-sizing: border-box; font-size: 0px; text-align: center; color: #000000; "><div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: nowrap; ">Table</div></div></div>
+</foreignObject>
+<text x="120" y="359" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle">Table</text>
+</switch>
+</g>
+<g data-cell-id="tr0">
+<path d="M 0 370 M 240 370 M 240 415 M 0 415" fill="none" stroke="#000000" stroke-linecap="square" stroke-miterlimit="10" pointer-events="all"/>
+<g data-cell-id="tc00">
+<path d="M 0 370 M 120 370 M 120 415 M 0 415" fill="none" stroke="#000000" stroke-linecap="square" stroke-miterlimit="10" pointer-events="all"/>
+<g>
+<switch>
+<foreignObject requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" pointer-events="none" width="100%" height="100%" style="overflow: visible; text-align: left;">
+<div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 118px; height: 1px; padding-top: 393px; margin-left: 1px;"><div style="box-sizing: border-box; font-size: 0px; text-align: center; max-height: 41px; overflow: hidden; color: #000000; "><div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">r0c0</div></div></div>
+</foreignObject>
+<text x="60" y="396" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle" clip-path="url(#qraw-1)">r0c0</text>
+</switch>
+</g>
+</g>
+<g data-cell-id="tc01">
+<path d="M 120 370 M 240 370 M 240 415 M 120 415" fill="none" stroke="#000000" stroke-linecap="square" stroke-miterlimit="10" pointer-events="all"/>
+<g>
+<switch>
+<foreignObject requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" pointer-events="none" width="100%" height="100%" style="overflow: visible; text-align: left;">
+<div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 118px; height: 1px; padding-top: 393px; margin-left: 121px;"><div style="box-sizing: border-box; font-size: 0px; text-align: center; max-height: 41px; overflow: hidden; color: #000000; "><div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">r0c1</div></div></div>
+</foreignObject>
+<text x="180" y="396" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle" clip-path="url(#qraw-2)">r0c1</text>
+</switch>
+</g>
+</g>
+</g>
+<g data-cell-id="tr1">
+<path d="M 0 415 M 240 415 M 240 460 M 0 460" fill="none" stroke="#000000" stroke-linecap="square" stroke-miterlimit="10" pointer-events="all"/>
+<g data-cell-id="tc10">
+<path d="M 0 415 M 120 415 M 120 460 M 0 460" fill="none" stroke="#000000" stroke-linecap="square" stroke-miterlimit="10" pointer-events="all"/>
+<g>
+<switch>
+<foreignObject requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" pointer-events="none" width="100%" height="100%" style="overflow: visible; text-align: left;">
+<div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 118px; height: 1px; padding-top: 438px; margin-left: 1px;"><div style="box-sizing: border-box; font-size: 0px; text-align: center; max-height: 41px; overflow: hidden; color: #000000; "><div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">r1c0</div></div></div>
+</foreignObject>
+<text x="60" y="441" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle" clip-path="url(#qraw-3)">r1c0</text>
+</switch>
+</g>
+</g>
+<g data-cell-id="tc11">
+<path d="M 120 415 M 240 415 M 240 460 M 120 460" fill="none" stroke="#000000" stroke-linecap="square" stroke-miterlimit="10" pointer-events="all"/>
+<g>
+<switch>
+<foreignObject requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" pointer-events="none" width="100%" height="100%" style="overflow: visible; text-align: left;">
+<div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 118px; height: 1px; padding-top: 438px; margin-left: 121px;"><div style="box-sizing: border-box; font-size: 0px; text-align: center; max-height: 41px; overflow: hidden; color: #000000; "><div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">r1c1</div></div></div>
+</foreignObject>
+<text x="180" y="441" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle" clip-path="url(#qraw-4)">r1c1</text>
+</switch>
+</g>
+</g>
+</g>
+</g>
+<g data-cell-id="pr">
+<path d="M 280 340 L 400 340 M 400 400 M 280 400" fill="none" stroke="#000000" stroke-linecap="square" stroke-miterlimit="10" pointer-events="all"/>
+<g>
+<switch>
+<foreignObject requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" pointer-events="none" width="100%" height="100%" style="overflow: visible; text-align: left;">
+<div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 370px; margin-left: 340px;"><div style="box-sizing: border-box; font-size: 0px; text-align: center; color: #000000; "><div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: nowrap; ">partial</div></div></div>
+</foreignObject>
+<text x="340" y="374" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle">partial</text>
+</switch>
+</g>
+</g>
+</svg>

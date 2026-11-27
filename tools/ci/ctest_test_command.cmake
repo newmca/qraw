@@ -1,0 +1,46 @@
+# Helper of diagnose_failed_tests.sh: prints how CTest runs one test, from
+# `ctest --show-only=json-v1`, so the diagnostics re-run exactly what CTest ran
+# (a Qt Test executable, qraw-bench, qraw-fuzz, ...).
+#   cmake -DJSON=<ctest json file> -DTEST=<test name> -DOUT=<file> -P ctest_test_command.cmake
+# OUT gets one line per element of the command (the program first), then a
+# line "--env" and one line per NAME=VALUE of the test's ENVIRONMENT property,
+# then "--cwd" and the working directory. CMake is used because every CI job
+# has it, whatever else the platform lacks.
+file(READ "${JSON}" json)
+string(JSON count LENGTH "${json}" tests)
+set(lines "")
+math(EXPR last "${count} - 1")
+foreach(i RANGE ${last})
+    string(JSON name GET "${json}" tests ${i} name)
+    if(NOT name STREQUAL TEST)
+        continue()
+    endif()
+    string(JSON argc LENGTH "${json}" tests ${i} command)
+    math(EXPR lastArg "${argc} - 1")
+    foreach(a RANGE ${lastArg})
+        string(JSON arg GET "${json}" tests ${i} command ${a})
+        string(APPEND lines "${arg}\n")
+    endforeach()
+    string(APPEND lines "--env\n")
+    string(JSON propCount LENGTH "${json}" tests ${i} properties)
+    math(EXPR lastProp "${propCount} - 1")
+    foreach(p RANGE ${lastProp})
+        string(JSON propName GET "${json}" tests ${i} properties ${p} name)
+        if(propName STREQUAL "ENVIRONMENT")
+            string(JSON envCount LENGTH "${json}" tests ${i} properties ${p} value)
+            math(EXPR lastEnv "${envCount} - 1")
+            foreach(e RANGE ${lastEnv})
+                string(JSON entry GET "${json}" tests ${i} properties ${p} value ${e})
+                string(APPEND lines "${entry}\n")
+            endforeach()
+        elseif(propName STREQUAL "WORKING_DIRECTORY")
+            string(JSON cwd GET "${json}" tests ${i} properties ${p} value)
+        endif()
+    endforeach()
+    if(DEFINED cwd)
+        string(APPEND lines "--cwd\n${cwd}\n")
+    endif()
+    file(WRITE "${OUT}" "${lines}")
+    return()
+endforeach()
+message(FATAL_ERROR "ctest knows no test named ${TEST}")

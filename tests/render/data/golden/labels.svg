@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="645px" height="561px" viewBox="-0.5 -0.5 645 561" content="&lt;mxfile host=&quot;qraw-fixture&quot;&gt;&#xa;  &lt;diagram name=&quot;labels&quot; id=&quot;labels&quot;&gt;&#xa;    &lt;mxGraphModel dx=&quot;800&quot; dy=&quot;600&quot; grid=&quot;1&quot; gridSize=&quot;10&quot; guides=&quot;1&quot; tooltips=&quot;1&quot; connect=&quot;1&quot; arrows=&quot;1&quot; fold=&quot;1&quot; page=&quot;1&quot; pageScale=&quot;1&quot; pageWidth=&quot;827&quot; pageHeight=&quot;1169&quot; math=&quot;0&quot; shadow=&quot;0&quot;&gt;&#xa;      &lt;root&gt;&#xa;        &lt;mxCell id=&quot;0&quot; /&gt;&#xa;        &lt;mxCell id=&quot;1&quot; parent=&quot;0&quot; /&gt;&#xa;        &lt;mxCell id=&quot;l0&quot; value=&quot;Plain text&quot; style=&quot;rounded=0;html=1;whiteSpace=wrap&quot; vertex=&quot;1&quot; parent=&quot;1&quot;&gt;&#xa;          &lt;mxGeometry x=&quot;40&quot; y=&quot;40&quot; width=&quot;120&quot; height=&quot;50&quot; as=&quot;geometry&quot; /&gt;&#xa;        &lt;/mxCell&gt;&#xa;        &lt;mxCell id=&quot;l1&quot; value=&quot;&amp;lt;b&amp;gt;Bold&amp;lt;/b&amp;gt; and &amp;lt;i&amp;gt;italic&amp;lt;/i&amp;gt;&amp;lt;br&amp;gt;two lines&quot; style=&quot;rounded=0;html=1;whiteSpace=wrap&quot; vertex=&quot;1&quot; parent=&quot;1&quot;&gt;&#xa;          &lt;mxGeometry x=&quot;200&quot; y=&quot;40&quot; width=&quot;120&quot; height=&quot;50&quot; as=&quot;geometry&quot; /&gt;&#xa;        &lt;/mxCell&gt;&#xa;        &lt;mxCell id=&quot;l2&quot; value=&quot;left/top&quot; style=&quot;html=1;align=left;verticalAlign=top&quot; vertex=&quot;1&quot; parent=&quot;1&quot;&gt;&#xa;          &lt;mxGeometry x=&quot;40&quot; y=&quot;120&quot; width=&quot;120&quot; height=&quot;60&quot; as=&quot;geometry&quot; /&gt;&#xa;        &lt;/mxCell&gt;&#xa;        &lt;mxCell id=&quot;l3&quot; value=&quot;left/middle&quot; style=&quot;html=1;align=left;verticalAlign=middle&quot; vertex=&quot;1&quot; parent=&quot;1&quot;&gt;&#xa;          &lt;mxGeometry x=&quot;190&quot; y=&quot;120&quot; width=&quot;120&quot; height=&quot;60&quot; as=&quot;geometry&quot; /&gt;&#xa;        &lt;/mxCell&gt;&#xa;        &lt;mxCell id=&quot;l4&quot; value=&quot;left/bottom&quot; style=&quot;html=1;align=left;verticalAlign=bottom&quot; vertex=&quot;1&quot; parent=&quot;1&quot;&gt;&#xa;          &lt;mxGeometry x=&quot;340&quot; y=&quot;120&quot; width=&quot;120&quot; height=&quot;60&quot; as=&quot;geometry&quot; /&gt;&#xa;        &lt;/mxCell&gt;&#xa;        &lt;mxCell id=&quot;l5&quot; value=&quot;center/top&quot; style=&quot;html=1;align=center;verticalAlign=top&quot; vertex=&quot;1&quot; parent=&quot;1&quot;&gt;&#xa;          &lt;mxGeometry x=&quot;40&quot; y=&quot;200&quot; width=&quot;120&quot; height=&quot;60&quot; as=&quot;geometry&quot; /&gt;&#xa;        &lt;/mxCell&gt;&#xa;        &lt;mxCell id=&quot;l6&quot; value=&quot;center/middle&quot; style=&quot;html=1;align=center;verticalAlign=middle&quot; vertex=&quot;1&quot; parent=&quot;1&quot;&gt;&#xa;          &lt;mxGeometry x=&quot;190&quot; y=&quot;200&quot; width=&quot;120&quot; height=&quot;60&quot; as=&quot;geometry&quot; /&gt;&#xa;        &lt;/mxCell&gt;&#xa;        &lt;mxCell id=&quot;l7&quot; value=&quot;center/bottom&quot; style=&quot;html=1;align=center;verticalAlign=bottom&quot; vertex=&quot;1&quot; parent=&quot;1&quot;&gt;&#xa;          &lt;mxGeometry x=&quot;340&quot; y=&quot;200&quot; width=&quot;120&quot; height=&quot;60&quot; as=&quot;geometry&quot; /&gt;&#xa;        &lt;/mxCell&gt;&#xa;        &lt;mxCell id=&quot;l8&quot; value=&quot;right/top&quot; style=&quot;html=1;align=right;verticalAlign=top&quot; vertex=&quot;1&quot; parent=&quot;1&quot;&gt;&#xa;          &lt;mxGeometry x=&quot;40&quot; y=&quot;280&quot; width=&quot;120&quot; height=&quot;60&quot; as=&quot;geometry&quot; /&gt;&#xa;        &lt;/mxCell&gt;&#xa;        &lt;mxCell id=&quot;l9&quot; value=&quot;right/middle&quot; style=&quot;html=1;align=right;verticalAlign=middle&quot; vertex=&quot;1&quot; parent=&quot;1&quot;&gt;&#xa;          &lt;mxGeometry x=&quot;190&quot; y=&quot;280&quot; width=&quot;120&quot; height=&quot;60&quot; as=&quot;geometry&quot; /&gt;&#xa;        &lt;/mxCell&gt;&#xa;        &lt;mxCell id=&quot;l10&quot; value=&quot;right/bottom&quot; style=&quot;html=1;align=right;verticalAlign=bottom&quot; vertex=&quot;1&quot; parent=&quot;1&quot;&gt;&#xa;          &lt;mxGeometry x=&quot;340&quot; y=&quot;280&quot; width=&quot;120&quot; height=&quot;60&quot; as=&quot;geometry&quot; /&gt;&#xa;        &lt;/mxCell&gt;&#xa;        &lt;mxCell id=&quot;lo&quot; value=&quot;outside&quot; style=&quot;html=1;labelPosition=right;verticalLabelPosition=bottom;align=left;verticalAlign=top&quot; vertex=&quot;1&quot; parent=&quot;1&quot;&gt;&#xa;          &lt;mxGeometry x=&quot;40&quot; y=&quot;400&quot; width=&quot;60&quot; height=&quot;40&quot; as=&quot;geometry&quot; /&gt;&#xa;        &lt;/mxCell&gt;&#xa;        &lt;mxCell id=&quot;lw&quot; value=&quot;A long label that must wrap onto several lines&quot; style=&quot;html=1;whiteSpace=wrap;&quot; vertex=&quot;1&quot; parent=&quot;1&quot;&gt;&#xa;          &lt;mxGeometry x=&quot;200&quot; y=&quot;400&quot; width=&quot;80&quot; height=&quot;40&quot; as=&quot;geometry&quot; /&gt;&#xa;        &lt;/mxCell&gt;&#xa;        &lt;mxCell id=&quot;ls&quot; value=&quot;Spacing&quot; style=&quot;html=1;spacing=10;spacingLeft=20;align=left&quot; vertex=&quot;1&quot; parent=&quot;1&quot;&gt;&#xa;          &lt;mxGeometry x=&quot;340&quot; y=&quot;400&quot; width=&quot;120&quot; height=&quot;50&quot; as=&quot;geometry&quot; /&gt;&#xa;        &lt;/mxCell&gt;&#xa;        &lt;mxCell id=&quot;lh&quot; value=&quot;Vertical&quot; style=&quot;html=1;horizontal=0&quot; vertex=&quot;1&quot; parent=&quot;1&quot;&gt;&#xa;          &lt;mxGeometry x=&quot;500&quot; y=&quot;400&quot; width=&quot;40&quot; height=&quot;100&quot; as=&quot;geometry&quot; /&gt;&#xa;        &lt;/mxCell&gt;&#xa;        &lt;mxCell id=&quot;lr&quot; value=&quot;Rotated&quot; style=&quot;html=1;rotation=30&quot; vertex=&quot;1&quot; parent=&quot;1&quot;&gt;&#xa;          &lt;mxGeometry x=&quot;580&quot; y=&quot;400&quot; width=&quot;100&quot; height=&quot;40&quot; as=&quot;geometry&quot; /&gt;&#xa;        &lt;/mxCell&gt;&#xa;        &lt;mxCell id=&quot;ex&quot; value=&quot;X&quot; style=&quot;rounded=1;html=1&quot; vertex=&quot;1&quot; parent=&quot;1&quot;&gt;&#xa;          &lt;mxGeometry x=&quot;40&quot; y=&quot;560&quot; width=&quot;80&quot; height=&quot;40&quot; as=&quot;geometry&quot; /&gt;&#xa;        &lt;/mxCell&gt;&#xa;        &lt;mxCell id=&quot;ey&quot; value=&quot;Y&quot; style=&quot;rounded=1;html=1&quot; vertex=&quot;1&quot; parent=&quot;1&quot;&gt;&#xa;          &lt;mxGeometry x=&quot;320&quot; y=&quot;560&quot; width=&quot;80&quot; height=&quot;40&quot; as=&quot;geometry&quot; /&gt;&#xa;        &lt;/mxCell&gt;&#xa;        &lt;mxCell id=&quot;elab&quot; value=&quot;edge label&quot; style=&quot;html=1;labelBackgroundColor=#ffffcc;labelBorderColor=#000000&quot; edge=&quot;1&quot; parent=&quot;1&quot; source=&quot;ex&quot; target=&quot;ey&quot;&gt;&#xa;          &lt;mxGeometry relative=&quot;1&quot; as=&quot;geometry&quot; /&gt;&#xa;        &lt;/mxCell&gt;&#xa;        &lt;mxCell id=&quot;el1&quot; value=&quot;0.2&quot; style=&quot;edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];&quot; vertex=&quot;1&quot; connectable=&quot;0&quot; parent=&quot;elab&quot;&gt;&#xa;          &lt;mxGeometry x=&quot;-0.5&quot; y=&quot;10&quot; relative=&quot;1&quot; as=&quot;geometry&quot;&gt;&#xa;            &lt;mxPoint as=&quot;offset&quot; /&gt;&#xa;          &lt;/mxGeometry&gt;&#xa;        &lt;/mxCell&gt;&#xa;        &lt;mxCell id=&quot;el2&quot; value=&quot;0.8&quot; style=&quot;edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];&quot; vertex=&quot;1&quot; connectable=&quot;0&quot; parent=&quot;elab&quot;&gt;&#xa;          &lt;mxGeometry x=&quot;0.5&quot; y=&quot;-10&quot; relative=&quot;1&quot; as=&quot;geometry&quot;&gt;&#xa;            &lt;mxPoint as=&quot;offset&quot; /&gt;&#xa;          &lt;/mxGeometry&gt;&#xa;        &lt;/mxCell&gt;&#xa;      &lt;/root&gt;&#xa;    &lt;/mxGraphModel&gt;&#xa;  &lt;/diagram&gt;&#xa;&lt;/mxfile&gt;&#xa;">
+<defs/>
+<g data-cell-id="l0">
+<rect x="0" y="0" width="120" height="50" fill="#ffffff" stroke="#000000" pointer-events="all"/>
+<g>
+<switch>
+<foreignObject requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" pointer-events="none" width="100%" height="100%" style="overflow: visible; text-align: left;">
+<div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 118px; height: 1px; padding-top: 25px; margin-left: 1px;"><div style="box-sizing: border-box; font-size: 0px; text-align: center; color: #000000; "><div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">Plain text</div></div></div>
+</foreignObject>
+<text x="60" y="29" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle">Plain text</text>
+</switch>
+</g>
+</g>
+<g data-cell-id="l1">
+<rect x="160" y="0" width="120" height="50" fill="#ffffff" stroke="#000000" pointer-events="all"/>
+<g>
+<switch>
+<foreignObject requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" pointer-events="none" width="100%" height="100%" style="overflow: visible; text-align: left;">
+<div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 118px; height: 1px; padding-top: 25px; margin-left: 161px;"><div style="box-sizing: border-box; font-size: 0px; text-align: center; color: #000000; "><div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; "><b>Bold</b> and <i>italic</i><br/>two lines</div></div></div>
+</foreignObject>
+<text x="220" y="22" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle"><tspan x="220" y="22">Bold and italic</tspan><tspan x="220" y="36">two lines</tspan></text>
+</switch>
+</g>
+</g>
+<g data-cell-id="l2">
+<rect x="0" y="80" width="120" height="60" fill="#ffffff" stroke="#000000" pointer-events="all"/>
+<g>
+<switch>
+<foreignObject requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" pointer-events="none" width="100%" height="100%" style="overflow: visible; text-align: left;">
+<div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe flex-start; justify-content: unsafe flex-start; width: 1px; height: 1px; padding-top: 87px; margin-left: 2px;"><div style="box-sizing: border-box; font-size: 0px; text-align: left; color: #000000; "><div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: nowrap; ">left/top</div></div></div>
+</foreignObject>
+<text x="2" y="99" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="start">left/top</text>
+</switch>
+</g>
+</g>
+<g data-cell-id="l3">
+<rect x="150" y="80" width="120" height="60" fill="#ffffff" stroke="#000000" pointer-events="all"/>
+<g>
+<switch>
+<foreignObject requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" pointer-events="none" width="100%" height="100%" style="overflow: visible; text-align: left;">
+<div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe flex-start; width: 1px; height: 1px; padding-top: 110px; margin-left: 152px;"><div style="box-sizing: border-box; font-size: 0px; text-align: left; color: #000000; "><div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: nowrap; ">left/middle</div></div></div>
+</foreignObject>
+<text x="152" y="114" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="start">left/middle</text>
+</switch>
+</g>
+</g>
+<g data-cell-id="l4">
+<rect x="300" y="80" width="120" height="60" fill="#ffffff" stroke="#000000" pointer-events="all"/>
+<g>
+<switch>
+<foreignObject requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" pointer-events="none" width="100%" height="100%" style="overflow: visible; text-align: left;">
+<div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe flex-end; justify-content: unsafe flex-start; width: 1px; height: 1px; padding-top: 137px; margin-left: 302px;"><div style="box-sizing: border-box; font-size: 0px; text-align: left; color: #000000; "><div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: nowrap; ">left/bottom</div></div></div>
+</foreignObject>
+<text x="302" y="137" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="start">left/bottom</text>
+</switch>
+</g>
+</g>
+<g data-cell-id="l5">
+<rect x="0" y="160" width="120" height="60" fill="#ffffff" stroke="#000000" pointer-events="all"/>
+<g>
+<switch>
+<foreignObject requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" pointer-events="none" width="100%" height="100%" style="overflow: visible; text-align: left;">
+<div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe flex-start; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 167px; margin-left: 60px;"><div style="box-sizing: border-box; font-size: 0px; text-align: center; color: #000000; "><div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: nowrap; ">center/top</div></div></div>
+</foreignObject>
+<text x="60" y="179" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle">center/top</text>
+</switch>
+</g>
+</g>
+<g data-cell-id="l6">
+<rect x="150" y="160" width="120" height="60" fill="#ffffff" stroke="#000000" pointer-events="all"/>
+<g>
+<switch>
+<foreignObject requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" pointer-events="none" width="100%" height="100%" style="overflow: visible; text-align: left;">
+<div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 190px; margin-left: 210px;"><div style="box-sizing: border-box; font-size: 0px; text-align: center; color: #000000; "><div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: nowrap; ">center/middle</div></div></div>
+</foreignObject>
+<text x="210" y="194" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle">center/middle</text>
+</switch>
+</g>
+</g>
+<g data-cell-id="l7">
+<rect x="300" y="160" width="120" height="60" fill="#ffffff" stroke="#000000" pointer-events="all"/>
+<g>
+<switch>
+<foreignObject requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" pointer-events="none" width="100%" height="100%" style="overflow: visible; text-align: left;">
+<div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe flex-end; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 217px; margin-left: 360px;"><div style="box-sizing: border-box; font-size: 0px; text-align: center; color: #000000; "><div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: nowrap; ">center/bottom</div></div></div>
+</foreignObject>
+<text x="360" y="217" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle">center/bottom</text>
+</switch>
+</g>
+</g>
+<g data-cell-id="l8">
+<rect x="0" y="240" width="120" height="60" fill="#ffffff" stroke="#000000" pointer-events="all"/>
+<g>
+<switch>
+<foreignObject requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" pointer-events="none" width="100%" height="100%" style="overflow: visible; text-align: left;">
+<div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe flex-start; justify-content: unsafe flex-end; width: 1px; height: 1px; padding-top: 247px; margin-left: 118px;"><div style="box-sizing: border-box; font-size: 0px; text-align: right; color: #000000; "><div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: nowrap; ">right/top</div></div></div>
+</foreignObject>
+<text x="118" y="259" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="end">right/top</text>
+</switch>
+</g>
+</g>
+<g data-cell-id="l9">
+<rect x="150" y="240" width="120" height="60" fill="#ffffff" stroke="#000000" pointer-events="all"/>
+<g>
+<switch>
+<foreignObject requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" pointer-events="none" width="100%" height="100%" style="overflow: visible; text-align: left;">
+<div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe flex-end; width: 1px; height: 1px; padding-top: 270px; margin-left: 268px;"><div style="box-sizing: border-box; font-size: 0px; text-align: right; color: #000000; "><div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: nowrap; ">right/middle</div></div></div>
+</foreignObject>
+<text x="268" y="274" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="end">right/middle</text>
+</switch>
+</g>
+</g>
+<g data-cell-id="l10">
+<rect x="300" y="240" width="120" height="60" fill="#ffffff" stroke="#000000" pointer-events="all"/>
+<g>
+<switch>
+<foreignObject requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" pointer-events="none" width="100%" height="100%" style="overflow: visible; text-align: left;">
+<div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe flex-end; justify-content: unsafe flex-end; width: 1px; height: 1px; padding-top: 297px; margin-left: 418px;"><div style="box-sizing: border-box; font-size: 0px; text-align: right; color: #000000; "><div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: nowrap; ">right/bottom</div></div></div>
+</foreignObject>
+<text x="418" y="297" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="end">right/bottom</text>
+</switch>
+</g>
+</g>
+<g data-cell-id="lo">
+<rect x="0" y="360" width="60" height="40" fill="#ffffff" stroke="#000000" pointer-events="all"/>
+<g>
+<switch>
+<foreignObject requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" pointer-events="none" width="100%" height="100%" style="overflow: visible; text-align: left;">
+<div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe flex-start; justify-content: unsafe flex-start; width: 1px; height: 1px; padding-top: 407px; margin-left: 62px;"><div style="box-sizing: border-box; font-size: 0px; text-align: left; color: #000000; "><div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: nowrap; ">outside</div></div></div>
+</foreignObject>
+<text x="62" y="419" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="start">outside</text>
+</switch>
+</g>
+</g>
+<g data-cell-id="lw">
+<rect x="160" y="360" width="80" height="40" fill="#ffffff" stroke="#000000" pointer-events="all"/>
+<g>
+<switch>
+<foreignObject requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" pointer-events="none" width="100%" height="100%" style="overflow: visible; text-align: left;">
+<div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 78px; height: 1px; padding-top: 380px; margin-left: 161px;"><div style="box-sizing: border-box; font-size: 0px; text-align: center; color: #000000; "><div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">A long label that must wrap onto several lines</div></div></div>
+</foreignObject>
+<text x="200" y="384" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle">A long label that must wrap onto several lines</text>
+</switch>
+</g>
+</g>
+<g data-cell-id="ls">
+<rect x="300" y="360" width="120" height="50" fill="#ffffff" stroke="#000000" pointer-events="all"/>
+<g>
+<switch>
+<foreignObject requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" pointer-events="none" width="100%" height="100%" style="overflow: visible; text-align: left;">
+<div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe flex-start; width: 1px; height: 1px; padding-top: 385px; margin-left: 330px;"><div style="box-sizing: border-box; font-size: 0px; text-align: left; color: #000000; "><div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: nowrap; ">Spacing</div></div></div>
+</foreignObject>
+<text x="330" y="389" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="start">Spacing</text>
+</switch>
+</g>
+</g>
+<g data-cell-id="lh">
+<rect x="460" y="360" width="40" height="100" fill="#ffffff" stroke="#000000" pointer-events="all"/>
+<g transform="rotate(-90 480 410)">
+<switch>
+<foreignObject requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" pointer-events="none" width="100%" height="100%" style="overflow: visible; text-align: left;">
+<div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 410px; margin-left: 480px;"><div style="box-sizing: border-box; font-size: 0px; text-align: center; color: #000000; "><div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: nowrap; ">Vertical</div></div></div>
+</foreignObject>
+<text x="480" y="414" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle">Vertical</text>
+</switch>
+</g>
+</g>
+<g data-cell-id="lr">
+<rect x="540" y="360" width="100" height="40" fill="#ffffff" stroke="#000000" transform="rotate(30,590,380)" pointer-events="all"/>
+<g transform="rotate(30 590 380)">
+<switch>
+<foreignObject requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" pointer-events="none" width="100%" height="100%" style="overflow: visible; text-align: left;">
+<div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 380px; margin-left: 590px;"><div style="box-sizing: border-box; font-size: 0px; text-align: center; color: #000000; "><div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: nowrap; ">Rotated</div></div></div>
+</foreignObject>
+<text x="590" y="384" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle">Rotated</text>
+</switch>
+</g>
+</g>
+<g data-cell-id="ex">
+<rect x="0" y="520" width="80" height="40" rx="6" ry="6" fill="#ffffff" stroke="#000000" pointer-events="all"/>
+<g>
+<switch>
+<foreignObject requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" pointer-events="none" width="100%" height="100%" style="overflow: visible; text-align: left;">
+<div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 540px; margin-left: 40px;"><div style="box-sizing: border-box; font-size: 0px; text-align: center; color: #000000; "><div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: nowrap; ">X</div></div></div>
+</foreignObject>
+<text x="40" y="544" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle">X</text>
+</switch>
+</g>
+</g>
+<g data-cell-id="ey">
+<rect x="280" y="520" width="80" height="40" rx="6" ry="6" fill="#ffffff" stroke="#000000" pointer-events="all"/>
+<g>
+<switch>
+<foreignObject requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" pointer-events="none" width="100%" height="100%" style="overflow: visible; text-align: left;">
+<div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 540px; margin-left: 320px;"><div style="box-sizing: border-box; font-size: 0px; text-align: center; color: #000000; "><div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: nowrap; ">Y</div></div></div>
+</foreignObject>
+<text x="320" y="544" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle">Y</text>
+</switch>
+</g>
+</g>
+<g data-cell-id="elab">
+<path d="M 80 540 L 273.63 540" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+<path d="M 278.88 540 L 271.88 543.5 L 273.63 540 L 271.88 536.5 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+<g>
+<switch>
+<foreignObject requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" pointer-events="none" width="100%" height="100%" style="overflow: visible; text-align: left;">
+<div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 540px; margin-left: 180px;"><div style="box-sizing: border-box; font-size: 0px; text-align: center; color: #000000; "><div style="display: inline-block; font-size: 11px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; background-color: #ffffcc; border: 1px solid #000000; white-space: nowrap; ">edge label</div></div></div>
+</foreignObject>
+<text x="180" y="543" fill="#000000" font-family="Helvetica" font-size="11px" text-anchor="middle">edge label</text>
+</switch>
+</g>
+<g data-cell-id="el1">
+<g>
+<switch>
+<foreignObject requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" pointer-events="none" width="100%" height="100%" style="overflow: visible; text-align: left;">
+<div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 531px; margin-left: 131px;"><div style="box-sizing: border-box; font-size: 0px; text-align: center; color: #000000; "><div style="display: inline-block; font-size: 11px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; background-color: #ffffff; white-space: nowrap; ">0.2</div></div></div>
+</foreignObject>
+<text x="131" y="534" fill="#000000" font-family="Helvetica" font-size="11px" text-anchor="middle">0.2</text>
+</switch>
+</g>
+</g>
+<g data-cell-id="el2">
+<g>
+<switch>
+<foreignObject requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" pointer-events="none" width="100%" height="100%" style="overflow: visible; text-align: left;">
+<div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 551px; margin-left: 231px;"><div style="box-sizing: border-box; font-size: 0px; text-align: center; color: #000000; "><div style="display: inline-block; font-size: 11px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; background-color: #ffffff; white-space: nowrap; ">0.8</div></div></div>
+</foreignObject>
+<text x="231" y="554" fill="#000000" font-family="Helvetica" font-size="11px" text-anchor="middle">0.8</text>
+</switch>
+</g>
+</g>
+</g>
+</svg>

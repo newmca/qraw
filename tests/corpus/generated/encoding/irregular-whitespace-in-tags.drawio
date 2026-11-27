@@ -1,0 +1,13 @@
+<mxfile   host = "x"
+   version="1" >
+<diagram	name="P"   id="w1" >
+<mxGraphModel  dx="1" dy="2"  >
+<root >
+<mxCell id="0" />
+<mxCell  id="1"  parent="0"  />
+<mxCell id="2" value="v"  vertex="1" parent="1"
+  ><mxGeometry x="0" y="0" width="10" height="10" as="geometry" /></mxCell>
+</root>
+</mxGraphModel>
+</diagram>
+</mxfile>

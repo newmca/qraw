@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="611px" height="202px" viewBox="-0.5 -0.5 611 202" content="&lt;mxfile host=&quot;qraw-fixture&quot;&gt;&#xa;  &lt;diagram name=&quot;basic-shapes&quot; id=&quot;basic-shapes&quot;&gt;&#xa;    &lt;mxGraphModel dx=&quot;800&quot; dy=&quot;600&quot; grid=&quot;1&quot; gridSize=&quot;10&quot; guides=&quot;1&quot; tooltips=&quot;1&quot; connect=&quot;1&quot; arrows=&quot;1&quot; fold=&quot;1&quot; page=&quot;1&quot; pageScale=&quot;1&quot; pageWidth=&quot;827&quot; pageHeight=&quot;1169&quot; math=&quot;0&quot; shadow=&quot;0&quot;&gt;&#xa;      &lt;root&gt;&#xa;        &lt;mxCell id=&quot;0&quot; /&gt;&#xa;        &lt;mxCell id=&quot;1&quot; parent=&quot;0&quot; /&gt;&#xa;        &lt;mxCell id=&quot;b0&quot; value=&quot;rectangle&quot; style=&quot;rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf&quot; vertex=&quot;1&quot; parent=&quot;1&quot;&gt;&#xa;          &lt;mxGeometry x=&quot;40&quot; y=&quot;40&quot; width=&quot;90&quot; height=&quot;60&quot; as=&quot;geometry&quot; /&gt;&#xa;        &lt;/mxCell&gt;&#xa;        &lt;mxCell id=&quot;b1&quot; value=&quot;rounded&quot; style=&quot;rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf&quot; vertex=&quot;1&quot; parent=&quot;1&quot;&gt;&#xa;          &lt;mxGeometry x=&quot;170&quot; y=&quot;40&quot; width=&quot;90&quot; height=&quot;60&quot; as=&quot;geometry&quot; /&gt;&#xa;        &lt;/mxCell&gt;&#xa;        &lt;mxCell id=&quot;b2&quot; value=&quot;ellipse&quot; style=&quot;ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf&quot; vertex=&quot;1&quot; parent=&quot;1&quot;&gt;&#xa;          &lt;mxGeometry x=&quot;300&quot; y=&quot;40&quot; width=&quot;90&quot; height=&quot;60&quot; as=&quot;geometry&quot; /&gt;&#xa;        &lt;/mxCell&gt;&#xa;        &lt;mxCell id=&quot;b3&quot; value=&quot;rhombus&quot; style=&quot;rhombus;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf&quot; vertex=&quot;1&quot; parent=&quot;1&quot;&gt;&#xa;          &lt;mxGeometry x=&quot;430&quot; y=&quot;40&quot; width=&quot;90&quot; height=&quot;60&quot; as=&quot;geometry&quot; /&gt;&#xa;        &lt;/mxCell&gt;&#xa;        &lt;mxCell id=&quot;b4&quot; value=&quot;triangle&quot; style=&quot;triangle;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf&quot; vertex=&quot;1&quot; parent=&quot;1&quot;&gt;&#xa;          &lt;mxGeometry x=&quot;560&quot; y=&quot;40&quot; width=&quot;90&quot; height=&quot;60&quot; as=&quot;geometry&quot; /&gt;&#xa;        &lt;/mxCell&gt;&#xa;        &lt;mxCell id=&quot;b5&quot; value=&quot;hexagon&quot; style=&quot;shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf&quot; vertex=&quot;1&quot; parent=&quot;1&quot;&gt;&#xa;          &lt;mxGeometry x=&quot;40&quot; y=&quot;160&quot; width=&quot;90&quot; height=&quot;60&quot; as=&quot;geometry&quot; /&gt;&#xa;        &lt;/mxCell&gt;&#xa;        &lt;mxCell id=&quot;b6&quot; value=&quot;cylinder&quot; style=&quot;shape=cylinder3;boundedLbl=1;backgroundOutline=1;size=15;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf&quot; vertex=&quot;1&quot; parent=&quot;1&quot;&gt;&#xa;          &lt;mxGeometry x=&quot;170&quot; y=&quot;160&quot; width=&quot;90&quot; height=&quot;60&quot; as=&quot;geometry&quot; /&gt;&#xa;        &lt;/mxCell&gt;&#xa;        &lt;mxCell id=&quot;b7&quot; value=&quot;cloud&quot; style=&quot;ellipse;shape=cloud;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf&quot; vertex=&quot;1&quot; parent=&quot;1&quot;&gt;&#xa;          &lt;mxGeometry x=&quot;300&quot; y=&quot;160&quot; width=&quot;90&quot; height=&quot;60&quot; as=&quot;geometry&quot; /&gt;&#xa;        &lt;/mxCell&gt;&#xa;        &lt;mxCell id=&quot;b8&quot; value=&quot;actor&quot; style=&quot;shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf&quot; vertex=&quot;1&quot; parent=&quot;1&quot;&gt;&#xa;          &lt;mxGeometry x=&quot;430&quot; y=&quot;160&quot; width=&quot;90&quot; height=&quot;60&quot; as=&quot;geometry&quot; /&gt;&#xa;        &lt;/mxCell&gt;&#xa;        &lt;mxCell id=&quot;b9&quot; value=&quot;doubleEllipse&quot; style=&quot;ellipse;shape=doubleEllipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf&quot; vertex=&quot;1&quot; parent=&quot;1&quot;&gt;&#xa;          &lt;mxGeometry x=&quot;560&quot; y=&quot;160&quot; width=&quot;90&quot; height=&quot;60&quot; as=&quot;geometry&quot; /&gt;&#xa;        &lt;/mxCell&gt;&#xa;      &lt;/root&gt;&#xa;    &lt;/mxGraphModel&gt;&#xa;  &lt;/diagram&gt;&#xa;&lt;/mxfile&gt;&#xa;">
+<defs/>
+<g data-cell-id="b0">
+<rect x="0" y="0" width="90" height="60" fill="#dae8fc" stroke="#6c8ebf" pointer-events="all"/>
+<g>
+<switch>
+<foreignObject requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" pointer-events="none" width="100%" height="100%" style="overflow: visible; text-align: left;">
+<div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 88px; height: 1px; padding-top: 30px; margin-left: 1px;"><div style="box-sizing: border-box; font-size: 0px; text-align: center; color: #000000; "><div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">rectangle</div></div></div>
+</foreignObject>
+<text x="45" y="34" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle">rectangle</text>
+</switch>
+</g>
+</g>
+<g data-cell-id="b1">
+<rect x="130" y="0" width="90" height="60" rx="9" ry="9" fill="#dae8fc" stroke="#6c8ebf" pointer-events="all"/>
+<g>
+<switch>
+<foreignObject requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" pointer-events="none" width="100%" height="100%" style="overflow: visible; text-align: left;">
+<div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 88px; height: 1px; padding-top: 30px; margin-left: 131px;"><div style="box-sizing: border-box; font-size: 0px; text-align: center; color: #000000; "><div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">rounded</div></div></div>
+</foreignObject>
+<text x="175" y="34" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle">rounded</text>
+</switch>
+</g>
+</g>
+<g data-cell-id="b2">
+<ellipse cx="305" cy="30" rx="45" ry="30" fill="#dae8fc" stroke="#6c8ebf" pointer-events="all"/>
+<g>
+<switch>
+<foreignObject requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" pointer-events="none" width="100%" height="100%" style="overflow: visible; text-align: left;">
+<div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 88px; height: 1px; padding-top: 30px; margin-left: 261px;"><div style="box-sizing: border-box; font-size: 0px; text-align: center; color: #000000; "><div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">ellipse</div></div></div>
+</foreignObject>
+<text x="305" y="34" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle">ellipse</text>
+</switch>
+</g>
+</g>
+<g data-cell-id="b3">
+<path d="M 435 0 L 480 30 L 435 60 L 390 30 Z" fill="#dae8fc" stroke="#6c8ebf" stroke-miterlimit="10" pointer-events="all"/>
+<g>
+<switch>
+<foreignObject requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" pointer-events="none" width="100%" height="100%" style="overflow: visible; text-align: left;">
+<div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 88px; height: 1px; padding-top: 30px; margin-left: 391px;"><div style="box-sizing: border-box; font-size: 0px; text-align: center; color: #000000; "><div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">rhombus</div></div></div>
+</foreignObject>
+<text x="435" y="34" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle">rhombus</text>
+</switch>
+</g>
+</g>
+<g data-cell-id="b4">
+<path d="M 520 0 L 610 30 L 520 60 Z" fill="#dae8fc" stroke="#6c8ebf" stroke-miterlimit="10" pointer-events="all"/>
+<g>
+<switch>
+<foreignObject requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" pointer-events="none" width="100%" height="100%" style="overflow: visible; text-align: left;">
+<div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 88px; height: 1px; padding-top: 30px; margin-left: 521px;"><div style="box-sizing: border-box; font-size: 0px; text-align: center; color: #000000; "><div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">triangle</div></div></div>
+</foreignObject>
+<text x="565" y="34" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle">triangle</text>
+</switch>
+</g>
+</g>
+<g data-cell-id="b5">
+<path d="M 22.5 120 L 67.5 120 L 90 150 L 67.5 180 L 22.5 180 L 0 150 Z" fill="#dae8fc" stroke="#6c8ebf" stroke-miterlimit="10" pointer-events="all"/>
+<g>
+<switch>
+<foreignObject requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" pointer-events="none" width="100%" height="100%" style="overflow: visible; text-align: left;">
+<div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 88px; height: 1px; padding-top: 150px; margin-left: 1px;"><div style="box-sizing: border-box; font-size: 0px; text-align: center; color: #000000; "><div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">hexagon</div></div></div>
+</foreignObject>
+<text x="45" y="154" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle">hexagon</text>
+</switch>
+</g>
+</g>
+<g data-cell-id="b6">
+<path d="M 130 135 C 130 126.72 150.15 120 175 120 C 199.85 120 220 126.72 220 135 L 220 165 C 220 173.28 199.85 180 175 180 C 150.15 180 130 173.28 130 165 Z" fill="#dae8fc" stroke="#6c8ebf" stroke-miterlimit="10" pointer-events="all"/>
+<path d="M 220 135 C 220 143.28 199.85 150 175 150 C 150.15 150 130 143.28 130 135" fill="none" stroke="#6c8ebf" stroke-miterlimit="10" pointer-events="all"/>
+<g>
+<switch>
+<foreignObject requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" pointer-events="none" width="100%" height="100%" style="overflow: visible; text-align: left;">
+<div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 88px; height: 1px; padding-top: 163px; margin-left: 131px;"><div style="box-sizing: border-box; font-size: 0px; text-align: center; color: #000000; "><div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">cylinder</div></div></div>
+</foreignObject>
+<text x="175" y="166" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle">cylinder</text>
+</switch>
+</g>
+</g>
+<g data-cell-id="b7">
+<path d="M 282.5 135 C 264.5 135 260 150 274.4 153 C 260 159.6 276.2 174 287.9 168 C 296 180 323 180 332 168 C 350 168 350 156 338.75 150 C 350 138 332 126 316.25 132 C 305 123 287 123 282.5 135 Z" fill="#dae8fc" stroke="#6c8ebf" stroke-miterlimit="10" pointer-events="all"/>
+<g>
+<switch>
+<foreignObject requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" pointer-events="none" width="100%" height="100%" style="overflow: visible; text-align: left;">
+<div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 88px; height: 1px; padding-top: 150px; margin-left: 261px;"><div style="box-sizing: border-box; font-size: 0px; text-align: center; color: #000000; "><div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">cloud</div></div></div>
+</foreignObject>
+<text x="305" y="154" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle">cloud</text>
+</switch>
+</g>
+</g>
+<g data-cell-id="b8">
+<ellipse cx="435" cy="127.5" rx="22.5" ry="7.5" fill="#dae8fc" stroke="#6c8ebf" pointer-events="all"/>
+<path d="M 435 135 L 435 160 M 435 140 L 390 140 M 435 140 L 480 140 M 435 160 L 390 180 M 435 160 L 480 180" fill="none" stroke="#6c8ebf" stroke-miterlimit="10" pointer-events="all"/>
+<g>
+<switch>
+<foreignObject requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" pointer-events="none" width="100%" height="100%" style="overflow: visible; text-align: left;">
+<div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe flex-start; justify-content: unsafe center; width: 88px; height: 1px; padding-top: 187px; margin-left: 391px;"><div style="box-sizing: border-box; font-size: 0px; text-align: center; color: #000000; "><div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">actor</div></div></div>
+</foreignObject>
+<text x="435" y="199" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle">actor</text>
+</switch>
+</g>
+</g>
+<g data-cell-id="b9">
+<ellipse cx="565" cy="150" rx="45" ry="30" fill="#dae8fc" stroke="#6c8ebf" pointer-events="all"/>
+<ellipse cx="565" cy="150" rx="41" ry="26" fill="none" stroke="#6c8ebf" pointer-events="all"/>
+<g>
+<switch>
+<foreignObject requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" pointer-events="none" width="100%" height="100%" style="overflow: visible; text-align: left;">
+<div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 80px; height: 1px; padding-top: 150px; margin-left: 525px;"><div style="box-sizing: border-box; font-size: 0px; text-align: center; color: #000000; "><div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">doubleEllipse</div></div></div>
+</foreignObject>
+<text x="565" y="154" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle">doubleEllipse</text>
+</switch>
+</g>
+</g>
+</svg>

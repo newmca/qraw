@@ -1,0 +1,3 @@
+<?xml version="1.0"?>
+<!DOCTYPE mxfile SYSTEM "ext.dtd" [<!ENTITY me "MyEnt">]>
+<mxfile><diagram id="d" name="Entities"><mxGraphModel><root><mxCell id="0"/><mxCell id="1" parent="0"/><foo>a &me; b &undeclared; c</foo></root></mxGraphModel></diagram></mxfile>

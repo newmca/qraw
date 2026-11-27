@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!-- Info.plist of Qraw.app, filled in twice: first by configure_file (src/app/CMakeLists.txt),
+     then by CMake's bundle generation from the target's MACOSX_BUNDLE properties. -->
+<plist version="1.0">
+<dict>
+    <key>CFBundleDevelopmentLanguage</key>
+    <string>en</string>
+    <key>CFBundleExecutable</key>
+    <string>${MACOSX_BUNDLE_EXECUTABLE_NAME}</string>
+    <key>CFBundleIdentifier</key>
+    <string>${MACOSX_BUNDLE_GUI_IDENTIFIER}</string>
+    <key>CFBundleInfoDictionaryVersion</key>
+    <string>6.0</string>
+    <key>CFBundleName</key>
+    <string>${MACOSX_BUNDLE_BUNDLE_NAME}</string>
+    <key>CFBundleDisplayName</key>
+    <string>${MACOSX_BUNDLE_BUNDLE_NAME}</string>
+    <key>CFBundlePackageType</key>
+    <string>APPL</string>
+    <key>CFBundleShortVersionString</key>
+    <string>${MACOSX_BUNDLE_SHORT_VERSION_STRING}</string>
+    <key>CFBundleVersion</key>
+    <string>${MACOSX_BUNDLE_BUNDLE_VERSION}</string>
+    <key>CFBundleIconFile</key>
+    <string>${MACOSX_BUNDLE_ICON_FILE}</string>
+    <key>LSMinimumSystemVersion</key>
+    <string>@QRAW_MACOS_MINIMUM_VERSION@</string>
+    <key>LSApplicationCategoryType</key>
+    <string>public.app-category.graphics-design</string>
+    <key>NSHumanReadableCopyright</key>
+    <string>@QRAW_COPYRIGHT@</string>
+    <key>NSPrincipalClass</key>
+    <string>NSApplication</string>
+    <key>NSHighResolutionCapable</key>
+    <true/>
+    <key>NSSupportsAutomaticGraphicsSwitching</key>
+    <true/>
+
+    <!-- Finder opens .drawio files with Qraw (delivered as QFileOpenEvent, ui/file_open_handler.h). -->
+    <key>CFBundleDocumentTypes</key>
+    <array>
+        <dict>
+            <key>CFBundleTypeName</key>
+            <string>draw.io Diagram</string>
+            <key>CFBundleTypeRole</key>
+            <string>Editor</string>
+            <key>LSHandlerRank</key>
+            <string>Default</string>
+            <key>CFBundleTypeIconFile</key>
+            <string>${MACOSX_BUNDLE_ICON_FILE}</string>
+            <key>LSItemContentTypes</key>
+            <array>
+                <string>@QRAW_APP_ID@.drawio</string>
+            </array>
+            <key>CFBundleTypeExtensions</key>
+            <array>
+                <string>drawio</string>
+            </array>
+        </dict>
+    </array>
+
+    <!-- No system type exists for the format. It is declared as imported (the format belongs to
+         draw.io) so that a draw.io installation declaring it as well does not conflict. -->
+    <key>UTImportedTypeDeclarations</key>
+    <array>
+        <dict>
+            <key>UTTypeIdentifier</key>
+            <string>@QRAW_APP_ID@.drawio</string>
+            <key>UTTypeDescription</key>
+            <string>draw.io Diagram</string>
+            <key>UTTypeConformsTo</key>
+            <array>
+                <string>public.xml</string>
+            </array>
+            <key>UTTypeTagSpecification</key>
+            <dict>
+                <key>public.filename-extension</key>
+                <array>
+                    <string>drawio</string>
+                </array>
+                <key>public.mime-type</key>
+                <array>
+                    <string>application/vnd.jgraph.mxfile</string>
+                </array>
+            </dict>
+        </dict>
+    </array>
+</dict>
+</plist>

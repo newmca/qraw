@@ -1,0 +1,36 @@
+<mxfile host="Electron" modified="2026-01-01T00:00:00.000Z" agent="fixture" version="24.0.0" type="device">
+  <diagram id="page-a" name="Flow">
+    <mxGraphModel dx="1000" dy="600" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="start" value="Start" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="step" value="&lt;b&gt;Step&lt;/b&gt;&lt;br&gt;two lines" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="240" y="40" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" value="go" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;" edge="1" parent="1" source="start" target="step">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-10" y="5" as="offset" />
+            <Array as="points">
+              <mxPoint x="200" y="70" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="page-b" name="Layers">
+    <mxGraphModel grid="0" background="#FFFFFF">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" value="Background" parent="0" />
+        <mxCell id="L2" value="Notes" parent="0" visible="0" />
+        <mxCell id="n1" value="hidden note" style="shape=note;" vertex="1" parent="L2">
+          <mxGeometry x="10" y="10" width="80" height="50" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

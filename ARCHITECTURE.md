@@ -1,0 +1,166 @@
+# Architecture
+
+Qraw is a set of layered modules. The layering is enforced by the build (D-012), and the lossless-model and mutation rules below are binding for every contributor.
+
+## Modules
+
+| Target | Dir | Depends on | May use | Contents |
+|---|---|---|---|---|
+| `qraw_core` | `src/core` | none | C++20 standard library only, no Qt | `XmlNode`, `Attributes`, `Style`, `Geometry`/`Point`/`Rect`, `Cell`, `Page`, `Document`, `Diagnostic`, number parse/format. |
+| `qraw_commands` | `src/commands` | core | standard library only | `Command`, `ChangeSet`, `Transaction`, `UndoStack`, the `Editor` facade with observers, the operations in `ops_*.h` (cells, structure, properties, pages, layers, tables, layout), the layout algorithms and the text, CSV and Mermaid importers. |
+| `qraw_diag` | `src/diag` | none | QtCore only | Process-level diagnostics (D-049): logging categories (`logging.h`), the GUI log file and its message handler (`log_file`), the crash handler (`crash_handler_posix`, `crash_handler_windows`, async-signal-safe text in `async_safe_text.h`), session markers and the previous-run check (`session_marker`), data locations, build info. Used by `qraw`, `qraw-cli` and `qraw_ui` (recovery). |
+| `qraw_format` | `src/format` | core | QtCore (`QXmlStream*`), zlib | Lossless XML I/O (`xml_io`), page compression (`compression`), model codec (`codec`), canonical comparison (`semantic`), mxlibrary files, embedding of diagrams in PNG, SVG and PDF (`embed`). |
+| `qraw_render` | `src/render` | core, format | QtGui, QtSvg, QtWidgets (`QGraphics*`) | Style resolution, `geometry/` (paths, polylines, label layout, perimeters, edge routing), edge markers, rich text, canvases (`SvgCanvas`, `PainterCanvas`), shape registry and painters, stencil interpreter and registry, `PageView` (cell states), `SceneRenderer`, the tile and snapshot machinery of the editor canvas, export. Design: [docs/design/render.md](docs/design/render.md). |
+| `qraw_ui` | `src/ui` | all of the above | QtWidgets, QtPrintSupport | Main window, canvas, interaction, docks, dialogs, palette, files and recovery. Design: [docs/design/ui.md](docs/design/ui.md). |
+| `qraw` (exe) | `src/app` | ui, cli | | The editor; also accepts the CLI flags. |
+| `qraw-cli` (exe) | `src/cli` | render, format | headless (`QT_QPA_PLATFORM=offscreen` by default) | `--validate`, `--info`, `--convert`, `--export`. The implementation is shared with the GUI binary (D-011). |
+| tests | `tests/<module>` | | Qt Test + CTest | |
+
+Namespace `qraw::<module>`. Public headers live in `src/<module>/include/qraw/<module>/`, sources in `src/<module>/`. `qraw_forbid_qt()` in `cmake/QrawTargets.cmake` fails the configure step if `core` or `commands` link Qt.
+
+### Lossless model rules
+
+1. Parse first, render second. Unknown things are kept, never dropped.
+2. `core::XmlNode` (name, ordered attributes, children including text) holds every element the model does not understand. It is written back unchanged and in its original order.
+3. Every modeled element (mxfile, diagram, mxGraphModel, mxCell, object/UserObject wrapper, mxGeometry, mxPoint, Array) keeps its **ordered attribute list**, so unknown attributes and the original order survive.
+4. `core::Style` keeps ordered tokens: bare names (`ellipse`, `text`) and `key=value`. An untouched style re-serializes byte-identically. A changed key is edited in place and a new key is appended.
+5. The per-page encoding (compressed `<diagram>` text or inline `<mxGraphModel>`) is recorded and reproduced by default. The `mxfile compressed` attribute is preserved.
+6. Saving is deterministic: equal model, equal bytes.
+7. Semantic round-trip equality (`format::semanticEqual`) compares the canonicalized XML trees: inflated pages, attribute sets and child order. The corpus tests assert that `load, save, load` is semantically equal **and** that `load, save, load, save` is byte-stable.
+
+### Mutation rules
+
+All model mutations go through `commands::Command` (apply and revert) inside a `commands::Transaction`. The `UndoStack` supports merging by command id. Observers receive a `ChangeSet` (cells added, removed or changed, by page). The UI never mutates core objects directly. Rendering is a projection: the canvas is rebuilt or patched from the `ChangeSet`.
+
+## Reading and writing
+
+```
+bytes ──parseXml──▶ XmlDocument (generic XmlNode tree) ──fromXml──▶ core::Document
+core::Document ──toXml──▶ XmlDocument ──serializeDocument──▶ bytes
+```
+
+1. `format::parseXml` turns the file into a generic `XmlNode` tree. It keeps namespace prefixes, comments, CDATA, PIs, the DOCTYPE and the XML declaration. Indentation is dropped (D-003).
+2. `format::fromXml` maps that tree onto the model. Every element the model does not recognise stays an `XmlNode` in its original position. Compressed `<diagram>` payloads are inflated and parsed the same way. Page validation runs, and its results come back as diagnostics.
+3. Writing reverses those steps. Each page is re-encoded the way it was read (inline, compressed, or opaque) unless `WriteOptions` forces one encoding.
+
+## The lossless model
+
+The ordered `Attributes` of every modeled element are the source of truth. Typed accessors such as `Cell::isVertex()`, `Geometry::x()` and `Page::gridSize()` parse values on demand. Setters edit a value in place, or insert a new attribute at draw.io's canonical position. A value that was never touched keeps its exact original text (`x="10.50"` stays `10.50`).
+
+| Element | Model | Unknown content kept in |
+|---|---|---|
+| `<mxfile>` | `Document` (attrs, entries) | `Document::entries()` holds `XmlNode`s interleaved with pages |
+| `<diagram>` | `Page` (diagram attrs, `PageEncoding`) | `Page::diagramForeign()` |
+| `<mxGraphModel>` | `Page::modelAttributes()` + typed accessors | `Page::modelForeign()` |
+| `<root>` | `Page::rootEntries()` = `variant<Cell, XmlNode>` in document order (= z-order) | the `XmlNode` alternatives |
+| `<mxCell>` | `Cell::attributes()` | `Cell::foreignChildren()` |
+| wrapper (`<object>`, `<UserObject>`, any tag with an `<mxCell>` child) | `CellWrapper` | `CellWrapper::foreign` |
+| `<mxGeometry>` | `Geometry` (attrs + child nodes; typed points, waypoints, offset) | its children |
+| style string | `Style` (ordered tokens) | the tokens themselves |
+
+`ForeignChildren` records where the single modeled child sat among the unknown siblings (`modeledSlot`), so the original child order comes back on save.
+
+`Page` keeps an id → entry index for `findCell`, and three z-ordered indexes (cells by parent, by source and by target) behind `children`, `descendants` and `connectedEdges`. Insert and remove shift the entry index in place and update the others; they are exact by construction, so a cell's id and parent must change only through `Page::replaceCell`, never through the pointer `findCell` returns (D-025). Pointers to cells stay valid only until the next structural change.
+
+## Semantic equality
+
+`format::canonicalTree` inflates compressed pages, sorts attributes by name, merges text and CDATA, and drops whitespace-only text between elements. `format::semanticEqual` compares two canonical trees and reports the path of the first difference. The corpus test compares the original file with the saved file, which is stricter than comparing two loads of our own output.
+
+## Render caches and shared values (D-030)
+
+**Shared large values.** `core::SharedValue` (`core/shared_value.h`) is the value type of `Attribute`, `Style::Token` and `render::StyleMap`. Below 16 KiB it is a `std::string`; above, an immutable reference-counted buffer. Copying an `Attributes`, `Cell`, `Style` or `ResolvedStyle` shares it; `core::largeValueCopies()` counts the buffers that were allocated by copying bytes (the work counter `largeValueCopies`). `Cell::style()` parses a large style text once per buffer and returns a copy of the memoised token list. `Attributes::setOwned` takes the bytes of an rvalue string without copying (the XML reader's path).
+
+**Image cache.** `render::ImageCache::instance()` (`render/image_cache.h`) resolves (`resolveImage`) and decodes an `image` style value once and hands out `shared_ptr<const CachedImage>`: level 0 premultiplied ARGB32, mip levels from a 2x2 box filter built on first use under the entry's mutex, SVGs parsed once per thread and rasterised per power-of-two bucket, failures cached. `ImageData::cached` carries the entry from the shape to the canvas (`cachedStyleImage`); `ImageData::encodedBytes()` reads the bytes again for the one consumer that needs them (`SvgCanvas`). `PainterCanvas` has two qualities: `Exact` (default; export, print, thumbnails, goldens: the decoder's image through QPainter's own scaling, byte-identical to the uncached path) and `Interactive` (the tile rasteriser; the smallest mip level at least as large as the destination in device pixels). The budget is bytes (256 MiB; entries used in the current frame are protected until the canvas calls `beginFrame()`, with a hard limit of twice the budget). Only decoding reduced-size JPEGs (`QImageReader::setScaledSize`) is not done: PNG has no scaled decode.
+
+**Label caches.** `render::TextLayoutCache::forThisThread()` (`render/text_layout_cache.h`) holds laid-out `QTextDocument`s per thread, keyed by text or HTML, font family, integer pixel size (font size times the canvas scale; the view zoom is only the painter transform, so layouts do not change with zoom), style bits, alignment, wrap width (when wrapping) and line height; `PainterCanvas::text` draws from it. `labelMetrics()` is the thread-neutral half (size and line rectangles, one mutex-protected cache for all threads), `labelTextRect()` the exact rectangle of a label on the page and `measureText()` a view of it. `CellState::paintBounds` still uses `geometry::estimateTextExtent`: a tile renderer must add a margin to it or take the rectangle from `labelTextRect`. Thread-local caches that hold Qt objects register a clear-up with `QCoreApplication` (`render/app_exit_cleanup.h`).
+
+
+## Canvas rendering (D-031 to D-037)
+
+The editor canvas does not repaint cells. It records them once, rasterises tiles from the recordings and composites the tiles; the overlay is painted on top and never touches a tile. In one line: model, `PageView` (patched or built), records and a spatial grid in an immutable snapshot, tiles per zoom bucket on worker threads, compositor; with an active layer for the cells under the user's hands and an overlay for everything the user is pointing at.
+
+```
+ session edit                           CanvasView paint (one per event-loop turn)
+      |                                          |
+ PageView::update (content-only edits)          |  visible tile keys (scale = zoom x dpr, 512 px tiles)
+  or PageView::build -> diffViews               v
+      |                (added / refreshed)
+      v                                  TileCache --hit--> TileRef(image, version, dest)
+ RenderSnapshot  (immutable, shared_ptr)     |  miss or dirty
+   records[]  : CellRecord = DisplayList     v
+                + visual bounds             rasterizeTile(snapshot, key)   pure, thread-ready
+   decor      : backdrop, page tiles, grid   |  decor + records from the spatial grid, in paint order
+   spatial grid -> query(rect) sorted        v
+      |                                  Compositor::present(FrameDescription)
+      +-- Damage (scene rects) ---------->   1. tiles   (content layer, CPU blit)
+             TileCache::invalidate           2. active  (cells under the hands: ActiveLayer)
+             viewport()->update(rect)        3. overlay (InteractionController::paintOverlay)
+```
+
+**Snapshot.** `DiagramScene` builds a `render::RenderSnapshot` for every projection change (`buildSnapshot`, `render/render_snapshot.h`): one `CellRecord` per `CellState` in paint order. A record is the cell's `Canvas` calls (`DisplayList`, `render/display_list.h`) and the bounds of everything they paint. Records of cells that the projection diff did not report as added or refreshed are shared with the previous snapshot (`recordsBuilt` counts the ones that were recorded). Nothing in a snapshot points into the model. It also holds the page decoration (`PageDecor`: backdrop, background colour, page tiles, grid), the cell whose label editor is open (recorded without its label) and a `render::SpatialGrid` over the visual bounds whose queries return paint indices in ascending order, so z-order is free. `computeDamage` compares two snapshots: the old and new bounds of every record that was added, removed or re-recorded, the bounds of the cells that left the longest run of survivors that kept their order (a restack exposes, it does not re-record), and everything when the decoration differs.
+
+**Tiles.** `rasterizeTile(snapshot, TileKey{scale, tx, ty}, dpr)` (`render/tile_rasterizer.h`) paints one 512 x 512 device-pixel tile: the decoration (what `DiagramScene::drawBackground` used to paint) and the records that meet the tile grown by one device pixel, replayed through a `PainterCanvas` at interactive image quality, into a premultiplied image whose `devicePixelRatio` is the frame's. Tile (tx, ty) covers device pixels [512 tx, 512 (tx + 1)) of the scaled scene, so origins are whole device pixels and adjacent tiles meet without a seam. `TileCache` (`render/tile_cache.h`) keeps the images by key with the snapshot generation; invalidation marks the tiles a damage rectangle touches dirty and keeps the stale image; the budget (192 MiB) evicts the other zoom buckets' tiles first and then the tiles that were displayed least recently, and never one that the frame in progress shows. Rasterisation is a pure function; it runs on worker threads (next sections).
+
+**Compositor.** `CanvasView::drawBackground` asks the `TileScheduler` (`ui/tile_scheduler.h`) for the tiles of the exposed region and hands them as a `FrameDescription` to `CpuCompositor`, which copies each tile at an integer device position (or, for a tile of another zoom bucket, draws it scaled into the rectangle the scheduler computed; edges are rounded to device pixels, so neighbours meet without a seam). `QGraphicsView` stays as the thin shell: scroll bars, the view transform, event plumbing and the rotated label editor's proxy widget are its job; the scene has no cell items (hit testing reads a spatial grid, next section). At a fractional device pixel ratio the scroll offset in logical pixels is a fractional number of device pixels: the tiles, the active layer and (`drawForeground`) the overlay are all placed from the whole device pixel `round(offset x dpr)` (`CanvasView::tileViewport().origin`), so that handles are where the cells' pixels are; the widget can scroll its old pixels only by a whole number of device pixels and repaints the viewport (from cached tiles) otherwise (D-045, KNOWN_ISSUES.md). The viewport is `MinimalViewportUpdate` with `WA_OpaquePaintEvent`, so a scroll step blits the old pixels and paints only the exposed strips from cached tiles.
+
+**Layers and invalidation.** *Content* is tiles. A content change repaints exactly the damaged rectangles (mapped through the view transform plus 2 px). *Active* is the cells a gesture lifts out of the tiles and draws live (next section). *Overlay* is `InteractionController::paintOverlay`: each handler and gesture reports `overlayBounds()`, and `CanvasView::requestOverlayUpdate` repaints the union of what the overlay occupied at the last request and what it occupies now. A handler that cannot say answers "unknown", which repaints the whole viewport and is counted in `viewportFullUpdates`; the paint benchmark shows which ones still do. A hover, a selection change and a rubber band therefore rasterise no tile and replay no cell. Whole-viewport updates remain for zoom, page switch, page properties, resize and the drag feedback of handlers that have no bounds yet.
+
+**What is not drawn by tiles.** Export, print, SVG and palette thumbnails stay on the direct renderer (`render::exportPage`, `SceneRenderer` on a `PainterCanvas` or `SvgCanvas`), so their goldens are untouched. `OutlineView` and tests render through `DiagramScene::render`, which replays the snapshot. Text in a tile is antialiased in grayscale (Qt uses LCD antialiasing only on widget devices).
+
+**Projection, hit testing and bulk changes (D-035, D-036, D-037).** `DiagramScene` keeps the `PageView` of the current page and a hit grid next to the snapshot, and no `QGraphicsItem` per cell.
+
+* *Hit testing.* `DiagramScene::statesIn(rect)` returns the paint indices (ascending) of the states whose box meets `rect`, from a `render::SpatialGrid` (`render/spatial_grid.h`: three nested uniform grids of 256, 4096 and 65536 units, a rectangle in the finest where it covers at most 64 cells, entries sorted by cell key, closed intersection so a straight edge or a zero-size vertex is found) built from one box per state: paint bounds with a pixel of slack, rotated bounds and bounds united. `cellsAt` (topmost first), `cellsInRect` (paint order), the drop target, the fold controls and the arrows of a hovered vertex take their candidates from it and run the same exact shape tests as before, so the answers did not change (D-035). The snapshot's own grid, over visual bounds, is the same class and serves tile membership. Both are rebuilt per projection change (about 1 ms each at 10k cells) and read-only in between. The snapper's guide search remains a scan of the vertex states: a guide matches on a line, not a distance.
+* *Scene rectangle.* The `QGraphicsScene` is the coordinate system and the parent of the rotated label editor's proxy widget: `NoIndex`, scene rectangle = the page area (an unset rectangle only ever grows), the view adds its scroll margin.
+* *Incremental projection.* `PageView::update` patches the view after an edit whose change set holds only changed cells (D-037); anything structural builds the view again and `diffViews` compares the two. Either way the projection diff names the added and refreshed states, the snapshot re-records exactly those and `computeDamage` names the areas to rasterise.
+* *Bulk changes.* Group, ungroup and any reorder of many cells are a fixed number of primitives (`ReplaceCells`, one-pass `ReorderCells`, D-036) over `Page::replaceCells` / `moveEntries` / `restoreEntries`, which rewrite only the window of entries that changes.
+
+**Caches and budgets in one place.** Image cache 256 MiB (`QRAW_IMAGE_CACHE_MB`; hard limit twice that; mip levels evicted before images; never an image used by the frame in progress). Tile cache 192 MiB (`QRAW_TILE_CACHE_MB`; other zoom buckets capped at a third; the tiles the frame shows are never evicted). Label layouts: per thread, 8,192 entries or 96 MiB; label metrics: one shared cache of 16,384 entries. Records about 1.1 KB per cell, shared between snapshots. Worker pool `clamp(idealThreadCount / 2, 2, 8)` threads (`QRAW_RASTER_THREADS`). Scheduling constants: an edit's few visible tiles are rasterised at once on the GUI thread (at most 4 tiles, 1.5 ms estimated), the neighbouring buckets are prefetched when they cost under 40 ms, a new tiling takes over after 150 ms of stable zoom, an edit's new tiles appear together after at most 16 ms, the active layer replays live up to an estimated 4 ms and as a bitmap above. `bench_paint` (BENCHMARKS.md) gates the counters that these budgets produce.
+
+**The GPU seam.** The only thing between the content and the screen is `render::Compositor::present(FrameDescription)` (`render/compositor.h`): tiles as shared immutable `QImage`s with their device rectangles, the active layer's records and the overlay as a callback. `CpuCompositor` blits and replays with `QPainter`. A GPU compositor (Vulkan, and Metal or Direct3D through QRhi; `QRhiWidget` needs Qt 6.7 and the project's minimum is 6.5, so it would be an optional widget chosen at run time) would upload tiles as textures, replay the active layer's records into its own target and keep the overlay as a transparent image; tile rasterisation, scheduling, the snapshot, hit testing and the interaction code do not change. Nothing GPU-specific is built.
+
+## Interaction snapshots and level of detail (D-034)
+
+**The active layer** (`ui/active_layer.h`, `ActiveLayer`, owned by `CanvasView`) is the Core Animation idea on the CPU: the cells under the user's hands are separate layers that move by transform while the rest is not redrawn.
+
+* *Lift.* When a move drag leaves the click tolerance (`MoveGesture`), or a single vertex starts to be resized or rotated (`ResizeGesture`, `RotateGesture`), the gesture calls `ActiveLayer::liftMove` / `liftVertex`. The lifted set of a move is the moved cells, their descendants (so their labels) and, rigidly, any edge among them; edges that are connected to a lifted cell and are not lifted themselves are re-routed each frame. The layer keeps the tiles that show the set (`TileScheduler::keepTiles`: shared immutable images, nothing is copied) and tells the scene to leave the set out of its tile snapshot (`DiagramScene::setExcluded`; `RenderSnapshot::withoutRecords` shares every record). The damage is the set's bounds, so the scheduler applies its normal edit policy: the few cheap visible tiles are rasterised again without the cells at once, the others by workers while the old tiles, which still show the cells, stay on screen. The doubled picture (the cells in the tiles and in the layer) therefore lasts only until those tiles arrive: `dragLift` settles in 3 ms on the image-heavy synthetic document and in tens of milliseconds for one cell on a 10k-cell page in Fit Window (BENCHMARKS.md).
+* *Every move.* `setMoveDelta` / `setVertexGeometry` change what the layer draws and request a repaint of the union of its old and new bounds (`requestContentUpdate`). The compositor (`CpuCompositor::present`, `FrameDescription::active`) replays the lifted cells' records under a translation from scene units to device pixels, skipping those outside the exposed region: vector-sharp at any zoom, no resampling, no tile, no `PageView` build (`dragMove`: `tilesRasterized`, `tilesRasterizedSync`, `pageViewBuilds` and `cellsReplayed` are 0; `activeReplayed` counts the replays). An edge that follows a moved end is `PageView::previewEdgeState` (the route with the terminal's bounds shifted, `RouteEnd::shift` / `bounds` / `rotation`; label box and paint bounds follow) recorded again by `render::recordState`: one cell, a few microseconds. A resized or rotated vertex is `PageView::previewVertexState` recorded each frame; its descendants stay in the layer as they are and the edges attached to it are re-routed against the previewed bounds. Ctrl (duplicate) lifts nothing out of the tiles: the copies are in the layer and the originals stay (`setMoveDelta` re-applies the exclusion when Ctrl changes during the drag).
+* *Interaction snapshot (bitmap).* When replaying the lifted set every frame is estimated to cost more than `ActiveLayer::kReplayBudgetUs` (4 ms, from `render::estimateRecordCostUs`, the model the tile scheduler uses, with the level of detail applied), the set is rasterised once into one `ARGB32_Premultiplied` image at the current scale (`activeBitmaps`) and blitted at a whole device offset (`activeBitmapsDrawn`; a copy, not a resampling). A zoom rebuilds it; a set whose bitmap would exceed 16 Mpx is replayed live (the compositor culls what is outside the viewport).
+* *Release.* The gesture's edit is one `DocumentSession::edit` as before. On success `commit()` puts the cells back into the tile snapshot (their new records, so the tiles of the new place become damaged) and the layer keeps drawing them until `TileScheduler::isIdle()`, polled after every `areaChanged` and every 4 ms, then drops them (1 s at most): no flash. `CanvasView::isRenderIdle()` includes a retiring layer. When no edit happened, or on Escape, focus loss and page switch, `cancel()` brings the kept tiles back (`TileScheduler::reinstate`; nothing is rasterised: the pixels are those before the lift) unless the document changed in between (`DiagramScene::contentRevision`), in which case the normal damage path re-rasterises.
+* *Not lifted.* Multi-selection resize and rotate, the edge handles, the connect gesture, table resizing and the Format panel keep their overlay previews (KNOWN_ISSUES.md). A lifted cell is drawn above everything in the tiles during the gesture (z-order is restored when the tiles take it back); `COMPATIBILITY.md` lists the difference to draw.io's dashed preview.
+
+**Level of detail** (`render/level_of_detail.h`). Replay for the screen (tile rasterisation, the active layer, `DiagramScene::render`) takes a device scale (device pixels per canvas unit): a cell whose bounds are below 1 px in both directions is skipped (`cellsSkippedLod`), and a label whose font renders below 4 px is not shaped or drawn (`labelsSkippedLod`; `DisplayListCost::labelFontPx` is recorded with the label). Both thresholds are constants in that header; `estimateRecordCostUs` applies the same decision, so a far-zoom tile is estimated as cheap as it is. Hit testing, selection and the rubber band read the model and are unaffected. Export, print, SVG and palette thumbnails never go through `replayRecord` with a scale: they are unchanged (goldens). Images use the mip level of the zoom (`CachedImage::levelFor`: at 15 % and 25 % a 1000 x 600 picture is drawn from its 250 x 150 level, at 10 % from 125 x 75; `tst_render_level_of_detail`). Greeked bars instead of unreadable labels and dropping shadows, dashes, gradients and sketch jitter on cells a few pixels wide were not done: on the 10k-cell page at 15 % the shapes' `drawPath` calls are 11 of the 16 ms of a tile's replay and labels 1.3 ms, and a cheaper path for a 12 x 6 px cell is not obviously a win; see BENCHMARKS.md.
+
+## Tiles on worker threads (D-033)
+
+The GUI thread composes finished tiles and handles input; it never waits for a worker. `TileScheduler` owns the `TileCache`, the pool and every scheduling decision.
+
+**Zoom buckets** (`render/zoom_buckets.h`). While the zoom moves, tiles exist at a few raster scales only: the view's zoom steps (draw.io's x1.2 steps, so a toolbar or wheel step lands on a bucket and blits 1:1 at whole device pixels) plus intermediate buckets wherever two steps are more than x1.2 apart (below 85 %), so that a zoom between two steps is shown from the bucket *above* it, scaled down by at most 1.2 (`SmoothPixmapTransform`). The raster scale of a tile is bucket x device pixel ratio. Few distinct scales also bound Qt's per-thread, per-matrix glyph caches, which are never trimmed on worker threads. `chooseDisplayBucket` is the hysteresis: while a zoom gesture runs the tiling on screen stays (scaled) as long as it is within a factor of 2 of the zoom; the target bucket takes over when the zoom has been stable for 150 ms (`kSettleDelayMs`), when the stale tiling would be scaled by more than 2x, or at once when every visible tile of the target is already current (the neighbour prefetch below makes that the normal case for a toolbar or wheel step: the first frame after the step is sharp). **The transient exact-scale tiling.** A settled zoom between two steps (Fit Window is on the 5 % grid, which most steps are not; continuous zoom) would be drawn from the bucket above, bilinearly scaled by up to 1.2: softer text and lines, and a blit that costs 0.4 to 0.8 ms per 1600 x 1000 frame instead of 0.2 ms (measured with a micro-benchmark of one frame of 512 px tiles). So once the zoom has settled one more tiling is rasterised at exactly that zoom by the workers and takes over when its visible tiles are all current; there is at most one, and the next zoom change drops it (`dropObsoleteExactTilings`). Until then, and during a gesture, the bucket tiling is shown scaled (the "soft frames" of KNOWN_ISSUES.md). Synchronous mode has no buckets: every zoom is rasterised at its own scale, as it was before the zoom buckets.
+
+**Fill policy** (never blank). For each tile of the displayed bucket that the frame shows: the exact tile of the current version; else the same tile of an older version (an edit keeps the old image until the replacement arrives); else the same area from the nearest other bucket, scaled and clipped to the part the viewport shows (`tilesSubstituted`); only when nothing exists (first paint, a jump to an area never rastered) the tile is rasterised on the GUI thread (`tilesRasterizedSync`). A stale image is kept only where it will be seen soon (the displayed bucket's visible tiles and the ring); other damaged tiles are dropped, so that a later scroll or zoom never shows content that is gone.
+
+**Plan.** One scheduler pass per event-loop turn (after a scroll, zoom, edit or result) computes what the workers should do: bin 0 the visible tiles of the displayed bucket, nearest the viewport centre first; bin 1 a ring of one tile around the viewport, the pan direction first; bin 2, only when nothing else is pending or running and the estimated cost is under 40 ms (`estimateTileCostUs`), the visible tiles of the two neighbouring buckets. At most two jobs per worker are handed to the pool (`kJobsPerWorker`), so a re-prioritisation never waits behind stale work; a job in flight that the new plan does not want is cancelled (its token is checked between cells) and its result, when it arrives, is dropped (`tilesDiscarded`).
+
+**Edits.** `RenderSnapshot` damage invalidates the tiles of every bucket. The visible tiles it dirties are rasterised at once on the GUI thread when there are at most 4 of them and their estimated cost is under 1.5 ms (`kSyncMaxTiles`, `kSyncBudgetUs`: typing and small edits are never a frame late); otherwise by workers, with the old tiles on screen, and the new tiles of one edit appear together: they are held until all the visible ones have arrived or 16 ms (`kBatchDeadlineMs`, one frame) have passed. A job whose area the damage touches is cancelled and its result dropped.
+
+**Synchronous mode.** `CanvasView::setSynchronousRasterization(true)` rasterises everything a paint needs on the GUI thread and starts no worker: deterministic pixels for the `--screenshot` harness and for tests that grab the viewport (`makeCanvas` in the UI tests turns it on). `isRenderIdle()` is true when nothing queued or running concerns a visible tile and no bucket switch is pending; `TileScheduler::isQuiescent()` also waits for the prefetch.
+
+### Threading rules
+
+Tile jobs run on `TileRasterPool` (`render/tile_pool.h`): a dedicated `QThreadPool` (never the global one) with `setExpiryTimeout(-1)` (an expired thread loses its font engines and the per-thread text layout cache: the first `drawText` in a fresh thread was measured at 1.15 ms against 0.011 ms warm) and `clamp(idealThreadCount / 2, 2, 8)` threads (`QRAW_RASTER_THREADS` overrides it; paths scaled about 7x and text 5 to 6x at 8 threads and got worse beyond, SMT). A job carries `shared_ptr<const RenderSnapshot>`, the key, the device pixel ratio and a cancellation token; the result returns by `QMetaObject::invokeMethod(context, ..., Qt::QueuedConnection)` and never by a blocking connection (deadlocks; Krita's lesson). What a worker may touch:
+
+| Object | Rule |
+|---|---|
+| `QImage`, `QPainter` on a `QImage` | allowed: the tile is created, painted and handed over by one thread; nobody paints it after the hand-over (`TileCache` stores it, the compositor reads it) |
+| `QPixmap`, `QIcon`, `QWidget`, `QGraphicsItem`, `QGraphicsScene` | never reachable from tile code: `src/render` uses none (checked by `tst_render_design_contract`) |
+| `QFont`, `QFontMetrics`, `QTextLayout`, `QTextDocument` | reentrant: each thread creates its own; nothing is shared across threads (the label cache `TextLayoutCache::forThisThread()` is thread-local) |
+| `QRawFont`, `QGlyphRun` | never cross threads |
+| `QFontDatabase` | static functions, used from workers by Qt's own text engine; Qt guards font engine lookup with a global mutex |
+| `QSvgRenderer` | one instance per thread (`ImageCache` keeps them thread-local) |
+| `QImage`, `QPainterPath`, `QByteArray`, `QString` as values | immutable once published; implicit sharing is atomic |
+| `ImageCache`, label metrics cache | one mutex each; entries are `shared_ptr<const ...>` |
+| `StencilRegistry` | mutex; `ShapeRegistry` is immutable after start-up |
+| `render::stats` counters, perf scopes | relaxed atomics, per-thread accumulators |
+| `RenderSnapshot`, `CellRecord`, `DisplayList` | immutable after publication; hold no pointer into the model (no `CellState::cell`) |
+| `Document`, `DocumentSession`, `DiagramScene`, `SceneRenderer` | never touched by a worker |
+
+The Qt class documentation (qdoc) is not installed on the machine this was written on, so the reentrancy statements above are those of Qt 6's "Thread-Support in Qt Modules" and class pages, not re-read here; they are exercised by `tst_ui_canvas_tiles_threaded` (a stress test of edits, scrolls and zooms during tile jobs) under the asan preset. GCC's ThreadSanitizer runtime (libtsan) is not installed, so data races are covered by that and by this table, not by TSan. CI runs the threaded tests on Linux, macOS and Windows; off-thread text on macOS and Windows is unverified until a run.

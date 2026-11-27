@@ -1,0 +1,39 @@
+#!/usr/bin/make -f
+# Qt 6.5 or newer is needed (CMakeLists.txt); Debian 13 and Ubuntu 25.10 or newer have it.
+
+include /usr/share/dpkg/architecture.mk
+
+APP_ID = io.github.newmca.qraw
+
+# The tests are built and run unless DEB_BUILD_OPTIONS contains nocheck.
+ifneq (,$(filter nocheck,$(DEB_BUILD_OPTIONS)))
+TESTING = OFF
+else
+TESTING = ON
+endif
+
+%:
+	dh $@ --buildsystem=cmake+ninja
+
+override_dh_auto_configure:
+	dh_auto_configure -- \
+		-DCMAKE_BUILD_TYPE=RelWithDebInfo \
+		-DBUILD_TESTING=$(TESTING) \
+		-DQRAW_LEAN_TEST_BINARIES=ON \
+		-DQRAW_WARNINGS_AS_ERRORS=OFF
+
+# The installed files are validated once they are in place.
+override_dh_auto_install:
+	dh_auto_install
+	desktop-file-validate debian/qraw/usr/share/applications/$(APP_ID).desktop
+	appstreamcli validate --no-net --pedantic debian/qraw/usr/share/metainfo/$(APP_ID).metainfo.xml
+	xmllint --noout debian/qraw/usr/share/mime/packages/$(APP_ID).xml
+
+# The whole suite on Qt's offscreen platform (the RPM %check does the same). bench_paint's wall-clock budgets
+# are not checked on a shared builder; its work-counter ceilings still are.
+override_dh_auto_test:
+ifeq ($(TESTING),ON)
+	mkdir -p $(CURDIR)/debian/.home
+	cd obj-$(DEB_HOST_GNU_TYPE) && HOME=$(CURDIR)/debian/.home QT_QPA_PLATFORM=offscreen \
+		QRAW_BENCH_TIME_BUDGETS=off ctest -j4 --output-on-failure
+endif

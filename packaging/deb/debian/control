@@ -1,0 +1,38 @@
+Source: qraw
+Section: graphics
+Priority: optional
+Maintainer: newmca <noreply@users.noreply.github.com>
+Build-Depends:
+ appstream,
+ cmake (>= 3.25),
+ debhelper-compat (= 13),
+ desktop-file-utils,
+ fontconfig,
+ fonts-dejavu-core,
+ g++,
+ libxml2-utils,
+ ninja-build,
+ qt6-base-dev (>= 6.5),
+ qt6-svg-dev,
+ qt6-tools-dev,
+ qt6-tools-dev-tools,
+ zlib1g-dev,
+Standards-Version: 4.7.0
+Homepage: https://github.com/newmca/qraw
+Rules-Requires-Root: no
+
+Package: qraw
+Architecture: any
+Depends:
+ hicolor-icon-theme,
+ qt6-svg-plugins,
+ shared-mime-info,
+ ${misc:Depends},
+ ${shlibs:Depends},
+Recommends:
+ qt6-wayland,
+Description: Native Qt diagram editor compatible with draw.io files
+ Qraw is a native Qt 6 Widgets editor for draw.io diagrams. It opens and
+ saves .drawio files (compressed or not), draws draw.io's shape libraries,
+ exports PNG, JPEG, SVG and PDF, and has a command line tool, qraw-cli, to
+ validate and export diagrams without a display.

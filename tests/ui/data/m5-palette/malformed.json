@@ -1,0 +1,22 @@
+{
+ "schema": 1,
+ "source": {"repo": "fixture", "commit": "none", "files": [], "license": "test"},
+ "palettes": [
+  {"id": "fx", "title": "Fixture", "library": "", "order": 5, "entries": [
+   {"id": "box", "title": "Box", "kind": "vertex", "style": "rounded=1;", "w": 40, "h": 20, "tags": ["box", "square"]},
+   {"title": "No id", "kind": "vertex", "style": "x;", "w": 1, "h": 1},
+   {"id": "no-style", "title": "No style", "kind": "vertex", "w": 1, "h": 1},
+   {"id": "no-size", "title": "No size", "kind": "edge", "style": "endArrow=none;"},
+   {"id": "odd", "title": "Odd", "kind": "hexagon", "style": "x;", "w": 1, "h": 1},
+   {"id": "empty-cells", "title": "Empty", "kind": "cells", "xml": ""},
+   "not an object",
+   {"id": "box", "title": "Duplicate", "kind": "vertex", "style": "x;", "w": 1, "h": 1},
+   {"id": "wire", "title": "Wire & <Co>", "kind": "edge", "style": "endArrow=classic;", "w": 50, "h": 30, "value": "a\"b\nc"},
+   {"id": "pair", "title": "Pair", "kind": "cells", "w": 10, "h": 10, "showLabel": false,
+    "xml": "<mxGraphModel><root><mxCell id=\"0\"/><mxCell id=\"1\" parent=\"0\"/><mxCell id=\"2\" vertex=\"1\" parent=\"1\"><mxGeometry width=\"10\" height=\"10\" as=\"geometry\"/></mxCell></root></mxGraphModel>"}
+  ]},
+  {"title": "Palette without id", "entries": []},
+  {"id": "fx", "title": "Duplicate palette", "entries": []},
+  {"id": "early", "title": "Early", "order": 1, "entries": []}
+ ]
+}

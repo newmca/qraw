@@ -1,0 +1,209 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+env:
+  # Hosted runners are shared and noisy: bench_paint checks its exact work-counter
+  # ceilings there but not the wall-clock p95 budgets (docs/BENCHMARKS.md, "The `bench_paint` gate").
+  QRAW_BENCH_TIME_BUDGETS: "off"
+
+jobs:
+  linux:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v5
+      - name: System packages
+        run: sudo apt-get update && sudo apt-get install -y ninja-build zlib1g-dev libgl1-mesa-dev libxkbcommon-dev desktop-file-utils appstream
+      - uses: jurplel/install-qt-action@v4
+        with:
+          version: '6.8.*'
+          cache: true
+      - name: Configure
+        run: cmake --preset release
+      - name: Build
+        run: cmake --build --preset release
+      - name: Test
+        id: test
+        run: ctest --preset release
+      - name: Diagnose failed tests
+        if: failure() && steps.test.conclusion == 'failure'
+        shell: bash
+        run: tools/ci/diagnose_failed_tests.sh build/release
+      # The source files that get installed on Linux (and into the Flatpak); no build needed. After the tests, so that
+      # a finding of Ubuntu's older appstreamcli cannot hide a test result.
+      - name: Validate desktop metadata
+        if: ${{ !cancelled() }}
+        run: |
+          desktop-file-validate resources/linux/*.desktop
+          appstreamcli validate --no-net --pedantic resources/linux/*.metainfo.xml
+
+  macos:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v5
+      - name: Ninja
+        run: brew install ninja
+      # Qt 6.8's WrapOpenGL links the AGL framework, which the macOS 26 SDK no longer ships.
+      # Qt >= 6.9 does not link AGL (BUILDING.md, CI).
+      - uses: jurplel/install-qt-action@v4
+        with:
+          version: '6.10.*'
+          cache: true
+      - name: Configure
+        run: cmake --preset release
+      - name: Build
+        run: cmake --build --preset release
+      - name: Test
+        id: test
+        run: ctest --preset release
+      - name: Diagnose failed tests
+        if: failure() && steps.test.conclusion == 'failure'
+        shell: bash
+        run: tools/ci/diagnose_failed_tests.sh build/release
+
+      # Qraw.app (macdeployqt, ad-hoc signature) in a .dmg. Unsigned, not notarised (BUILDING.md, "Packages").
+      - name: Package
+        run: cpack --config build/release/CPackConfig.cmake -B build/packages
+      - name: Check the package
+        run: |
+          hdiutil attach -nobrowse -readonly -mountpoint "$RUNNER_TEMP/qraw-dmg" build/packages/Qraw-*.dmg
+          app="$RUNNER_TEMP/qraw-dmg/Qraw.app"
+          codesign --verify --deep --strict "$app"
+          tools/ci/smoke_package.sh "$app/Contents/MacOS/Qraw" "$app/Contents/MacOS/qraw-cli" \
+            tests/compat/fixtures/inline_two_pages.drawio "$RUNNER_TEMP/smoke"
+          hdiutil detach "$RUNNER_TEMP/qraw-dmg"
+      - name: Short commit
+        id: commit
+        run: echo "short=${GITHUB_SHA::7}" >> "$GITHUB_OUTPUT"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: qraw-macos-${{ steps.commit.outputs.short }}
+          path: |
+            build/packages/Qraw-*.dmg
+            build/packages/Qraw-*.dmg.sha256
+          retention-days: 14
+          if-no-files-found: error
+
+  windows:
+    runs-on: windows-2022
+    steps:
+      - uses: actions/checkout@v5
+      - uses: ilammy/msvc-dev-cmd@v1
+      - uses: jurplel/install-qt-action@v4
+        with:
+          version: '6.8.*'
+          arch: win64_msvc2022_64
+          cache: true
+      - name: zlib (vcpkg)
+        run: vcpkg install zlib:x64-windows
+      - name: Configure
+        run: cmake --preset release -DCMAKE_TOOLCHAIN_FILE="$env:VCPKG_INSTALLATION_ROOT/scripts/buildsystems/vcpkg.cmake"
+      - name: Build
+        run: cmake --build --preset release
+      - name: Test
+        id: test
+        run: ctest --preset release
+      - name: Diagnose failed tests
+        if: failure() && steps.test.conclusion == 'failure'
+        shell: bash
+        run: tools/ci/diagnose_failed_tests.sh build/release
+
+      # An NSIS installer and a portable ZIP (windeployqt). Unsigned (BUILDING.md, "Packages").
+      - name: Package
+        run: cpack --config build/release/CPackConfig.cmake -B build/packages
+      - name: Check the ZIP
+        shell: bash
+        run: |
+          7z x -y -obuild/unpacked build/packages/Qraw-*.zip
+          root=$(ls -d build/unpacked/Qraw-*)
+          tools/ci/smoke_package.sh "$root/bin/qraw.exe" "$root/bin/qraw-cli.exe" \
+            tests/compat/fixtures/inline_two_pages.drawio "$RUNNER_TEMP/smoke-zip"
+      # Silent install, then the files, the .drawio registration and (below) the uninstaller.
+      - name: Install
+        shell: pwsh
+        run: |
+          $installer = (Get-ChildItem build/packages/Qraw-*.exe).FullName
+          Start-Process -FilePath $installer -ArgumentList '/S' -Wait
+          if (-not (Test-Path "$env:ProgramFiles\Qraw\bin\qraw.exe")) { throw "not installed to $env:ProgramFiles\Qraw" }
+          $command = Get-Item 'Registry::HKEY_CLASSES_ROOT\io.github.newmca.qraw.drawio\shell\open\command'
+          Write-Host "open command: $($command.GetValue(''))"
+          if (-not $command.GetValue('').Contains('qraw.exe')) { throw ".drawio open command is wrong" }
+      - name: Check the installed program
+        shell: bash
+        run: |
+          dir="$PROGRAMFILES/Qraw"
+          tools/ci/smoke_package.sh "$dir/bin/qraw.exe" "$dir/bin/qraw-cli.exe" \
+            tests/compat/fixtures/inline_two_pages.drawio "$RUNNER_TEMP/smoke-installed"
+      - name: Uninstall
+        shell: pwsh
+        run: |
+          $dir = "$env:ProgramFiles\Qraw"
+          # _?= keeps the uninstaller in this process, so that -Wait waits for it.
+          Start-Process -FilePath "$dir\Uninstall.exe" -ArgumentList '/S', "_?=$dir" -Wait
+          if (Test-Path 'Registry::HKEY_CLASSES_ROOT\io.github.newmca.qraw.drawio') { throw "the uninstaller left the .drawio registration" }
+      - name: Short commit
+        id: commit
+        shell: bash
+        run: echo "short=${GITHUB_SHA::7}" >> "$GITHUB_OUTPUT"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: qraw-windows-${{ steps.commit.outputs.short }}
+          path: |
+            build/packages/Qraw-*.exe
+            build/packages/Qraw-*.zip
+            build/packages/Qraw-*.sha256
+          retention-days: 14
+          if-no-files-found: error
+
+  # RPM, DEB and a Flatpak bundle (BUILDING.md, "Linux packages"). The build and the install tests are the
+  # scripts in packaging/, the ones to run locally. The packages are workflow artifacts only: nothing is
+  # released or published.
+  linux-packages:
+    name: linux-packages (${{ matrix.target }})
+    runs-on: ubuntu-24.04
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - target: rpm
+            files: |
+              dist/*.rpm
+          - target: deb
+            files: |
+              dist/*.deb
+          - target: flatpak
+            files: |
+              dist/*.flatpak
+    steps:
+      - uses: actions/checkout@v5
+      # A package build compiles everything and runs the suite inside a container, in the runner's
+      # ~14 GB of free disk space (the RPM build ran out of it, and in the DEB build the tests could no
+      # longer write files). Toolchains this job does not use are removed first.
+      - name: Free disk space
+        run: |
+          sudo rm -rf /usr/share/dotnet /usr/local/lib/android /opt/ghc /opt/hostedtoolcache/CodeQL /usr/local/share/boost
+          sudo docker image prune --all --force
+          df -h /
+      - name: Flatpak tooling
+        if: matrix.target == 'flatpak'
+        run: sudo apt-get update && sudo apt-get install -y flatpak flatpak-builder dbus-user-session
+      - name: Build
+        run: packaging/build-all.sh ${{ matrix.target }}
+      - name: Install test
+        run: |
+          if [ "${{ matrix.target }}" = flatpak ]; then
+            dbus-run-session -- packaging/test-install.sh flatpak
+          else
+            packaging/test-install.sh ${{ matrix.target }}
+          fi
+      - name: Short commit
+        id: commit
+        run: echo "short=${GITHUB_SHA::7}" >> "$GITHUB_OUTPUT"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: qraw-linux-${{ matrix.target }}-${{ steps.commit.outputs.short }}
+          path: ${{ matrix.files }}
+          retention-days: 14
+          if-no-files-found: error

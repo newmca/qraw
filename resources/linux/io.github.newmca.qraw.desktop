@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=Application
+Name=Qraw
+GenericName=Diagram Editor
+Comment=Create and edit draw.io diagrams
+Exec=qraw %F
+Icon=io.github.newmca.qraw
+Terminal=false
+Categories=Graphics;2DGraphics;VectorGraphics;Qt;
+MimeType=application/vnd.jgraph.mxfile;
+Keywords=diagram;flowchart;drawio;draw.io;uml;graph;
+StartupNotify=true

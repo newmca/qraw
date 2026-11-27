@@ -1,0 +1,2 @@
+// Executable icon; the first ICON resource is the one Explorer shows.
+IDI_QRAW ICON "@QRAW_ICON_DIR@/qraw.ico"

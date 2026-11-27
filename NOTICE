@@ -1,0 +1,29 @@
+Qraw
+Copyright 2026 Qraw contributors
+
+This product is licensed under the Apache License, Version 2.0 (see LICENSE).
+
+This product includes software and data derived from draw.io and mxGraph
+(https://github.com/jgraph/drawio), which are:
+
+    Copyright (c) 2006-2025 JGraph Holdings Ltd and draw.io AG
+    Licensed under the Apache License, Version 2.0
+
+  - Source files that are ports (translations to C++, with changes) of
+    functions of draw.io and mxGraph. Each says so in its header, in the form
+    "Port of <upstream path> (draw.io, Apache-2.0), modified."
+  - The default style sheet (resources/styles/), the stencil libraries
+    (resources/stencils/), the shape palette definitions (resources/palettes/)
+    and the diagram templates (resources/templates/, and the copies used as
+    test input in tests/corpus/upstream-templates/), all taken from the draw.io
+    repository at commit c72c9a98. The stencil libraries carry an additional
+    field-of-use restriction, stated in resources/stencils/LICENSE; the
+    templates also carry the Creative Commons Attribution 4.0 International
+    licence (resources/templates/LICENSE-CC-BY-4.0.txt).
+
+The draw.io repository does not contain a NOTICE file. "draw.io" and
+"diagrams.net" are trademarks of JGraph Ltd.; Qraw is not affiliated with or
+endorsed by JGraph Ltd.
+
+Qt is used under the LGPL-3.0, linked dynamically, and is not part of this
+distribution's source. See THIRD_PARTY.md for every third-party component.

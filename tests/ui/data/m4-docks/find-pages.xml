@@ -1,0 +1,29 @@
+<mxfile host="qraw-test">
+  <diagram id="p1" name="Intro">
+    <mxGraphModel dx="800" dy="600" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="c1" value="Alpha &lt;b&gt;beta&lt;/b&gt;" style="text;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="120" height="60" as="geometry"/>
+        </mxCell>
+        <object label="Service" owner="alice" id="o1">
+          <mxCell style="rounded=0;" vertex="1" parent="1">
+            <mxGeometry x="200" y="40" width="120" height="60" as="geometry"/>
+          </mxCell>
+        </object>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="p2" name="Second">
+    <mxGraphModel dx="800" dy="600" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="p" value="Alpha" style="rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="120" height="60" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

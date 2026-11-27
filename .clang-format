@@ -1,0 +1,24 @@
+---
+BasedOnStyle: WebKit
+ColumnLimit: 120
+IndentWidth: 4
+AccessModifierOffset: -4
+BreakBeforeBraces: Custom
+BraceWrapping:
+  AfterFunction: true
+  AfterClass: false
+  AfterStruct: false
+  AfterNamespace: false
+  AfterControlStatement: Never
+  BeforeElse: false
+AllowShortFunctionsOnASingleLine: Inline
+AllowShortIfStatementsOnASingleLine: Never
+AllowShortLambdasOnASingleLine: All
+NamespaceIndentation: None
+FixNamespaceComments: true
+PointerAlignment: Left
+SortIncludes: CaseSensitive
+IncludeBlocks: Preserve
+SpaceAfterTemplateKeyword: false
+Standard: c++20
+...
