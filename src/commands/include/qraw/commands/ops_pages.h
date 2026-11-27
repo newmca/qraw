@@ -102,7 +102,6 @@ struct PageProperties {
     std::optional<double> pageWidth;  // both width and height are needed to
     std::optional<double> pageHeight; // change the size; one alone -> failure
     std::optional<std::string> background;
-    std::optional<bool> math;
     std::optional<bool> shadow;
     // "auto", "simple" or "none" (dark diagram mode); "" or "default" removes the attribute.
     std::optional<std::string> adaptiveColors;

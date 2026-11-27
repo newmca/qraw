@@ -54,6 +54,7 @@ private slots:
     void diagramTabWhenNothingSelected();
     void cellTabsWhenSelected();
     void gridCheckboxWritesAndUndoes();
+    void thereIsNoMathBoxAndMathOnePassesThroughPageEdits();
     void fillColorWritesBothCellsInOneUndoStep();
     void strokeWidthStepsAreOneUndoStep();
     void mixedFormattedTextShowsPartialState();
@@ -110,6 +111,28 @@ void TestFormatPanel::gridCheckboxWritesAndUndoes()
     session.undo();
     QCOMPARE(savedBytes(session), before);
     QVERIFY(control<QCheckBox>(panel, "format.grid")->isChecked());
+}
+
+// Math typesetting is out of scope: the Diagram tab has no box for it, but a page that says math="1" keeps it.
+void TestFormatPanel::thereIsNoMathBoxAndMathOnePassesThroughPageEdits()
+{
+    std::string xml(kSimpleDiagram);
+    const std::size_t at = xml.find("math=\"0\"");
+    QVERIFY(at != std::string::npos);
+    xml.replace(at, 8, "math=\"1\"");
+    DocumentSession session(documentFromXml(xml));
+    FormatPanel panel(session);
+
+    QVERIFY(control<QCheckBox>(panel, "format.math") == nullptr);
+    for (const QCheckBox* box : panel.findChildren<QCheckBox*>())
+        QVERIFY2(!box->text().contains(QStringLiteral("Math"), Qt::CaseInsensitive), qPrintable(box->text()));
+
+    QVERIFY(savedBytes(session).contains("math=\"1\""));
+    control<QCheckBox>(panel, "format.pageShadow")->click(); // another page setting, written through setPageProperties
+    QVERIFY(session.currentPage()->shadow());
+    QVERIFY(savedBytes(session).contains("math=\"1\" shadow=\"1\""));
+    session.undo();
+    QVERIFY(savedBytes(session).contains("math=\"1\" shadow=\"0\""));
 }
 
 void TestFormatPanel::fillColorWritesBothCellsInOneUndoStep()

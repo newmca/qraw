@@ -250,8 +250,6 @@ Result setPageProperties(Transaction& tx, std::size_t index, const PagePropertie
         const bool none = *properties.background == "none";
         scratch.setBackground(none ? std::string_view{} : std::string_view{*properties.background});
     }
-    if (properties.math)
-        scratch.setMath(*properties.math);
     if (properties.shadow)
         scratch.setShadow(*properties.shadow);
     if (properties.adaptiveColors)

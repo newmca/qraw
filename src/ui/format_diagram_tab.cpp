@@ -69,7 +69,6 @@ private:
     ColorField* background_ = nullptr;
     QComboBox* adaptive_ = nullptr;
     QCheckBox* shadow_ = nullptr;
-    QCheckBox* math_ = nullptr;
     QComboBox* paperSize_ = nullptr;
     QRadioButton* portrait_ = nullptr;
     QRadioButton* landscape_ = nullptr;
@@ -169,15 +168,6 @@ void DiagramTab::buildView(QVBoxLayout* layout)
         props.shadow = on;
         applyPageProperties(session(), formatTr("Shadow"), props);
     });
-
-    math_ = new QCheckBox(formatTr("Math typesetting"));
-    math_->setObjectName(QStringLiteral("format.math"));
-    form->addRow(math_);
-    onClicked(math_, [this](bool on) {
-        commands::ops::PageProperties props;
-        props.math = on;
-        applyPageProperties(session(), formatTr("Math"), props);
-    });
 }
 
 void DiagramTab::buildPaper(QVBoxLayout* layout)
@@ -262,7 +252,6 @@ void DiagramTab::refresh(const StyleSummary& summary)
     setCurrentUnit();
     setCheckState(pageView_, page->pageVisible());
     setCheckState(shadow_, page->shadow());
-    setCheckState(math_, page->math());
     background_->setState(page->background(), false);
     {
         QSignalBlocker adaptiveBlocker(adaptive_);

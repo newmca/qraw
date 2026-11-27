@@ -9,6 +9,9 @@ All notable changes are listed here. The format follows [Keep a Changelog](https
 - While a shape is dragged into a container, the container is outlined in green on a dark canvas and in blue on a light one, as draw.io does.
 - The System theme gives the application palette back to the platform instead of keeping a copy of the startup palette, so the widgets follow the OS colour scheme too.
 
+### Removed
+- The Math typesetting box of the Format panel's Diagram tab: Qraw does not render math. A page's `math` attribute is still kept as it is in the file.
+
 ## [0.1.0] - 2026-11-26
 
 The first release. Qraw is a native Qt 6 / C++20 editor for draw.io files; see [README.md](README.md) for what it is and [ROADMAP.md](ROADMAP.md) for what is not done yet. It is licensed under the Apache License 2.0 ([LICENSE](LICENSE), [NOTICE](NOTICE)); the draw.io code and data it derives from are Apache-2.0 too ([THIRD_PARTY.md](THIRD_PARTY.md)).

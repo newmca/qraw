@@ -17,7 +17,8 @@ class DocumentSession;
 // Tabs depend on the selection (Format.prototype.refresh, Format.js):
 //  * nothing selected: "Diagram" (DiagramFormatPanel, Format.js:9560) --
 //    grid on/off + size, page view on/off, page size presets + custom +
-//    portrait/landscape, background color, shadow, math (shown, saved).
+//    portrait/landscape, background color, adaptive colors, shadow. (No math
+//    typesetting box: `math=1` is kept in the file, never rendered.)
 //  * vertices and/or edges: "Style" (StyleFormatPanel, :6836), "Text"
 //    (TextFormatPanel, :4683), "Arrange" (ArrangePanel, :2240).
 // Every control writes through DocumentSession::edit with ops::setStyles /
