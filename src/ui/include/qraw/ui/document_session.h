@@ -109,9 +109,9 @@ public:
     // renderContext() with the page variables of the current page (%page%,
     // %pagenumber%, %pagecount%); the canvas builds its views with it.
     [[nodiscard]] render::RenderContext pageRenderContext() const;
-    // The scheme the diagram is shown in (View > Dark Diagram): the dark scheme
-    // follows the page's adaptiveColors. A viewing choice of the user, not part
-    // of the document. Emits renderContextChanged.
+    // The scheme the diagram is shown in (resolved by the main window from the theme and View > Diagram
+    // Appearance, diagram_scheme.h): the dark scheme follows the page's adaptiveColors. A viewing choice of
+    // the user, not part of the document. Emits renderContextChanged when it changes.
     [[nodiscard]] bool diagramDark() const { return renderContext_.theme.dark; }
     void setDiagramDark(bool dark);
     [[nodiscard]] const QString& baseDirectory() const { return baseDirectory_; }

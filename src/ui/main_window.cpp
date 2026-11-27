@@ -8,6 +8,7 @@
 #include "qraw/ui/canvas_view.h"
 #include "qraw/ui/cells_panel.h"
 #include "qraw/ui/diagram_scene.h"
+#include "qraw/ui/diagram_scheme.h"
 #include "qraw/ui/find_panel.h"
 #include "qraw/ui/format_panel.h"
 #include "qraw/ui/layers_panel.h"
@@ -25,11 +26,13 @@
 #include <QDir>
 #include <QDockWidget>
 #include <QFileInfo>
+#include <QGuiApplication>
 #include <QLabel>
 #include <QLocale>
 #include <QPushButton>
 #include <QMessageBox>
 #include <QStatusBar>
+#include <QStyleHints>
 #include <QUrl>
 #include <QVBoxLayout>
 
@@ -50,7 +53,8 @@ MainWindow::Impl::~Impl() = default;
 
 void MainWindow::Impl::buildCentral()
 {
-    session.setDiagramDark(settings.diagramDark());
+    osScheme = QGuiApplication::styleHints()->colorScheme();
+    session.setDiagramDark(resolveDiagramDark(settings.theme(), settings.diagramAppearance(), osScheme));
     canvas = new CanvasView(session);
     canvas->setGuidesEnabled(settings.guidesEnabled());
     pageTabs = new PageTabs(session);
@@ -164,6 +168,12 @@ void MainWindow::Impl::connectSignals()
 
     for (QDockWidget* dockWidget : docks)
         connect(dockWidget, &QDockWidget::visibilityChanged, this, &Impl::syncPanelActions);
+
+    // draw.io's automatic appearance follows prefers-color-scheme live; so does the canvas of the System theme.
+    connect(QGuiApplication::styleHints(), &QStyleHints::colorSchemeChanged, this, [this](Qt::ColorScheme scheme) {
+        osScheme = scheme;
+        refreshDiagramScheme();
+    });
 
     window.installEventFilter(this);
     canvas->viewport()->installEventFilter(this);
@@ -421,6 +431,7 @@ void MainWindow::applySettings()
 {
     if (auto* application = qobject_cast<QApplication*>(QCoreApplication::instance()))
         applyTheme(*application, d->settings.theme());
+    d->refreshDiagramScheme();
     d->controller.setAutosaveInterval(d->settings.autosaveIntervalSeconds());
     d->canvas->setGuidesEnabled(d->settings.guidesEnabled());
     if (QAction* guides = d->actions[action_id::kGuides])

@@ -49,6 +49,13 @@ inline const QColor kConnectHandle(0xce, 0xe7, 0xff); // CONNECT_HANDLE_FILLCOLO
 inline const QColor kGuide(0x00, 0x88, 0xcf);         // GUIDE_COLOR '#0088cf'
 inline const QColor kValid(0x00, 0xa8, 0xff);         // DEFAULT_VALID_COLOR (connect target highlight)
 inline const QColor kRubberband(0x99, 0xcc, 0xff);    // mxRubberband default fill, drawn at alpha 0.2
+// Graph.js keeps the handle, selection and guide colours in both schemes: they are legible on the light
+// page and on the dark one (tst_ui_diagram_scheme checks the contrast). Only the drop target changes
+// (EditorUi.setDarkMode: mxConstants.DROP_TARGET_COLOR).
+[[nodiscard]] inline QColor dropTarget(bool dark)
+{
+    return dark ? QColor(0x00, 0xff, 0x00) : QColor(0x00, 0x00, 0xff);
+}
 inline constexpr double kHandleSize = 9;              // px, mxConstants.HANDLE_SIZE
 inline constexpr double kHitTolerance = 4;            // px, mxGraph.tolerance
 // Rotation handle: 16 px right of and above the top-right corner
@@ -64,6 +71,8 @@ struct OverlayContext {
     // lies outside it is clipped, so a handler may skip it. Null: unknown,
     // paint everything.
     QRectF exposed;
+    // The diagram is shown in the dark scheme (DocumentSession::diagramDark): overlay colours that depend on it.
+    bool dark = false;
     [[nodiscard]] double pixels(double px) const { return px / scale; }
 };
 

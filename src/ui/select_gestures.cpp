@@ -191,12 +191,11 @@ bool MoveGesture::commitMove(QPointF delta, bool duplicate, QPointF pointer)
 
 void MoveGesture::paint(QPainter& painter, const OverlayContext& context) const
 {
-    (void)context;
     if (!dragging_ || ctx_.scene == nullptr)
         return;
     if (!destination_.target.empty()) {
         if (const render::CellState* target = ctx_.scene->state(destination_.target))
-            paintDropTarget(painter, *target);
+            paintDropTarget(painter, *target, context.dark);
     }
     for (const std::string& id : moving_) {
         if (const render::CellState* state = ctx_.scene->state(id))

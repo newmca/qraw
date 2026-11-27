@@ -79,8 +79,8 @@ void paintCellOutline(QPainter& painter, const render::CellState& state, QPointF
 void paintRotatedRect(QPainter& painter, const QRectF& rect, double rotationDegrees);
 // The same with another pen.
 void paintRotatedRect(QPainter& painter, const QRectF& rect, double rotationDegrees, const QPen& pen);
-// The drop target highlight (mxCellHighlight with the valid colour): a solid
-// outline, three screen pixels wide, around the container a drag would land in.
-void paintDropTarget(QPainter& painter, const render::CellState& state);
+// The drop target highlight (mxCellHighlight, mxConstants.DROP_TARGET_COLOR: blue, green in the dark
+// scheme): a solid outline, three screen pixels wide, around the container a drag would land in.
+void paintDropTarget(QPainter& painter, const render::CellState& state, bool dark);
 
 } // namespace qraw::ui

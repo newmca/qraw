@@ -122,7 +122,6 @@ void MainWindow::Impl::updateActionState()
     actions[kPageView]->setChecked(page != nullptr && page->pageVisible());
     actions[kGrid]->setChecked(page != nullptr && page->gridEnabled());
     actions[kGuides]->setChecked(canvas->guidesEnabled());
-    actions[kDarkDiagram]->setChecked(session.diagramDark());
     actions[kFullscreen]->setChecked(window.isFullScreen());
 }
 

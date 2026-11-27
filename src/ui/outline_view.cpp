@@ -3,6 +3,7 @@
 #include "qraw/ui/outline_view.h"
 
 #include "qraw/ui/canvas_view.h"
+#include "qraw/ui/document_session.h"
 #include "qraw/ui/diagram_scene.h"
 
 #include <QMouseEvent>
@@ -69,7 +70,7 @@ struct OutlineView::Impl {
     bool dragging = false;
     QPointF dragOffset;     // scene distance from the grabbed point to the viewport centre
 
-    // Renders the whole canvas scene into the cache (white where no scene is drawn).
+    // Renders the whole canvas scene into the cache (the scheme's paper colour where no scene is drawn).
     void render(const QSize& size, qreal devicePixelRatio)
     {
         cacheValid = true;
@@ -77,7 +78,7 @@ struct OutlineView::Impl {
             return;
         cache = QPixmap(QSize(qRound(size.width() * devicePixelRatio), qRound(size.height() * devicePixelRatio)));
         cache.setDevicePixelRatio(devicePixelRatio);
-        cache.fill(Qt::white);
+        cache.fill(canvas.session().renderContext().theme.background);
         const Fit fit = Fit::of(canvas.sceneRect(), size);
         QPainter painter(&cache);
         canvas.diagramScene().render(&painter, fit.target, fit.scene, Qt::IgnoreAspectRatio);

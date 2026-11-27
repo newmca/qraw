@@ -15,6 +15,11 @@ namespace qraw::ui {
 
 enum class ThemeKind { System, Light, Dark, HighContrast };
 
+// Which scheme the diagram canvas is shown in (View > Diagram Appearance). FollowTheme (the default) takes
+// it from the effective application theme, as draw.io's single appearance setting does (diagram_scheme.h);
+// Light and Dark pin it, for a dark UI around a light canvas or the other way round.
+enum class DiagramAppearance { FollowTheme, Light, Dark };
+
 // Every key the application persists lives here, so their names and
 // defaults are defined once. Each getter reads QSettings on demand and each
 // setter writes through, so several instances (or a test that changes
@@ -38,10 +43,11 @@ public:
     // The unit of the length fields (View > Units); the model stays in pixels. default Points.
     [[nodiscard]] MeasureUnit measureUnit() const;
     void setMeasureUnit(MeasureUnit unit);
-    // View > Dark Diagram: show the diagram in the dark scheme (see render::Theme). Independent of the
-    // application theme. default false.
-    [[nodiscard]] bool diagramDark() const;
-    void setDiagramDark(bool on);
+    // View > Diagram Appearance (see render::Theme and diagram_scheme.h). default FollowTheme. The old
+    // boolean "diagramDark" setting is migrated on read: true is Dark, false is FollowTheme; writing the new
+    // value removes the old key.
+    [[nodiscard]] DiagramAppearance diagramAppearance() const;
+    void setDiagramAppearance(DiagramAppearance appearance);
     [[nodiscard]] bool showWelcomeOnStart() const;     // default true
     void setShowWelcomeOnStart(bool on);
     // Crash reports at or before this time were shown in the "Qraw closed unexpectedly" dialog;

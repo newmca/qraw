@@ -145,7 +145,7 @@ void DiagramTab::buildView(QVBoxLayout* layout)
         applyPageProperties(session(), formatTr("Background Color"), props);
     });
 
-    // How the diagram looks in the dark scheme (View > Dark Diagram), Editor.js adaptiveColors.
+    // How the diagram looks in the dark scheme (the dark scheme of the canvas), Editor.js adaptiveColors.
     adaptive_ = new QComboBox;
     adaptive_->setObjectName(QStringLiteral("format.adaptiveColors"));
     adaptive_->setToolTip(formatTr("How colors change in the dark scheme: Automatic inverts every color, Simple "

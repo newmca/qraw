@@ -618,7 +618,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Draw the diagram in the dark scheme, as View &gt; Dark Diagram shows it.</source>
+        <source>Draw the diagram in the dark scheme, as the canvas shows it when it is dark.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1125,6 +1125,10 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <source>Diagram Appearance</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Units</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1462,6 +1466,18 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <source>The canvas follows the theme unless you pin it to light or dark.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Follow Theme</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Diagram appearance:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>A restart is required for a language change to take effect.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1745,10 +1761,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Dark Diagram</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Reset View</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1846,6 +1858,18 @@
     </message>
     <message>
         <source>Full Screen</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Follow Theme</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Light</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Dark</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

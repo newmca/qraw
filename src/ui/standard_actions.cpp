@@ -178,7 +178,6 @@ void registerView(ActionRegistry& registry)
             {action_id::kPageView, QT_TRANSLATE_NOOP("qraw::ui::StandardActions", "Page View"), {}},
             {action_id::kGrid, QT_TRANSLATE_NOOP("qraw::ui::StandardActions", "Grid"), keys({ctrlShift(Qt::Key_G)})},
             {action_id::kGuides, QT_TRANSLATE_NOOP("qraw::ui::StandardActions", "Guides"), {}},
-            {action_id::kDarkDiagram, QT_TRANSLATE_NOOP("qraw::ui::StandardActions", "Dark Diagram"), {}},
             {action_id::kResetView, QT_TRANSLATE_NOOP("qraw::ui::StandardActions", "Reset View"),
              keys({QKeyCombination(Qt::Key_Home)})},
             {action_id::kZoomIn, QT_TRANSLATE_NOOP("qraw::ui::StandardActions", "Zoom In"),
@@ -197,6 +196,9 @@ void registerView(ActionRegistry& registry)
              // Plasma's theme binds Full Screen to Ctrl+Shift+F, which draw.io uses for To Front; F11 is kept
              // (KDE's own alternative) and the clash is not taken.
              standard(QKeySequence::FullScreen, keys({QKeyCombination(Qt::Key_F11)}), keys({ctrlShift(Qt::Key_F)}))},
+            {action_id::kDiagramFollowTheme, QT_TRANSLATE_NOOP("qraw::ui::StandardActions", "Follow Theme"), {}},
+            {action_id::kDiagramLight, QT_TRANSLATE_NOOP("qraw::ui::StandardActions", "Light"), {}},
+            {action_id::kDiagramDark, QT_TRANSLATE_NOOP("qraw::ui::StandardActions", "Dark"), {}},
             {action_id::kUnitPoints, QT_TRANSLATE_NOOP("qraw::ui::StandardActions", "Points"), {}},
             {action_id::kUnitInches, QT_TRANSLATE_NOOP("qraw::ui::StandardActions", "Inches"), {}},
             {action_id::kUnitMillimeters, QT_TRANSLATE_NOOP("qraw::ui::StandardActions", "Millimeters"), {}},
@@ -316,8 +318,9 @@ void markDialogActions(ActionRegistry& registry)
 void makeCheckable(ActionRegistry& registry)
 {
     for (const char* id : {action_id::kFormatPanel, action_id::kOutline, action_id::kLayers, action_id::kCells, action_id::kShapes,
-                           action_id::kPageView, action_id::kGrid, action_id::kGuides, action_id::kDarkDiagram, action_id::kFreehand,
+                           action_id::kPageView, action_id::kGrid, action_id::kGuides, action_id::kFreehand,
                            action_id::kFullscreen,
+                           action_id::kDiagramFollowTheme, action_id::kDiagramLight, action_id::kDiagramDark,
                            action_id::kUnitPoints, action_id::kUnitInches, action_id::kUnitMillimeters,
                            action_id::kUnitCentimeters, action_id::kUnitMeters}) {
         if (QAction* action = registry[id])

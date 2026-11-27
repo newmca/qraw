@@ -2,6 +2,13 @@
 
 All notable changes are listed here. The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and the project follows [Semantic Versioning](https://semver.org/).
 
+## [Unreleased]
+
+### Changed
+- The diagram canvas follows the application theme, as in draw.io: a dark theme (and High Contrast) shows the dark scheme, a light theme the light one, and System follows the OS colour scheme, also when it changes while Qraw runs. View > Diagram Appearance (Follow Theme, Light, Dark; also in Preferences) pins the canvas to one scheme. The old View > Dark Diagram switch is replaced by it: a stored "on" becomes Dark, "off" becomes Follow Theme. The Export As dialog's "Dark appearance" starts from the scheme the canvas shows. `qraw --screenshot` has `--light-diagram` next to `--dark-diagram`, and `--theme` now also decides the canvas.
+- While a shape is dragged into a container, the container is outlined in green on a dark canvas and in blue on a light one, as draw.io does.
+- The System theme gives the application palette back to the platform instead of keeping a copy of the startup palette, so the widgets follow the OS colour scheme too.
+
 ## [0.1.0] - 2026-11-26
 
 The first release. Qraw is a native Qt 6 / C++20 editor for draw.io files; see [README.md](README.md) for what it is and [ROADMAP.md](ROADMAP.md) for what is not done yet. It is licensed under the Apache License 2.0 ([LICENSE](LICENSE), [NOTICE](NOTICE)); the draw.io code and data it derives from are Apache-2.0 too ([THIRD_PARTY.md](THIRD_PARTY.md)).

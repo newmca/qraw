@@ -11,6 +11,7 @@
 #include "qraw/ui/edit_diagram_dialog.h"
 #include "qraw/ui/edit_geometry_dialog.h"
 #include "qraw/ui/edit_shape_dialog.h"
+#include "qraw/ui/diagram_scheme.h"
 #include "qraw/ui/export_dialog.h"
 #include "qraw/ui/find_panel.h"
 #include "qraw/ui/page_tabs.h"
@@ -186,7 +187,6 @@ void MainWindow::Impl::connectActions()
     onToggle(kPageView, [this](bool checked) { togglePageProperty(false, checked); });
     onToggle(kGrid, [this](bool checked) { togglePageProperty(true, checked); });
     onToggle(kGuides, [this](bool checked) { toggleGuides(checked); });
-    onToggle(kDarkDiagram, [this](bool checked) { toggleDarkDiagram(checked); });
     onToggle(kFreehand, [this](bool checked) { canvas->setFreehandActive(checked); });
     on(kResetView, [this] { canvas->resetZoom(); });
     on(kZoomIn, [this] { canvas->zoomIn(); });
@@ -246,6 +246,7 @@ void MainWindow::Impl::connectActions()
     on(kEditDiagram, [this] { editDiagram(); });
     on(kPreferences, [this] { showPreferences(); });
     connectUnitActions();
+    connectDiagramAppearanceActions();
     on(kKeyboardShortcuts, [this] { showShortcuts(); });
     on(kOpenLogFolder, [this] { openLogFolder(); });
     on(kAbout, [this] { showAbout(); });
@@ -440,12 +441,6 @@ void MainWindow::Impl::toggleGuides(bool on)
     settings.setGuidesEnabled(on);
 }
 
-void MainWindow::Impl::toggleDarkDiagram(bool on)
-{
-    session.setDiagramDark(on);
-    settings.setDiagramDark(on);
-}
-
 void MainWindow::Impl::toggleFullscreen(bool on)
 {
     if (on)
@@ -565,6 +560,39 @@ void MainWindow::Impl::connectUnitActions()
     };
     connect(&MeasureUnits::instance(), &MeasureUnits::unitChanged, &window, sync);
     sync();
+}
+
+// View > Diagram Appearance: Follow Theme (default), Light and Dark are exclusive and persist as the
+// diagram appearance; Preferences sets the same value.
+void MainWindow::Impl::connectDiagramAppearanceActions()
+{
+    struct Entry {
+        const char* id;
+        DiagramAppearance appearance;
+    };
+    static constexpr Entry entries[] = {{kDiagramFollowTheme, DiagramAppearance::FollowTheme},
+                                        {kDiagramLight, DiagramAppearance::Light},
+                                        {kDiagramDark, DiagramAppearance::Dark}};
+    auto* group = new QActionGroup(&window);
+    group->setExclusive(true);
+    for (const Entry& entry : entries) {
+        QAction* action = actions[entry.id];
+        group->addAction(action);
+        connect(action, &QAction::triggered, &window, [this, appearance = entry.appearance] {
+            settings.setDiagramAppearance(appearance);
+            refreshDiagramScheme();
+        });
+    }
+    refreshDiagramScheme();
+}
+
+void MainWindow::Impl::refreshDiagramScheme()
+{
+    const DiagramAppearance appearance = settings.diagramAppearance();
+    actions[kDiagramFollowTheme]->setChecked(appearance == DiagramAppearance::FollowTheme);
+    actions[kDiagramLight]->setChecked(appearance == DiagramAppearance::Light);
+    actions[kDiagramDark]->setChecked(appearance == DiagramAppearance::Dark);
+    session.setDiagramDark(resolveDiagramDark(settings.theme(), appearance, osScheme));
 }
 
 void MainWindow::Impl::showPreferences()

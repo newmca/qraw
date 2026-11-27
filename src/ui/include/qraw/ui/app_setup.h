@@ -32,9 +32,9 @@ void setupApplicationIdentity();
 // the default light palette; Dark = Fusion with a dark QPalette (window
 // #2a2a2a, base #1e1e1e, text #e0e0e0, highlight #29b6f2); HighContrast =
 // Fusion, black/white palette, yellow highlight, 2 px focus frames via a
-// small style sheet; System = the platform style and palette as at startup.
-// The diagram canvas itself stays light (diagram dark mode is out of scope,
-// render.md §10).
+// small style sheet; System = the platform style and palette (which follow
+// the OS colour scheme). The diagram canvas follows the theme too unless the
+// user pinned it (diagram_scheme.h).
 void applyTheme(QApplication& app, ThemeKind theme);
 
 // Installs QTranslators for `language` ("" = QLocale::system()): Qraw's
@@ -44,7 +44,7 @@ void applyTheme(QApplication& app, ThemeKind theme);
 QString installTranslations(QCoreApplication& app, const QString& language);
 
 // qraw --screenshot OUT.png [FILE] [--panel NAME]... [--size WxH]
-//   [--select ID]... [--theme light|dark] [--search TEXT] [--dialog export|welcome|data|link|tooltip|image]
+//   [--select ID]... [--theme light|dark] [--dark-diagram|--light-diagram] [--search TEXT] [--dialog export|welcome|data|link|tooltip|image]
 //   [--tab TITLE]
 // Opens a MainWindow at the given size (default 1280x800), loads FILE (or a
 // blank diagram), selects the given cell ids, shows the named panels
@@ -66,7 +66,8 @@ struct ScreenshotOptions {
     QString dialog; // "", "export", "welcome", "data", "link", "tooltip", "image", "import-text", "import-csv", "import-mermaid", "diagram" (Extras > Edit Diagram), "recovery", "preferences", "shortcuts" or "geometry"
     QString importKind; // "", "list", "diagram", "csv" or "mermaid": insert the text of importFile first (Insert > Advanced)
     QString importFile;
-    bool darkDiagram = false;        // --dark-diagram: View > Dark Diagram is on
+    // --dark-diagram / --light-diagram: View > Diagram Appearance is Dark / Light (default: Follow Theme).
+    std::optional<DiagramAppearance> diagramAppearance;
     std::optional<MeasureUnit> unit; // --units NAME: the unit of the length fields (View > Units)
     QString tab;    // a tab of the Format panel to show by its title (e.g. "Arrange"), "" for none
 };

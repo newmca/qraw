@@ -52,7 +52,8 @@ public:
     // dialog when set.
     void setFormat(render::ExportFormat format);
     void setOutputPath(const QString& path);
-    // Checks "Dark appearance" (View > Dark Diagram is on).
+    // Sets "Dark appearance"; the Export As command passes the scheme the canvas shows now, so the default
+    // follows View > Diagram Appearance (and so the theme). Exports keep their own explicit choice.
     void setDark(bool dark);
 
 private:

@@ -16,7 +16,8 @@ constexpr auto kLanguage = "appearance/language";
 constexpr auto kAutosave = "editing/autosaveSeconds";
 constexpr auto kGridSize = "editing/defaultGridSize";
 constexpr auto kGuides = "editing/guides";
-constexpr auto kDiagramDark = "appearance/diagramDark";
+constexpr auto kDiagramAppearance = "appearance/diagramAppearance"; // "follow", "light" or "dark"
+constexpr auto kLegacyDiagramDark = "appearance/diagramDark";         // bool, before diagramAppearance
 constexpr auto kUnit = "view/unit";
 constexpr auto kWelcome = "startup/showWelcome";
 constexpr auto kCrashReportsSeen = "startup/crashReportsSeenUntil";
@@ -107,14 +108,34 @@ void AppSettings::setGuidesEnabled(bool on)
     QSettings().setValue(kGuides, on);
 }
 
-bool AppSettings::diagramDark() const
+DiagramAppearance AppSettings::diagramAppearance() const
 {
-    return QSettings().value(kDiagramDark, false).toBool();
+    const QSettings settings;
+    const QString value = settings.value(kDiagramAppearance).toString();
+    if (value == QLatin1String("light"))
+        return DiagramAppearance::Light;
+    if (value == QLatin1String("dark"))
+        return DiagramAppearance::Dark;
+    if (value.isEmpty() && settings.value(kLegacyDiagramDark, false).toBool())
+        return DiagramAppearance::Dark; // the old View > Dark Diagram toggle was on
+    return DiagramAppearance::FollowTheme;
 }
 
-void AppSettings::setDiagramDark(bool on)
+void AppSettings::setDiagramAppearance(DiagramAppearance appearance)
 {
-    QSettings().setValue(kDiagramDark, on);
+    QSettings settings;
+    settings.remove(kLegacyDiagramDark);
+    switch (appearance) {
+    case DiagramAppearance::FollowTheme:
+        settings.setValue(kDiagramAppearance, QStringLiteral("follow"));
+        break;
+    case DiagramAppearance::Light:
+        settings.setValue(kDiagramAppearance, QStringLiteral("light"));
+        break;
+    case DiagramAppearance::Dark:
+        settings.setValue(kDiagramAppearance, QStringLiteral("dark"));
+        break;
+    }
 }
 
 bool AppSettings::showWelcomeOnStart() const

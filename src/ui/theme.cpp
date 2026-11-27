@@ -1,5 +1,4 @@
-// Widget themes (app_setup.h). The diagram canvas itself stays light in every
-// theme (render.md section 10).
+// Widget themes (app_setup.h). The diagram canvas follows the effective theme (diagram_scheme.h).
 #include "qraw/ui/app_setup.h"
 
 #include <QApplication>
@@ -11,17 +10,12 @@ namespace qraw::ui {
 
 namespace {
 
-// The look the process started with, captured on the first applyTheme call so
+// The style the process started with, captured on the first applyTheme call so
 // ThemeKind::System can restore it.
-struct StartupLook {
-    QString styleName;
-    QPalette palette;
-};
-
-const StartupLook& startupLook(const QApplication& app)
+const QString& startupStyleName(const QApplication& app)
 {
-    static const StartupLook look{app.style()->name(), app.palette()};
-    return look;
+    static const QString name = app.style()->name();
+    return name;
 }
 
 void setStyle(QApplication& app, const QString& name)
@@ -96,13 +90,15 @@ QString highContrastStyleSheet()
 
 void applyTheme(QApplication& app, ThemeKind theme)
 {
-    const StartupLook& startup = startupLook(app);
+    const QString& startupStyle = startupStyleName(app);
     app.setStyleSheet(QString());
 
     switch (theme) {
     case ThemeKind::System:
-        setStyle(app, startup.styleName);
-        app.setPalette(startup.palette);
+        setStyle(app, startupStyle);
+        // A default palette gives the application's palette back to the platform, which then keeps
+        // it in step with the OS colour scheme (a copy of the startup palette would pin it).
+        app.setPalette(QPalette());
         break;
     case ThemeKind::Light:
         setStyle(app, QStringLiteral("Fusion"));

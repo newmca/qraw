@@ -72,7 +72,6 @@ inline constexpr char kShapes[] = "toggleShapes";
 inline constexpr char kPageView[] = "pageView";
 inline constexpr char kGrid[] = "grid";
 inline constexpr char kGuides[] = "guides";
-inline constexpr char kDarkDiagram[] = "darkDiagram";
 inline constexpr char kResetView[] = "resetView";
 inline constexpr char kZoomIn[] = "zoomIn";
 inline constexpr char kZoomOut[] = "zoomOut";
@@ -81,6 +80,10 @@ inline constexpr char kFitPage[] = "fitPage";
 inline constexpr char kFitSelection[] = "fitSelection";
 inline constexpr char kActualSize[] = "actualSize";
 inline constexpr char kFullscreen[] = "fullscreen";
+// View > Diagram Appearance (exclusive, checkable)
+inline constexpr char kDiagramFollowTheme[] = "diagramFollowTheme";
+inline constexpr char kDiagramLight[] = "diagramLight";
+inline constexpr char kDiagramDark[] = "diagramDark";
 // View > Units (exclusive, checkable)
 inline constexpr char kUnitPoints[] = "unitPoints";
 inline constexpr char kUnitInches[] = "unitInches";

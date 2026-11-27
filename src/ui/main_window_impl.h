@@ -131,7 +131,6 @@ public:
     void findReplace();
     void togglePageProperty(bool grid, bool on);
     void toggleGuides(bool on);
-    void toggleDarkDiagram(bool on);
     void toggleFullscreen(bool on);
     void enterGroup();
     void exitGroup();
@@ -141,6 +140,10 @@ public:
     void showPreferences();
     void editDiagram();
     void connectUnitActions();
+    void connectDiagramAppearanceActions();
+    // Resolves the diagram scheme (settings theme and appearance, the OS scheme) and hands it to the
+    // session, which rebuilds the canvas when it changed; keeps the View > Diagram Appearance checks in step.
+    void refreshDiagramScheme();
     void showShortcuts();
     void showAbout();
     void applyZoomText(const QString& text);
@@ -193,6 +196,8 @@ public:
     QLabel* positionLabel = nullptr;
 
     diag::PreviousRun previousRun; // asked once, at startup
+    // The OS colour scheme as QStyleHints last reported it (colorSchemeChanged carries it).
+    Qt::ColorScheme osScheme = Qt::ColorScheme::Unknown;
 
     std::string styleBuffer; // Copy Style / Paste Style
 };

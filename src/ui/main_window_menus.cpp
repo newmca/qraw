@@ -189,8 +189,12 @@ void MainWindow::Impl::buildMenus()
                               nullptr,      kLockUnlock,  nullptr,        kFind});
 
     QMenu* view = addTopMenu(*bar, tr("&View"), QStringLiteral("menu.view"));
-    fillMenu(*view, actions, {kFormatPanel, kOutline, kLayers, kCells, kShapes, nullptr, kPageView, kGrid, kGuides, kDarkDiagram, nullptr,
-                              kResetView, kZoomIn, kZoomOut, kFitWindow, kFitPage, kFitSelection, kActualSize, nullptr});
+    fillMenu(*view, actions, {kFormatPanel, kOutline, kLayers, kCells, kShapes, nullptr, kPageView, kGrid, kGuides});
+    // View > Diagram Appearance: the canvas follows the theme, or is pinned light or dark.
+    QMenu* appearanceMenu = addSubmenu(*view, tr("Diagram Appearance"), actions,
+                                       {kDiagramFollowTheme, kDiagramLight, kDiagramDark});
+    appearanceMenu->setObjectName(QStringLiteral("menu.diagramAppearance"));
+    fillMenu(*view, actions, {nullptr, kResetView, kZoomIn, kZoomOut, kFitWindow, kFitPage, kFitSelection, kActualSize, nullptr});
     // View > Units: the unit of the length fields (a preference, the diagram stays in pixels).
     QMenu* unitMenu = addSubmenu(*view, tr("Units"), actions,
                                  {kUnitPoints, kUnitInches, kUnitMillimeters, kUnitCentimeters, kUnitMeters});

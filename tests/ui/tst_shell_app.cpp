@@ -48,6 +48,41 @@ private slots:
         QVERIFY(!parseScreenshotArguments(args({"diagram.drawio"})).has_value());
     }
 
+    void parseReadsTheDiagramAppearanceOptions()
+    {
+        QCOMPARE(parseScreenshotArguments(args({"--screenshot", "o.png"}))->diagramAppearance, std::nullopt);
+        QCOMPARE(parseScreenshotArguments(args({"--screenshot", "o.png", "--dark-diagram"}))->diagramAppearance,
+                 std::optional<DiagramAppearance>(DiagramAppearance::Dark));
+        QCOMPARE(parseScreenshotArguments(args({"--screenshot", "o.png", "--theme", "dark", "--light-diagram"}))
+                     ->diagramAppearance,
+                 std::optional<DiagramAppearance>(DiagramAppearance::Light));
+    }
+
+    void aDarkThemeScreenshotHasADarkCanvasUnlessPinnedLight()
+    {
+        QTemporaryDir directory;
+        const auto shoot = [&](std::initializer_list<const char*> extra) {
+            QStringList list = args({"--screenshot"});
+            list << directory.path() + QStringLiteral("/shot.png");
+            for (const char* item : extra)
+                list << QString::fromLatin1(item);
+            const auto options = parseScreenshotArguments(list);
+            if (!options || runScreenshot(*options) != 0)
+                return QImage();
+            return QImage(directory.path() + QStringLiteral("/shot.png"));
+        };
+        const auto canvasPixel = [](const QImage& image) { return image.pixelColor(image.width() / 2, image.height() / 2); };
+        // The window centre is the canvas (default panels sit at the sides): dark under the dark theme, as the
+        // canvas follows it; a light canvas when pinned.
+        const QImage followed = shoot({"--theme", "dark"});
+        QVERIFY(!followed.isNull());
+        QVERIFY(canvasPixel(followed).lightness() < 64);
+        const QImage pinned = shoot({"--theme", "dark", "--light-diagram"});
+        QVERIFY(!pinned.isNull());
+        QVERIFY(canvasPixel(pinned).lightness() > 192);
+        applyTheme(*static_cast<QApplication*>(QCoreApplication::instance()), ThemeKind::System);
+    }
+
     void parseReadsOutputFileAndOptions()
     {
         const auto options = parseScreenshotArguments(args({"--screenshot", "out.png", "in.drawio", "--panel", "layers",

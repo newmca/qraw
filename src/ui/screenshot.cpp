@@ -95,7 +95,7 @@ void printUsage(QTextStream& err)
 {
     err << "usage: qraw --screenshot OUT.png [FILE] [--panel NAME]... [--size WxH] [--select ID]...\n"
         << "       [--theme light|dark] [--search TEXT] [--dialog export|welcome|data|link|tooltip|image|import-text|import-csv|import-mermaid|diagram|recovery|preferences|shortcuts|geometry]\n"
-        << "       [--units points|inches|millimeters|centimeters|meters] [--dark-diagram] [--tab TITLE] [--import list|diagram|csv|mermaid TEXTFILE]\n"
+        << "       [--units points|inches|millimeters|centimeters|meters] [--dark-diagram|--light-diagram] [--tab TITLE] [--import list|diagram|csv|mermaid TEXTFILE]\n"
         << "panels: palette, format, layers, outline, find, cells (default: palette, format)\n"
         << "--size is the window size in logical pixels; the PNG has the window's device pixels (WxH times the\n"
         << "device pixel ratio: set QT_SCALE_FACTOR=2 for a HiDPI picture).\n";
@@ -321,7 +321,9 @@ std::optional<ScreenshotOptions> parseScreenshotArguments(const QStringList& arg
                 return options;
             parsed.unit = *unit;
         } else if (argument == QLatin1String("--dark-diagram")) {
-            parsed.darkDiagram = true;
+            parsed.diagramAppearance = DiagramAppearance::Dark;
+        } else if (argument == QLatin1String("--light-diagram")) {
+            parsed.diagramAppearance = DiagramAppearance::Light;
         } else if (argument == QLatin1String("--tab")) {
             const std::optional<QString> title = needValue(i);
             if (!title || title->isEmpty())
@@ -367,12 +369,14 @@ int runScreenshot(const ScreenshotOptions& options)
     }
 
     const SettingsSandbox sandbox;
-    if (options.theme)
+    if (options.theme) {
         applyTheme(*qobject_cast<QApplication*>(QCoreApplication::instance()), *options.theme);
+        AppSettings().setTheme(*options.theme); // the sandbox keeps it out of the user's settings; the canvas follows it
+    }
     if (options.unit)
         AppSettings().setMeasureUnit(*options.unit); // the sandbox keeps it out of the user's settings
-    if (options.darkDiagram)
-        AppSettings().setDiagramDark(true);
+    if (options.diagramAppearance)
+        AppSettings().setDiagramAppearance(*options.diagramAppearance);
     MainWindow window;
     NonInteractivePrompts prompts;
     window.setPrompts(&prompts);

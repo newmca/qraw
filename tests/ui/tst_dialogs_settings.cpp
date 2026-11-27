@@ -33,6 +33,9 @@ private slots:
         QSignalSpy applied(&dialog, &PreferencesDialog::settingsApplied);
         dialog.findChild<QComboBox*>(QStringLiteral("prefs.theme"))->setCurrentIndex(
             dialog.findChild<QComboBox*>(QStringLiteral("prefs.theme"))->findData(static_cast<int>(ThemeKind::Dark)));
+        auto* appearance = dialog.findChild<QComboBox*>(QStringLiteral("prefs.diagramAppearance"));
+        QCOMPARE(appearance->currentData().toInt(), static_cast<int>(DiagramAppearance::FollowTheme));
+        appearance->setCurrentIndex(appearance->findData(static_cast<int>(DiagramAppearance::Light)));
         dialog.findChild<QDoubleSpinBox*>(QStringLiteral("prefs.gridSize"))->setValue(20);
         dialog.findChild<QCheckBox*>(QStringLiteral("prefs.guides"))->setChecked(false);
         auto* autosave = dialog.findChild<QComboBox*>(QStringLiteral("prefs.autosave"));
@@ -44,11 +47,13 @@ private slots:
 
         const AppSettings reloaded;
         QCOMPARE(reloaded.theme(), ThemeKind::Dark);
+        QCOMPARE(reloaded.diagramAppearance(), DiagramAppearance::Light); // a light canvas under a dark UI
         QCOMPARE(reloaded.defaultGridSize(), 20.0);
         QVERIFY(!reloaded.guidesEnabled());
         QCOMPARE(reloaded.autosaveIntervalSeconds(), 300);
 
         settings.setTheme(ThemeKind::System);
+        settings.setDiagramAppearance(DiagramAppearance::FollowTheme);
         settings.setGuidesEnabled(true);
         settings.setDefaultGridSize(10);
         settings.setAutosaveIntervalSeconds(30);

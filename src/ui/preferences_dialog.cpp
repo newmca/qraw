@@ -61,6 +61,7 @@ struct PreferencesDialog::Impl {
     PreferencesDialog& dialog;
     AppSettings& settings;
     QComboBox* theme = nullptr;
+    QComboBox* diagramAppearance = nullptr;
     QComboBox* language = nullptr;
     QComboBox* autosave = nullptr;
     QDoubleSpinBox* gridSize = nullptr;
@@ -80,6 +81,15 @@ struct PreferencesDialog::Impl {
         theme->addItem(dialog.tr("High Contrast"), static_cast<int>(ThemeKind::HighContrast));
         theme->setCurrentIndex(theme->findData(static_cast<int>(settings.theme())));
         form->addRow(dialog.tr("Theme:"), theme);
+
+        diagramAppearance = new QComboBox(&dialog);
+        diagramAppearance->setObjectName(QStringLiteral("prefs.diagramAppearance"));
+        diagramAppearance->setToolTip(dialog.tr("The canvas follows the theme unless you pin it to light or dark."));
+        diagramAppearance->addItem(dialog.tr("Follow Theme"), static_cast<int>(DiagramAppearance::FollowTheme));
+        diagramAppearance->addItem(dialog.tr("Light"), static_cast<int>(DiagramAppearance::Light));
+        diagramAppearance->addItem(dialog.tr("Dark"), static_cast<int>(DiagramAppearance::Dark));
+        diagramAppearance->setCurrentIndex(diagramAppearance->findData(static_cast<int>(settings.diagramAppearance())));
+        form->addRow(dialog.tr("Diagram appearance:"), diagramAppearance);
 
         language = new QComboBox(&dialog);
         language->setObjectName(QStringLiteral("prefs.language"));
@@ -135,6 +145,7 @@ struct PreferencesDialog::Impl {
     void apply()
     {
         settings.setTheme(static_cast<ThemeKind>(theme->currentData().toInt()));
+        settings.setDiagramAppearance(static_cast<DiagramAppearance>(diagramAppearance->currentData().toInt()));
         settings.setLanguage(language->currentData().toString());
         settings.setAutosaveIntervalSeconds(autosave->currentData().toInt());
         settings.setDefaultGridSize(gridSize->value());

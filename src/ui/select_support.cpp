@@ -134,9 +134,9 @@ void paintRotatedRect(QPainter& painter, const QRectF& rect, double rotationDegr
     painter.restore();
 }
 
-void paintDropTarget(QPainter& painter, const render::CellState& state)
+void paintDropTarget(QPainter& painter, const render::CellState& state, bool dark)
 {
-    QPen pen(overlay::kValid, 3);
+    QPen pen(overlay::dropTarget(dark), 3);
     pen.setCosmetic(true);
     paintRotatedRect(painter, toQRect(state.bounds), state.style.rotation(), pen);
 }

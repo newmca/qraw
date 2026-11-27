@@ -228,7 +228,7 @@ struct ExportDialog::Impl {
 
         dark = new QCheckBox(dialog.tr("Dark appearance"), &dialog);
         dark->setObjectName(QStringLiteral("export.dark"));
-        dark->setToolTip(dialog.tr("Draw the diagram in the dark scheme, as View > Dark Diagram shows it."));
+        dark->setToolTip(dialog.tr("Draw the diagram in the dark scheme, as the canvas shows it when it is dark."));
         form->addRow(QString(), dark);
 
         embed = new QCheckBox(dialog.tr("Include a copy of my diagram"), &dialog);

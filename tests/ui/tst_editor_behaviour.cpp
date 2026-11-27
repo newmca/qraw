@@ -1135,7 +1135,7 @@ private slots:
             if (info.category == window.actions().categories().value(0) || info.id == "editStyle" || info.id == "preferences"
                 || info.id == "about" || info.id == "keyboardShortcuts" || info.id == "renamePage" || info.id == "findReplace"
                 || info.id == "deletePage" || info.id == "fullscreen" || info.id == "insertPage" || info.id == "duplicatePage"
-                || info.id == "darkDiagram")
+                || info.id == "diagramFollowTheme" || info.id == "diagramLight" || info.id == "diagramDark")
                 continue;
             if (info.action->isEnabled())
                 info.action->trigger();
@@ -1171,7 +1171,7 @@ private slots:
             for (const ActionInfo& info : window.actions().actions()) {
                 static const QStringList skip{"new", "open", "openRecent", "save", "saveAs", "revert", "exportAs", "pageSetup", "print",
                                               "printPreview", "close", "quit", "fullscreen", "deletePage", "undo", "redo", "preferences",
-                                              "darkDiagram"}; // a setting that outlives the window; see tst_canvas_tiles
+                                              "diagramFollowTheme", "diagramLight", "diagramDark"}; // settings that outlive the window; see tst_diagram_scheme
                 if (skip.contains(info.id))
                     continue;
                 s.selection().set(sel);

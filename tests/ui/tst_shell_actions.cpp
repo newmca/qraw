@@ -23,8 +23,9 @@ const std::vector<const char*>& allIds()
         id::kEditLabel,  id::kEditStyle,   id::kCopyStyle,         id::kPasteStyle,   id::kSetDefaultStyle, id::kClearDefaultStyle, id::kSelectVertices,
         id::kSelectEdges, id::kSelectAll,  id::kSelectNone,        id::kLockUnlock,   id::kFind,
         id::kFormatPanel, id::kOutline,    id::kLayers, id::kCells,            id::kShapes,       id::kPageView,
-        id::kGrid,       id::kGuides,      id::kDarkDiagram, id::kFreehand, id::kResetView,         id::kZoomIn,       id::kZoomOut,
+        id::kGrid,       id::kGuides,      id::kFreehand, id::kResetView,         id::kZoomIn,       id::kZoomOut,
         id::kFitWindow,  id::kFitPage,     id::kFitSelection,      id::kActualSize,   id::kFullscreen,
+        id::kDiagramFollowTheme, id::kDiagramLight, id::kDiagramDark,
         id::kUnitPoints, id::kUnitInches, id::kUnitMillimeters, id::kUnitCentimeters, id::kUnitMeters,
         id::kToFront,    id::kToBack,      id::kBringForward,      id::kSendBackward, id::kGroup,
         id::kUngroup,    id::kRemoveFromGroup, id::kEnterGroup,    id::kExitGroup,    id::kHome,
@@ -121,7 +122,10 @@ private slots:
                                   QString::fromLatin1(id::kLayers), QString::fromLatin1(id::kCells),      QString::fromLatin1(id::kShapes),
                                   QString::fromLatin1(id::kPageView),    QString::fromLatin1(id::kGrid),
                                   QString::fromLatin1(id::kGuides),      QString::fromLatin1(id::kFullscreen),
-                                  QString::fromLatin1(id::kDarkDiagram), QString::fromLatin1(id::kFreehand),
+                                  QString::fromLatin1(id::kFreehand),
+                                  // View > Diagram Appearance: exclusive, one is checked
+                                  QString::fromLatin1(id::kDiagramFollowTheme), QString::fromLatin1(id::kDiagramLight),
+                                  QString::fromLatin1(id::kDiagramDark),
                                   // View > Units: exclusive, one is checked
                                   QString::fromLatin1(id::kUnitPoints),  QString::fromLatin1(id::kUnitInches),
                                   QString::fromLatin1(id::kUnitMillimeters), QString::fromLatin1(id::kUnitCentimeters),

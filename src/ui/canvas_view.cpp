@@ -602,7 +602,7 @@ void CanvasView::requestContentUpdate(const QRectF& sceneRect)
 
 void CanvasView::requestOverlayUpdate()
 {
-    const OverlayBounds now = interaction_->overlayBounds(OverlayContext{zoom_, {}});
+    const OverlayBounds now = interaction_->overlayBounds(OverlayContext{zoom_, {}, session_.diagramDark()});
     const std::optional<QRectF> before = overlayPainted_;
     overlayPainted_ = now;
     if (!now || !before) {
@@ -702,7 +702,7 @@ void CanvasView::drawForeground(QPainter* painter, const QRectF& rect)
     const QPoint origin = tileViewport().origin;
     painter->translate((origin.x() / dpr - transform.dx()) / transform.m11(),
                        (origin.y() / dpr - transform.dy()) / transform.m22());
-    interaction_->paintOverlay(*painter, OverlayContext{zoom_, rect});
+    interaction_->paintOverlay(*painter, OverlayContext{zoom_, rect, session_.diagramDark()});
     painter->restore();
 }
 
